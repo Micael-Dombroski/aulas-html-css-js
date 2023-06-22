@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/favicon1.ico" type="image/x-icon">
+    <title>Tabelas</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            margin: 20px;
+        }
+        table {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas com HTML</h1>
+    <p>As tabelas são usadas para exibir dados de forma estruturada. Para inserirmos uma 
+        tabela na nossa página usamos a tag &lt;table&gt;&lt;/table&gt;. Essa tag pode receber 
+        o atributo <code>border</code> para definir o tamanho da borda da tabela.
+    </p>
+    <p>Não existe um tag que crie colunas, apenas tags que criem linhas (&lt;tr&gt;&lt;/tr&gt;)
+         e células (&lt;td&gt;&lt;/td&gt;). O ideal é que cada linha possua a mesma quantia de células para 
+        que não haja espaços em branco na tabela. Usamos a tag &lt;th&gt;&lt;th&gt; para inserirmos títulos 
+        para a coluna da tabela.</p>
+        <p>A tabela possui duas áreas a cabeça e o corpo, a cabeça é representada pela tag &lt;thead&gt;&lt;/thead&gt;, 
+            onde colocamos os títulos da tabela (&lt;th&gt;&lt;/th&gt;); o corpo é representado pela tag &lt;tbody&gt;&lt;/tbody&gt;, onde inserimos 
+            as linhas e células da tabela.
+        </p>
+        <table width="200px" border="10px">
+            <thead>
+                <tr>
+                    <th>Título Coluna 1</th>
+                    <th>Título Coluna 2</th>
+                    <th>Título Coluna 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>0</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</html>

@@ -1,0 +1,78 @@
+					O que é HTML?
+
+	São os códigos que são interpretados pelo navegador e mostrados na tela ao acessar uma página. O navegador traduz os código, junta eles e mostra uma página resultante desses códigos para o usuário.
+	Podemos clicar em um site com o botão direito do mouse e usar a opção "inspecionar elemento" para vez o código usado na construção da página que estamos acessando. E apertando as teclas Ctrl+Shif+C juntas podemos ver o código usado para criar elementos específicos da página, como por exemplo o logo dela ou um título.
+	Em resumo, HTML é nada mais que o código enviado para um navegador para que ele traduza e carregue uma página.
+
+	Definição HTML: Uma linguagem que através de tags apresenta informações como imagens e textos interpretadas pelo navegador.
+
+			Qual a diferença entre HTML e CSS?
+
+	O HTML são os códigos estruturais e o CSS são os códigos de estilização. Por exemplo: O HTML criar uma quadrado e o CSS da a cor azul para o quadrado; O HTML é usado para escrever uma matéria em um site de notícias, o CSS é usado para definir o tamanho do título e do texto da notícia, alinhar o texto com as imagens caso necessário, definir o estilo de fonte e a cor do texto e título.
+
+						O que é CSS?
+
+	O CSS é responsável por estilizar o código HTML que será mostrado na poágina, para deixar ele visualmente mais agradável.
+
+
+	Softwares necessários para começar a criar códigos em HTML
+
+	Podemos usar vários editores diferentes para escrever esses códigos, como por exemplo o Visual Studio Code, ele é um Software editor de código-fonte. Todos os códigos escritos são salvos em arquivos, os códigos HTML devem ser escritos com extensão .html, no caso do HTML e CSS, eles podem ser escritos até mesmo no próprio blocos de notas do Windows. É melhor usarmos editores diferentes do bloco de notas pois eles colorem cada parte do código com cores diferentes, o que ajuda a diferenciar elementos no código.
+
+					Extensão dos arquivos
+
+	Sempre que baixamos um arquivo, após o nome dele tem .(alguma coisa), isso é a extensão, imagens tem exetensão .jpg,.jpeg ou .png por exemplo, textos possuel extensão .txt, arquivos HTML tem extensão .html e arquivos CSS tem extenção .css.
+
+
+
+					O que são Tags em HTML?
+
+
+	Tags são como caixas, para criar uma tag usamos os sinais < e >, colocamos dentro desses sinais o nome da tag, o navegador interpreta que o que está dentro de <> é um tipo de tag e o que tiver entre determinada tag de abertura e tag de fechamento, é o conteúdo da tag. As tags de fechamento possuem o sinal de / antes do nome da tag (</nome da tag>). Ex de tag e inserção de conteúdo nela:
+			<strong> 	 Hotel? Trivago 	</strong>
+	
+
+	Se inseirmos o código acima em um documento .html e abrirmos ele no navegador, ele vai ler a tag e traduzir ela, a tag <strong> quer dizer que o conteúdo após essa tag até chegar em sua tag fechamento </strong> deve ser lido com ênfase e por isso será apresentado em negrito.
+
+	Podemos inserir tags dentro de tag, isso se chama aninhamento de tags por exemplo, vamos colocar a tag <u></u> que deixa o texto dentro dela sublinhado, dentro da tag <strong></strong> que deixa o texto dentro dela em negrito.
+
+	<strong> 	 Hotel?	<u>	 Trivago	</u> 	</strong>
+
+	No exemplo acima, todo o texto está tem negrito, mas somente Trivago está sublinhado e em negrito.
+
+	Nem todas as tags precisam de uma tag de fechamento, na maioria do caso são as tags que não podem ter conteúdo dentro delas, como por exemplo, a tag <hr> que insere uma linha na horizontal que é usada geralmente para separar conteúdos, nela, não se pode inserir conteúdos, já que ela cria apenas uma linha que vai de uma canto ao outro na janela do navegador.
+
+
+		O que são atributos em HTML?
+
+	Os atributos são colocados na tag de abertura, elas aplicam propriedades possíveis para a tag. Como por exemplo o atributo href para a tag <a></a>, a tag a criar um link, o atriburo href é usado para inserirmos o local para qual o link deve nos direcionar quando clicarmos nele. Ex:
+
+		<a href:"https://www.google.com.br/"> Link	</a>
+
+	Podemos colocar mais de um atributo na mesma tag. Ex:
+
+		<img src:"https://www.google.com.br/logos/google.jpg" 						width:""100px>
+
+	No exemplo acima escrevemos a tag img que é usada para inserir imagens e aplicamos nela o atributo src(source) onde informamos o link para a imagem que queremos acessar, e o atributo width, que informamos a largura desejada da imagem, no exemplo definimos a largura de 100 pixels(px).
+
+
+		Estrutura Básica de um Documento HTML
+
+	Vimos que apenas colocar códigos num documento .html funciona, mas é ideal criar uma estrutura para organizar o código html e ajudar o navegador a entender o nosso código.
+	A primeira tag que devemos colocar é:
+			<!DOCTYPE html>
+	Percebe-se que ela é uma tag q não possui fechamento, por tanto, não se pode inserir conteúdo nela. Essa tag informa o navegador que a nossa página usa os recursos mais atualizados do HTML5.
+
+	
+	A segunda tag que devemos colocar é:
+		<html></html>
+	Dentro dessa tag colocamos todo o conteúdo do site. Dentro dessa tag temos 2 tags principais, sendo ela:
+	
+	<head></head> (Configurações da minha página)
+	Dentro dessa tag colocamos o cabeçálio, o que inserirmos nessa tag não são exibidos na tela, dentro dela inserimos o nome da página e informações sobre a página. O nome da página é inserido usandoa a tag <title>nome-da-pagina</title>, dentro da tag head podemos configurar nossa página para que ela possa suportar os símbolos e acentuações que usamos em nossa língua, para isso usamos a tag <meta> com o atributo "charset" com o valor "UTF-8". UTF-8 é a codificação de caracteres que usamos na nossa língua.
+
+	Após o fechamento da tag head inserimos a tag:
+			
+	<body></body> (Conteúdo da minha página)
+	Devemos inserir nessa tag todo o conteúdo que deverá ser exibido na tela, é nessa tag que colocamos títulos e parágrafos de textos.
+	

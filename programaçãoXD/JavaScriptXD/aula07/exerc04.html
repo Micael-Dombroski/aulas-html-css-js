@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        .purple {
+            color: rgb(70, 0, 128);
+            background-color: rgb(134, 169, 180);
+        }
+        .obs {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores</h1>
+    <p>A linguem de programação JavaScript possui vários operadores, hoje iremos abordar 
+        os operadores <strong>aritméticos</strong> e os operadores de <strong>atribuição</strong>.
+    </p>
+    <h2>Operadores Aritméticos</h2>
+    <p>São os operadores responsáveis por operações aritméticas</p>
+    <p>Vamos apresentar a seguir operadores binários (que precisam de dois operandos):</p>
+    <ul>
+        <li>5 <strong class="purple">+</strong> 2 = 7</li>
+        <li>5 <strong class="purple">-</strong> 2 = 3</li>
+        <li>5 <strong class="purple">*</strong> 2 = 10</li>
+        <li>5 <strong class="purple">/</strong> 2 = 2.5</li>
+        <li>5 <strong class="purple"><abbr title="resto da divisão inteira (divisão inteira é uma divisão que termina antes de precisar colocar casas decimais no resultado)">%</abbr></strong> 2 = 1</li>
+        <li>5 <strong class="purple"><abbr title="potenciação">**</abbr></strong> 2 = 25</li>
+    </ul>
+    <h3>Precedência de operadores</h3>
+    <p>Existe uma ordem de prioridade de operações as serem realizadas, essa ordem vai depender de seu operador. A seguir uma lista com essa ordem de precedência:</p>
+    <ol>
+        <li><strong class="purple">()</strong></li>
+        <li><strong class="purple">**</strong></li>
+        <li><strong class="purple">/,%,*</strong></li>
+        <li><strong class="purple">+,-</strong></li>
+    </ol>
+    <p class="obs"><strong>Observação:</strong> Quando os operadores possuem a mesma ordem de precedência eles são resolvidos da esquerda para a direita.</p>
+    <h2>Operadores de Atribuição</h2>
+    <p>Usamos esses operadores para guardar dados, como por exemplo o valor de variáveis. <br> Exemplos de atribuições: <br>
+        <strong>Atribuição Simples</strong> <br>
+    <code> var a = 3 + 4 <br> var b = 4 / 2 <br> var c = 8 % 3</code></p>
+    <p class="obs">O sinal de igual (=) representa atribuição em JS.</p>
+    <p><strong>Auto-atribuições</strong> <br> 
+    <code>var n= 3 <br>
+    n= n + 4 <br>
+var b= 4 <br>
+b=b*b</code></p>
+    <p class="obs"> Como pode ver somamos o próprio valor da variável n com 4 para dar um novo valor para a varável (n=7).</p>
+        <p><strong>Auto-atribuição Simplificadas </strong> <br>
+        <code>var n=4 <br>
+        <abbr title="Isso é o mesmo que dizer que o valor da variável é igual a seu valor antigo + 4, esse comando só pode ser usado se for uma auto-atribuição">n+= 4</abbr></code></p>
+        <p><code> n/=2 <br>
+        n**=2 <br>
+    n-=1</code></p>
+    <h2>Operadores de incremento</h2>
+    <p><strong>pré-incremento</strong> <br>
+        <code>var n=4 <br>
+        <abbr title="Com esse comando, o resultado mostrado será 5">++n</abbr> </code> <br>
+        <strong>Pós-incremento</strong> <br><code>var n= 4 <br>
+    <abbr title="ao executar o comando, o valor mostrado será o mesmo inicial da variável (4), porém se pedirmos para ver o valor da variável após isso, ele está 1 número acima (5)">n++</abbr></code></p>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/justice.ico" type="image/x-icon">
+    <title>Criando Links</title>
+</head>
+<body>
+    <h1>Tipos de <em>Links</em></h1>
+    Existem 2 tipos de <em>links</em>, o externo e o interno.
+    <h2><em>Links</em> Externo</h2>
+    <p>Os <em>links</em> externos são <em>links</em> que quando clicado levam o usuário para 
+        outro site. <a href="exercise9.html">Este <em>links</em> vai te direcionar a outro site</a>
+        Porém esse link acima vai substituir o conteúdo que o usuário está vendo pelo conteúdo da 
+        página linkada. Mas podemos controlar onde o site de destino do link vai abrir usando atributos dentro da tag Anchor.
+        <h3>Como controlar onde o site de destino do link vai abrir</h3>
+        <p>Podemos usar o atributo <strong>target</strong> para controlar onde o site de destino do link vai abrir. Este atributo possui os seguintes valores:
+        <ul>
+            <li><abbr title="vai abrir o link em uma nova janela em branco">_blank</abbr></li>
+        </ul>
+            <p>Ex: <a href="exercise3.2.html" target="_blank">Link</a></p>
+        
+        <ul>
+            <li><abbr title="vai abrir o link na janela ou frame atual (valor padrão do atributo)">_self</abbr></li>
+        </ul>
+            <p>Ex: <a href="exercise3.2.html" target="_self">Link</a></p>
+        <ul>
+            <li><abbr title="vai desfazer todos os frames e abrir o destino no navegador completo">_top</abbr></li>
+        </ul>
+            <p>Ex: <a href="exercise3.2.html" target="_top">Link</a></p>
+        <ul>
+            <li><abbr title="similar ao uso do _top em uma referência à janela mãe">_parent</abbr></li>
+        </ul>
+            <p>Ex: <a href="exercise3.2.html" target="_parent">Link</a></p>
+        <ul>
+            <li><abbr title="caso esteja usando frames, indicar o nome da janela a abrir">nome-do-frame</abbr></li>
+        </ul>
+            <p>Ex: <a href="exercise3.2.html">Link</a></p>
+    Visualmente a princípio o _self, _top e _parent fazem a mesma coisa.</p>
+        <h3>Natureza do destino do link</h3>
+        <p>Com o atributo <strong>rel</strong> podemos indicar qual é a natureza do destino do link usado. <br>
+        Esse atributo pode receber os seguintes valores:
+    <ul>
+        <li><abbr title="indica que o link é para a próxima parte do documento atual">next</abbr></li>
+        <li><abbr title="indica que o link é para a parte anterior do documento atual">prev</abbr></li>
+        <li><abbr title="indica que é um link para o site o autor do artigo atual">author</abbr></li>
+        <li><abbr title="indica que é um link para outro site que não faz parte do site atual">external</abbr></li>
+        <li><abbr title="indica que é um link para um site não endossado, como um link pago">nofollow</abbr></li>
+    </ul></p>
+    <h2><em>Link</em> Interno</h2>
+    <p>Existem 2 tipos de links internos, em um dos tipos é feito a relação com outra página que está dentro do nosso servidor e condiz com nossa página. Ex:
+        Para acessar a próxima página do nosso site <a href="link interno exercise 9.1/exercise9.1p2.html" rel="next">clique aqui</a>.
+    </p>
+    <h2><em>Links</em> para Downloads</h2>
+    <p>Para fazermos links para downloads basta fazer o link diretamente para o arquivo que deseja efetuar o dowload e adicionar 
+        o atributo <strong>download</strong> com o valor configurado para o nome do arquivo a ser baixado e o atributo <strong>type</strong> 
+        para indicar ao navegador que tipo de arquivo está sendo baixado. Temos todos o types para cada tipo de documento no site iana.org media types. Os valores mais usados são:
+        <ul>
+            <li>application/zip</li>
+            <li>application/pdf</li>
+            <li>text/html</li>
+            <li>text/css</li>
+            <li>text/javascript</li>
+            <li>video/mp4</li>
+            <li>video/H264</li>
+            <li>video/JPEG</li>
+            <li>audio/aac</li>
+            <li>audio/mpeg</li>
+            <li>font/ttf</li>
+            <li>image/jpeg</li>
+            <li>image/png</li>
+        </ul>
+        <br>
+        Lembrando que cada um dos tipos acima só deve ser usado se o documento for na formatação que é descrita em cada um dos itens da lista.
+        <br>
+        Ex. de link para download:
+        <a href="../../../../../Downloads/currículo.pdf" download="currículo.pdf" type="application/pdf">Baixe esse pdf</a>. <br>
+    <a href="../../../../../Downloads/Exercicio.zip" download="Exercicio.zip" type="application/zip">Baixe esse zip</a>.</p>
+</body>
+</html>

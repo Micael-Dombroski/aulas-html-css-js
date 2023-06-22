@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif2.ico" type="image/x-icon">
+    <title>Height & Width</title>
+    <style>
+        body {
+            margin: 0px;
+            text-align: justify;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            margin: 10px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+        .div-1 {
+            padding: 10px;
+            border: 5px solid black;
+            background-color: greenyellow;
+        }
+        #div-2 {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Height & Width</h1>
+     <p>Quando definimos a altura e/ou largura de um elemento, estamos definindo esses valores para o conteúdo, 
+         caso criemos uma caixa de 400px de largura e altura e adicionemos um padding de 10px e border de 5px a 
+         largura do quadrado no site será de 430 (10px na esquerda + 10px na esquerda + 5px na esquerda + 5 px 
+         na direita= 30px). <br>
+         Abaixo um exemplo com 2 quadrados de 400px porém um com padding e border com os valores mostrados no texto acima.
+     </p>
+     <nav>
+         <div class="div-1"></div>
+         <div></div>
+     </nav>
+     <p>Com isso notamos que a altura real do elemento é a soma do conteúdo interno, da margin e da borda dele.</p>
+     <h2>Como definir uma altura/largura para o elemento que não será alterada pelo padding nem pelo border?</h2>
+     <p>Escrevemos o seguinte código no CSS (preferencialmente no topo dele): <br>
+    <code><abbr title="Usamos esse símbolo para dizer que isso será aplicado para todos os elementos visíveis na tela da nossa 
+        página">*</abbr> { <br>
+    box-sizing: <abbr title="Valor padrão, indica que a altura/largura indicada é somente para o conteúdo e não para o padding 
+    e o border">content-box</abbr>; <br>
+}</code> <br> O valor que devemos usar é: <br>
+<code>* {<br>
+box-sizing: <abbr title="Esse valor indica que a altura ou largura especificada inclui padding e border">border-box</abbr>; <br>
+}</code></p>
+<nav>
+    <div class="div-1"></div>
+    <div class="div-1" id="div-2"></div>
+    <div></div>
+</nav>
+<p>O quadrado do meio possui os mesmos atributos e valores que o primeiro quadrado no entanto, aplicamos no atributo box-sizing o valor border-box ao invés de deixar o valor padrão.</p>
+<h1>Importante</h1>
+<p>Devemos sempre colocar no estilo do nosso site o comando <strong>* {box-sizing:border-box;}</strong> e <strong>aplicar dentro do body margin:0px</strong>.</p>
+</body>
+</html>

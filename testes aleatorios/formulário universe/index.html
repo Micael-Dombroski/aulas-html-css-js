@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Universe</title>
+    <style>
+        body {
+            background-image: url("universe-3.jpg");
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="pag-name">Universe</h1>
+        <ul type="none">
+            <li><a href="#">Entrar</a></li>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#">Ajuda</a></li>
+        </ul>
+    </header>
+    <nav>
+        <div>
+            <h1 id="Ficha-Insc">Ficha de Inscrição</h1>
+            <form>
+                <div class="ficha-1">
+                    <h2>Informações Básicas</h2>
+                    <p>Nome: <input type="text" name="nome"></p>
+                    <p>Sobrenome: <input type="text" name="sobrenome"></p>
+                    <p>Nascimento: <input type="date" name="data-nascimento"></p>
+                    <p>Sexo: <input type="radio" name="sexo" value="m" checked>Masculino
+                        <input type="radio" name="sexo" value="f">Feminino</p>
+                    <p>País: <input type="text" name="país"></p>
+                    <p>Estado: <input type="text" name="estado"></p>
+                    <p>Cidade: <input type="text" name="cidade"></p>
+                    <p>Email: <input type="email" name="email" placeholder="xxxxx@xxxxx.com"></p>
+                    <p>Email para Contato: <input type="email" name="email-contato" placeholder="xxxxx@xxxxx.com"></p>
+                    <p>Telefone: <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}"></p>
+                    <p>Telefone para Contato: <input type="tel" name="telefone-contato" placeholder="(xx) xxxxx-xxxx" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}"></p>
+                    <p>Horário Disponível: De <input type="time" horário-1> até <input type="time" name="horário-2"></p>
+                </div>
+                <div class="ficha-2">
+                    <h2>Informações Adicionais</h2>
+                    <p>Assinale abaixo o seu grau de escolaridade: <br>
+                        <input type="radio" name="escolaridade" value="Fund-Inc"> Fundamental Incompleto <br>
+                        <input type="radio" name="escolaridade" value="Fund-Comp"> Fundamental Completo <br>
+                        <input type="radio" name="escolaridade" value="EM-Inc"> Ensino Médio Incompleto <br>
+                        <input type="radio" name="escolaridade" value="EM-Comp"> Ensino Médio Completo
+                    </p>
+                    <p>Assinale abaixo os programas de computador que você domina:
+                        <br><input type="checkbox" name="prog" value="word">Word
+                        <br><input type="checkbox" name="prog" value="excel">Excel
+                        <br><input type="checkbox" name="prog" value="access">Access
+                        <br><input type="checkbox" name="prog" value="powerpoint">Power Point
+                    </p>
+                    <p>Você faz ou já fez algum curso? <br>
+                    <input type="radio" name="curso" value="s">Sim
+                    <input type="radio" name="curso" value="n">Não</p>
+                    <p>Qual curso você fez/faz? (Ignore caso a sua resposta para a pergunta anterior seja Não) <br>
+                    <input type="text" name="nome-curso" placeholder="Nome do curso"></p>
+                    <p>Gostaria de receber email sobre novidades do nosso site? <br>
+                        <input type="radio" name="notificação" value="s">Sim 
+                        <input type="radio" name="notificação" value="n">Não</p>
+                        <section class="campo">
+                            <label for="sugestão">Caso queira dar sugestões para melhorar o site, escreva-as na caixa de texto abaixo:</label> <br>
+                            <textarea row="6" name="sugestão" placeholder="Escreva sua sugestão aqui"></textarea>
+                        </section>
+                </div>
+                    <p class="Fim-Ficha">
+                        <input type="submit" name="Enviar Dados" value="Enviar">
+                        <input type="reset" name="Apagar Campos" value="Limpar">
+                    </p>
+            </form>
+        </div>
+    </nav>
+</body>
+</html>

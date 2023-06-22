@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif2.ico" type="image/x-icon">
+    <title>Condições parte 2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        .condmult {
+            color: crimson;
+        }
+        .bloco {
+            background-color: rgb(70, 70, 70);
+            padding: 2px;
+            margin-top: 2px;
+            border-radius: 2px;
+        }
+        .break {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Condições</h1>
+    <p>Existem 2 tipos de condição, a simples (<code><strong>if</strong></code>) 
+    e a composta (<code><strong>if / else</strong></code>).</p>
+    <h2>Condições Aninhadas</h2>
+    <p>São condições compostas com outras condições dentro de sua estrutura. Ex1:   
+    </p>
+    <p style="text-align: center;">Condição 1 = <strong style="color: red;">(</strong>true > <code style="background-color:aquamarine;">
+        Condição 2 = (true > <code style="background-color: cornflowerblue;">Condição 4 = (true) or (false)</code>)
+            or (false)
+    </code><strong style="color: red;">)</strong> or <strong style="color: lime;">(</strong>false > <code style="background-color:aquamarine;">
+        Condição 3 > (true) or (false > <code style="background-color: cornflowerblue;">
+            Condição 5 =(true)
+                or (false)
+        </code>)
+    </code><strong style="color: lime;">)</strong></p>
+    <p>Ex2:</p>
+    <pre><code>
+    if (condição 1) {
+        bloco 1
+    } else {
+        if (Condição 2) {
+            bloco 2
+        } else {
+            bloco 3
+        }
+    }
+    </code></pre>
+    <h2>Condição Múltipla</h2>
+    <p>Essa estrutura executa blocos de acordo com respostas fixas, tendo várias  possibilidades 
+        de blocos a serem executados, porém, só 1 deles será executado no final. Não é aplicavel para 
+        todo tipo de situação, porém é muito útil para situação específica.Ex:
+    </p>
+    <pre  style="background-color: black; color: white; padding: 20px; display: block; margin-left: auto; margin-right: auto;width: 200px;"><code>
+    <strong class="condmult"><abbr title="Funciona como a estrutura Caso">switch</abbr> (</strong>Expressão<strong class="condmult">)</strong> <strong style="color: rgb(255, 196, 0);">{</strong>
+        <strong class="condmult">case</strong> <abbr title="Caso 1">valor 1</abbr><strong class="condmult">:</strong>
+            <strong class="bloco">bloco 1</strong>
+            <strong class="break"><abbr title="Deve ser inserido no fim de cada caso">break</abbr></strong>
+        <strong class="condmult">case</strong> <abbr title="Caso 2">valor 2</abbr><strong class="condmult">:</strong>
+            <strong class="bloco">bloco 2</strong>
+            <strong class="break"><abbr title="Deve ser inserido no fim de cada caso">break</abbr></strong>
+        <strong class="condmult">case</strong> <abbr title="Caso 3">valor 3</abbr><strong class="condmult">:</strong>
+            <strong class="bloco">bloco 3</strong>
+            <strong class="break"><abbr title="Deve ser inserido no fim de cada caso">break</abbr></strong>
+        <strong class="condmult"><abbr title="Outro Caso, é executado caso nenhum dos anteriores seja executado">default:</abbr></strong>
+            <strong class="bloco">bloco 4</strong>
+            <strong class="break"><abbr title="Deve ser inserido no fim de cada caso">break</abbr></strong>
+    <strong style="color: rgb(255, 196, 0);">}</strong>
+    </code></pre>
+    <p>Esse estrutura não funciona com intevalos (Ex: Se 1 até 6 faça) só com valores fixos (Ex: Se 2 faça).</p>
+    
+    <script>
+        window.alert('Vamos ver mais um pouco sobre condições ;)')
+    </script>
+</body>
+</html>

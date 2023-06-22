@@ -1,0 +1,92 @@
+O aniversário de Creuza está se aproximando mais ela não sabe quantas velas colocar em cima do bolo, pois ela não sabe quantos anos ela vai fazer, mas ela sabe quando nasceu, abaixo veremos um algoritmo que irá permitir Creuza saber quantos anos ela vai fazer e consequentemente, quantas velas colocar em cima do bolo.
+
+
+	Algoritmo "Idade de Creuza"
+	//Esse algoritmo é usado para descobrir a idade que Creuza irá fazer
+	var
+		Ano_Atual, Ano_Nasc, Idade: Inteiro
+		
+		Ano_Atual: 0
+		Ano_Nasc: 0
+		Idade: 0
+	inicio
+		Escreval ("Em que ano nós estamos? ")
+		Leia (Ano_Atual)
+		Escreval ("Em que ano nasci? ")
+		Leia (Ano_Nasc)
+		Idade <- Ano_Atual - Ano_Nasc
+		Escreval ("Eu tenho que colocar ", Idade, " velas no meu 			bolo")
+	fimalgoritmo
+
+	Algoritmo "Conversão de dólar para real"
+	var
+		Dinheiro_Creuza_Reais, Cotacao_Dolar, 
+		Dinheiro_Creuza_Dolar: Inteiro
+			
+		
+		Dinheiro_Creuza_Reais: 0
+		Cotacao_Dolar: 0
+		Dinheiro_Creuza_Dolar: 0	
+	inicio
+		Escreval ("Quantos Reais eu tenho? ")
+		Leia (Dinheiro_Creuza_Reais)
+		Escreval ("Qual é o valor da cotação do dólar hoje? ")
+		Leia (Cotacao_Dolar)
+		Dinheiro_Creuza_Dolar<-Dinheiro_Creuza_Reais/Cotacao_Dolar
+		Escreval ("Convertendo meus R$ ", Dinheiro_Creuza_Reais, " 
+		reais para dólares, eu terei US$ ", Dinheiro_Creuza_Dolar, " 
+		dólares")
+	fimalgoritmo
+
+	Algoritmo "Conversão ºF para ºC"
+	var
+		Temp_Celsius, Temp_Fire: Real
+	inicio
+		Escreval ("Qual a temperatura em ºF hoje nos EUA? ")
+		Leia (Temp_Fire)
+		Temp_Celsius <- (Temp_Fire-32)/1.8
+		Escreval ("Essa temperatura equivale a ", Temp_Celsius, "ºC")
+	fimalgoritmo
+
+	Algoritmo "Taxa por trazer compras do exterior"
+	var
+		preco, imposto: Real
+	inicio
+		Escreval ("Qual o valor do produto?")
+		Leia (preco)
+		imposto <- preco*0.6
+		Escreval ("Terei que pagar um imposto de US$ ", taxa, " dólares pelo produto que comprei nos EUA")
+	fimalgoritmo
+
+Para restringirmos a quantidade de números antes e depois das casas decimais devemos escrever dessa forma:
+		x:y
+x=quantidade de números antes das casas decimais
+y=quantidade de números depois das casas decimais
+
+Ex: 
+
+	algoritmo "Soma"
+	var
+		N1,N2, R: Real
+	inicio
+		Escreval ("Digite um número: ")
+		Leia (N1)
+		Escreval ("Digite outro número: ")
+		Leia (N2)
+		R <- N1*N2
+		Escreval ("O resultado é ", R:5:2)
+	fimalgoritmo
+					Nesse exemplo decidimos que o número poderá tem 5 casas antes da vírgula/ponto e somente 2 depois. Ex: 11111.11
+
+	Algoritmo "Empréstimo"
+	var
+		emprestimo, n_parcelas, valor_com_juros, valor_parcelas: Real
+	inicio
+		Escreval ("Qual o valor do empréstimo?")
+		Leia (emprestimo)
+		Escreval ("Quantas parcelas?")
+		Leia (n_parcelas)
+		valor_com_juros <- emprestimo*1.2
+		valor_parcelas <- (emprestimo*1.2)/n_parcelas
+		Escreval ("Vou pagar R$ ", valor_com_juros, " em " n_parcelas, " parcelas de R$ ", valor_parcelas, " reais")
+	fimalgoritmo

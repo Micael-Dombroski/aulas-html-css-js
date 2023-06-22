@@ -1,0 +1,251 @@
+				Operadores relacionais
+Criam uma relação entre variáveis ou expressões e gerar resultados lógicos. Os resultados lógicos variam entre Verdadeiro ou Falso.
+
+			Operadores Relacionais Existentes:
+		> Maior que
+		< Menor que
+		>= Maior ou igual a
+		<= Menor ou igual a
+		= Igual a
+		<> Diferente de
+
+	Abaixo vamos comparar valores numéricos com esses operadores 		lógicos:
+		algoritmo "teste 1"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (A>B)
+		fimalgoritmo
+							Resultado:Falso
+	Nesse exemplo, definimos os valores das variáveis A,B e C e 	pedimos para que o programa mostre o resultado da operação 	relacional A>B, o resultado e Falso, pois 2 não é maior que 	3.
+
+		algoritmo "teste 2"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (A+B=C)
+		fimalgoritmo
+							Resultado:Verdadeiro
+	Nesse exemplo o resultado da opreção relacional  A+B=C é 		verdadeira pois 2+3 é igual a 5.
+
+		algoritmo "teste 3"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (A^2>=B)
+		fimalgoritmo
+							Resultado:Verdadeiro
+	Nesse exemplo dizemos ao programa que 2^2 é maior ou igual a 	3 e ele nos responde que é verdadeiro essa operação 	relacional, por 2^2 	é 4 e 4 é maior que 3.
+
+		algoritmo "teste 4"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (A^B<>C)
+		fimalgoritmo
+							Resultado:Verdadeiro
+	Nesse exemplo dizemos ao programa que 2^3 difere de 5 e ele 	nos responde que a operação relacional é verdadeira, pois 2^3 	é 8.
+
+		algoritmo "teste 5"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (A^C=5^A)
+		fimalgoritmo
+							Resultado:Falso
+	Nesse exemplo dizemos ao programa que 2^5 é igual a 5^2 e ele 	nos responde que a operação relacional é falsa, pois 2^5 é 	igual a 32 e 	5^2 é igual a 25, logo os 2 resultados não são 	iguais.
+
+
+			Operadores Lógicos
+Assim como os operadores relacionais, os operadores lógicos também nos devolvem um resultado lógico, no entanto eles não servem para comparar resultados de expressões ou números, eles apenas servem para comparar outros resultados lógicos. No Visualg temos 3 tipos de operadores lógicos. Eles serão mostrados abaixo:
+
+	Operador lógico E
+	Vamos considerar 2 valores, P e Q cada um com seu conjunto de valores Verdadeiros e Falsos.
+	P	Q	E
+	V	V	V
+	V	F	F
+	F	V	F
+	F	F	F	
+
+	No Operador Lógico E, só teremos o resultado Verdadeiro apenas onde as premissas P e Q forem verdadeiras, em todos os resultados lógicos restantes serão falsos.
+
+
+	Operador lógico OU
+	P	Q	OU
+	V	V	V
+	V	F	V
+	F	V	V
+	F	F	F
+
+	No Operador Lógico OU, só vai nos retornar o resultado Falso, no caso onde as duas premissas forem Falsas, em todos os outros casos o resultado lógico será Verdadeiro.
+
+
+	Operador lógico NÃO
+	P	NÃO P
+	V	F
+	V	F
+	F	V
+	F	V
+
+	O Operador Lógico NÃO, faz a inversão da sua premissa, ele faz a inversão do resultado lógico.
+
+	Vamos fazer abaixo 2 testes lógicos usando esses operadores:
+
+
+		algoritmo "teste 6"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (verdadeiro e falso)
+		fimalgoritmo
+										Resultado:Falso
+	Como no exemplo acima usamos o operador lógico E, o resultado é gerado é falso, pois temos 2 resultados, "verdadeiro" e "falso", como para que o resultado gerado seja verdadeiro com o operador lógico E, ambos os resultados devem ser verdadeiro.
+
+
+		algoritmo "teste 7"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva ((A=B) ou (C>A))
+		fimalgoritmo
+										Resultado:Verdadeiro
+
+	No exemplo acima temos resultados lógicos gerados por operadores relacionais para que esses resultados sejam usados em um operador lógico (No caso do exemplo acima usamos o operador lógico OU), como com o operador lógico OU basta apenas um dos resultados lógicos anteriores ser verdeiro e C é maior que A, o resultado gerado pelo operador lógico O é Verdadeiro.
+
+
+		algoritmo "teste 7"
+		var
+			A, B, C: Inteiro
+		inicio
+			A <- 2
+			B <- 3
+			C <- 5
+			Escreva (não ((A=B) ou (C>A)))
+		fimalgoritmo
+										Resultado:Falso
+
+	No exemplo acima usamos o mesmo exemplo anterior porém deixamos o operados lógico OU dentro do operador lógico NÃO, com isso, após o resultado do operador lógico OU for registrado como Verdadeiro, o operador lógico NÃO vai inverter o Resultado Lógico, e exibindo apenas o resultado Falso.
+
+Devemos colocar todas as nossas comparações relacionais entre () pois elas que vão nos gerar os resultados lógicos que os operadores lógicos vão usar.
+
+	Ordem de precedência geral numa operação que tenha operadores aritméticos, relacionais e lógicos ao mesmo tempo:
+
+	A maior ordem de precedência são os operadores aritméticos (Lembrando que a ordem de precedência dos operadores aritméticos é essa: (),^,*/,+-).
+	Depois temos os operadores relacionais (Todos os operadores relacionais tem a mesma ordem de precedência, sendo executados sempre da esquerda para a direita)
+	Por fim serão executado os operadores lógicos (Onde a ordem de precedência é: E, OU, NÃO).
+
+
+Abaixo vamos fazer alguns exemplos de códigos mais complexos com o que foi ensinado até agora:
+
+			algoritmo "teste 8"
+		var
+			L1, L2, L3: Real
+			EQ, ES, TRI: Logico
+		inicio
+			Escreva ("Digite o primeiro lado: ")
+			Leia (L1)
+			Escreva ("Digite o segundo lado: ")
+			Leia (L2)
+			Escreva ("Digite o terceiro lado: ")
+			Leia (L3)
+			TRI <- (L1 < L2 + L3) e (L2 < L1 + L3) e (L3 < L1 + L2)
+			EQ <- (L1 = L2) e (L2 = L3)
+			ES <- (L1 <> L2) e (L2 <> L3) e (L1 <> L3)
+			Escreval ("O triangulo e EQUILATERO? ", EQ)
+			Escreval ("O triangul0 e ESCALENO? ", ES)
+		fimalgoritmo
+
+
+	Nesse exemplo criamos um algoritmo para sabermos se o triângulo formado pelos valores que o usuário inserir será equilatero ou escaleno, para isso, após o usuário inserir os valores, o algoritmo fará testes relacionais, na primeira linha fazemos os testes relacionais para ver se com os valores inseridos é possível fazer um triângulo; na segunda linha fazemos testes relacionais para ver se os valores de cada lado é igual e com o resultados lógicos gerados determinamos com o operador lógico E se o triângulo é equilatero; na terceira linha fazemos testes relacionais para ver se os valores de cada lado é diferente e com os resultados lógicos gerados determinamos com o operador lógico E se o triângulo é escaleno. Exemplos de resultados que podem ser gerados:
+
+			algoritmo "teste 9"
+		var
+			L1, L2, L3: Real
+			EQ, ES, TRI: Logico
+		inicio
+			Escreva ("Digite o primeiro lado: ") (Ex: 1)
+			Leia (L1)
+			Escreva ("Digite o segundo lado: ")  (Ex: 1)
+			Leia (L2)
+			Escreva ("Digite o terceiro lado: ")  (Ex: 1)
+			Leia (L3)
+			TRI <- (L1 < L2 + L3) e (L2 < L1 + L3) e (L3 < L1 + L2)
+			EQ <- (L1 = L2) e (L2 = L3)
+			ES <- (L1 <> L2) e (L2 <> L3) e (L1 <> L3)
+			Escreval ("Pode formar um TRIANGULO? , TRI")
+			Escreval ("O triangulo e EQUILATERO? ", EQ)
+			Escreval ("O triangul0 e ESCALENO? ", ES)
+		fimalgoritmo
+
+			Resultado: Pode formar um TRIANGULO? VERDADEIRO
+					 O triangulo e EQUILATERO? VERDADEIRO
+					 O triangul0 e ESCALENO? FALSO
+
+			algoritmo "teste 10"
+		var
+			L1, L2, L3: Real
+			EQ, ES, TRI: Logico
+		inicio
+			Escreva ("Digite o primeiro lado: ") (Ex: 1)
+			Leia (L1)
+			Escreva ("Digite o segundo lado: ") (Ex: 2)
+			Leia (L2)
+			Escreva ("Digite o terceiro lado: ") (Ex: 3)
+			Leia (L3)
+			TRI <- (L1 < L2 + L3) e (L2 < L1 + L3) e (L3 < L1 + L2) 
+			EQ <- (L1 = L2) e (L2 = L3)
+			ES <- (L1 <> L2) e (L2 <> L3) e (L1 <> L3)
+			Escreval ("Pode formar um TRIANGULO? , TRI")
+			Escreval ("O triangulo e EQUILATERO? ", EQ)
+			Escreval ("O triangul0 e ESCALENO? ", ES)
+		fimalgoritmo
+
+			Resultado: Pode formar um TRIANGULO? FALSO
+					 O triangulo e EQUILATERO? FALSO
+					 O triangul0 e ESCALENO? VERDADEIRO
+
+
+			algoritmo "teste 11"
+		var
+			L1, L2, L3: Real
+			EQ, ES, TRI: Logico
+		inicio
+			Escreva ("Digite o primeiro lado: ") (Ex: 2)
+			Leia (L1)
+			Escreva ("Digite o segundo lado: ") (Ex: 3)
+			Leia (L2)
+			Escreva ("Digite o terceiro lado: ") (Ex: 2)
+			Leia (L3)
+			TRI <- (L1 < L2 + L3) e (L2 < L1 + L3) e (L3 < L1 + L2)
+			EQ <- (L1 = L2) e (L2 = L3)
+			ES <- (L1 <> L2) e (L2 <> L3) e (L1 <> L3)
+			Escreval ("Pode formar um TRIANGULO? , TRI")
+			Escreval ("O triangulo e EQUILATERO? ", EQ)
+			Escreval ("O triangul0 e ESCALENO? ", ES)
+		fimalgoritmo
+
+			Resultado: Pode formar um TRIANGULO? VERDADEIRO
+					 O triangulo e EQUILATERO? FALSO
+					 O triangul0 e ESCALENO? FALSO
+

@@ -1,0 +1,36 @@
+body {
+backgrounde-color: black;
+color:white;
+}
+h1 {
+    font-size: 45px;
+    color:aqua;
+}
+p {
+    font-size: 20px;
+    color: gold; 
+}
+.topo {
+    background-color:aqua;
+}
+.menu {
+    background-color: pink;
+}
+.conteudo {
+    background-color:blueviolet;
+    float: right;
+    width: 80%;
+    box-sizing: border-box;
+}
+.rodape {
+    background-color: red;
+}
+.anuncio {
+    background-color: green;
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+}
+div {
+    padding: 10px;
+}

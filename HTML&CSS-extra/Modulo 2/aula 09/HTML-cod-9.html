@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Margin e Padding</title>
+    <style>
+        .padding {
+            border: 2px solid;
+            padding: 20px;
+        }
+        .margin {
+            border: 2px solid;
+            margin: 20px;
+        }
+        code {
+            border: 2px solid;
+            padding: 20px 10px 50px 30px;
+        }
+        .padding-2 {
+            border: 2px solid;
+            padding: 20px 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>Todo elemento que é visualizado na tela possui essas 3 propriedades, o <strong>conteúdo</strong>, a <strong>borda</strong> e o <strong>padding</strong>, o <strong>margin</strong>.</p>
+    <h1>Margin</h1>
+    <p>Usamos  atributo "margin" para criar um distância entre o elemento e os demais elementos ou mesmo as bordas do navegador. Ex:</p>
+    <p><code class="margin">&lt;p style="border: 2px solid; margin: 20px;"&gt;Parágrafo&lt;/p&gt;</code></p>
+    <p>Podemos também aplicar o margin para somente uma das bordas especificando, desta forma: "margin-top".</p>
+    <h1>Padding</h1>
+    <p>Usamos o atributo "padding" para aumentar a distancia do contéudo interno do elemento e a borda dele. Ex: </p>
+    <p><code class="padding">&lt;p style="border: 2px solid; padding: 20px;"&gt;Parágrafo&lt;/p&gt;</code></p>
+    <p>Podemos também aplicar o padding para somente uma das bordas especificando, desta forma: "padding-top".</p>
+    <h2>Especificando o margin ou padding de todos os lados quando usar valores diferentes</h2>
+    <p>Para isso sempre seguimos essa ordem de inserção de valores: cima, direita, baixo, esquerda. Ex:</p>
+    <p><code>&lt;p style="margin: 20px 10px 50px 5px;"&gt;Parágrafo&lt;/p&gt;</code></p>
+    <p>Se colocarmos somente 2 valores, o primeiro valor será aplicado para cima e para baixo e o segundo para a direita e para a esquerda.</p>
+    <p><code class="padding-2">&lt;p style="border: 2px solid; padding: 20px 50px;"&gt;Parágrafo&lt;/p&gt;</code></p>
+</body>
+</html>

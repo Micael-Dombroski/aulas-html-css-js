@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif.ico" type="image/x-icon">
+    <title>Variáveis Compostas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+        p, pre {
+            text-align: justify;
+        }
+        td {
+            width: 100px;
+        }
+        #central td{
+            height: 100px;
+            border: 3px solid aqua;
+            font-size: 80px;
+            color: orange;
+        }
+        #keys td {
+            font-size: 30px;
+            text-align: center;
+            color: crimson;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <p>As Arrays são também conhecidas como vetor e variáveis compostas, pois 
+        diferentemente das variáveis comuns que só podem armazenar um valor 
+        por vez, as Arrays são capazes de armazenar múltiplos valores.
+    </p>
+    <p>Um array é uma variável que tem vários elementos, cada elemento é composto 
+        por seu valor e por uma chave de identificação.
+    </p>
+    <p>Para declarar uma variável composta basta criar uma variável e colocar 
+        entre '[]' os valores dela, os valores devem estar separados por uma vírgula.
+    </p>
+    <p>Ex:</p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+        <strong style="color: crimson;">var</strong> num = <strong style="color: aqua;">[ </strong><strong style="color: orange;">5</strong> , <strong style="color: orange;">8</strong> , <strong style="color: orange;">4</strong> <strong style="color: aqua;">]</strong>
+    </code></pre>
+    <table style="background-color: black; margin: auto;" abbr="variável composta com 3 espaços de armazenamento disponíveis">
+        <tr>
+            <td style="color: white; text-align: left; font-size: 20px;">num</td>
+        </tr>
+        <tr id="central" abbr="elementos e seus respectivos valores">
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
+        </tr>
+        <tr id="keys" abbr="chaves de identificação">
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <p>No exemplo acima, os quadrado negro representa a Array <code>num</code>, os quadrados de 
+        borda azul são seus elementos e os números laranjas são seus valores, os números vermelhos 
+        são as chaves de identificação de cada um desses elementos, como você pode notar sempre começamos 
+        a contar a partir do número 0.</p>
+    <p>Como você pode ver, nesse exemplo o Array tem apenas 3 elementos, mas caso você queira inserir 
+        um novo valor sem precisar substituir outro valor por esse novo, você pode adicionar outro elemento 
+        para o Array da seguinte forma:
+    </p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+        num  <strong style="color: aqua;">[</strong><strong style="color: crimson;">3</strong><strong style="color: aqua;">]</strong> = <strong style="color: orange;">6</strong>
+    </code></pre>
+    <p>Aqui declaramos que a variável composta <code>num</code> vai receber o valor 6 no elemento que possui a 
+    chave de acesso '3' mas como essa chave não existe ela  será automaticamente criada.</p>
+    <p>Caso você queira colocar um valor novo na Array sem ter que substituir outro valor e não quer ter que saber 
+        qual é a última chave de acesso existente na sua Array, você pode fazer isto:
+    </p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+        num<strong style="color: aqua;">.push(</strong><strong style="color: orange;">7</strong><strong style="color: aqua;">)</strong>
+    </code></pre>
+    <p>Desta  forma você não precisa se preocupar em saber qual foi a última posição inserida na Array.</p>
+    <p>Caso você queira saber quantos elementos tem um Array basta você fazer como mostra o exemplo abaixo:</p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+        num<strong style="color: aqua;">.length</strong>
+    </code></pre>
+    <p>Caso você queira que os valores fiquem organizados em ordem crescente na Array basta você usar o seguinte comando:</p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+        num<strong style="color: aqua;">.sort()</strong>
+    </code></pre>
+    <p>Para buscarmos valores dentro do Vetor usamos o comando:</p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+        num<strong style="color: aqua;">.indexOf(</strong><strong style="color: orange;">7</strong><strong style="color: aqua;">)</strong>
+    </code></pre>
+    <p>Esse comando nos retorna a chave de acesso do valor escolhido na Array, caso o valor buscado na Array não exista o comando retornará o valor 
+        -1 que indica que não possui esse valor na Array.
+    </p>
+</body>
+</html>

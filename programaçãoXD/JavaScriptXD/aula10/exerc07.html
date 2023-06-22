@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>DOM Events</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            margin: 20px;
+        }
+        #area {
+            font: normal 20pt Arial;
+            background-color: rgb(42, 139, 42);
+            color: white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /* Alinha verticalmente o texto */
+            text-align: center; /* Alinha horizontalmente o texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Relembrando alguns assuntos...</h1>
+    <p><strong>DOM</strong> é o <strong>D</strong>ocument <strong>O</strong>bject 
+        <strong>M</strong>odel, ele é um facilitador que existe dentro do seu 
+        navegador para dar acesso aos elementos diretamente pelo JS.</p>
+    <p>A Árvore DOM é mostra todos os elementos presentes na página, desde 
+        o que abriga todos até último abrigado.</p>
+    <p>Podemos chamar elementos do HTML no JS usando as seguintes técnicas: 
+        <code>TagName</code> (pelo nome da tag), <code>ID</code> (pelo ID colocado no elemento), 
+        <code>Name</code> (pelo nome colocado no elemento), 
+        <code>ClassName</code> (pela classe colocado no elemento) e 
+        <code>querySelector</code> (faz a seleção através de elementos CSS).</p>
+    <h1>DOM Events</h1>
+    <p>Eventos são tudo o que pode acontecer com determinado elemento. Ex: Avisar que o 
+        cursos do mouse está dentro de uma div (<code>mouseneter</code>), caso o mouse seja movido dentro de uma div 
+        avisar que o mouse está se movendo dentro da div (<code>mousemove</code>), caso seja mantido o botão de clicar 
+        dentro da div avisar que você estar pressionando o clique na div (<code>mousedown</code>), 
+        avisar quando você parar de pressionar o botão de clicar do mouse sobre a div (<code>mouseup</code>), 
+        avisar quando você der um clique rápido na div (<code>click</code>), avisar quando você remover 
+        o cursor do mouse de dentro da div (<code>mouseout</code>). Existem muitos outros eventos possíveis. 
+        Podemos ver outros eventos possíveis em outros elementos pesquisando "JS DOM event referent" e entrar no site da mozzila, 
+        ou também, você pode ser encaminhado para o site direto, <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_black">
+            Clicando Aqui</a>
+    </p>
+    <h2>Funções</h2>
+    <p>É um conjunto de linhas que só vão ser executadas quando determinado evento ocorrer, esse conjunto de 
+        linhas é chamado de bloco, que é colocado entre "{}". Devemos nomear o bloco de <code>function</code>, 
+        porém só nomeando assim, será criado uma função anônima, devemos complementar com o nome da ação executada 
+        pelo bloco, também podemos complementar com alguns parâmetros entre "()". Ex: <br>
+        <code>function ação (parâmetros) { <br>
+        bloco <br>
+        }</code>
+    </p>
+    <p>No exemplo criamos funções em HTML para a div, olhe o código para mais detalhes.</p>
+    <p>Os ententos podem ser configurados tanto na parte HTML quanto na parte JS, fica a escolha do desenvolvedor.</p>
+    <p><abbr title="Eventos feitos em HTML">
+        Coloque o mouse dentro da div, clique nela, retire o
+            mouse de dentro dela
+    </abbr>, <abbr title="Eventos feitos em JS">pressione o clique sobre ela, dê um clique duplo nela e gire o scroll do mouse dentro da div</abbr>...</p>
+        <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--Foi criado no HTML a função clicar-->
+            Interaja...
+        </div>
+    
+    <script>
+        addEventListener('mousedown', clicando) /* Eventos criados em JS*/
+        addEventListener('dblclick', doubleclick)
+        addEventListener('mousewheel', girar)
+        window.document.alert('Estamos vendo eventos')
+        function clicar (){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar () {
+            var b = window.document.getElementById('area')
+            b.innerText = 'Entrou!'
+            b.style.background = 'blue'
+        }
+        function sair () {
+            var c = window.document.getElementById('area')
+            c.innerText = 'Saiu!'
+            c.style.background = 'black'
+        }
+        function clicando () {
+            var d = window.document.getElementById('area')
+            d.innerText =  'Segurou'
+            d.style.background = 'purple'
+        }
+        function doubleclick () {
+            var e = window.document.getElementById('area')
+            e.innerText = 'Clique Duplo!'
+            e.style.background = 'gray'
+        }
+        function girar () {
+            var f = window.document.getElementById('area')
+            f.innerText = 'Roda-Roda!'
+            f.style.background = 'lime'
+        }
+    </script>
+</body>
+</html>

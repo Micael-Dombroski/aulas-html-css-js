@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Tabelas</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        table {
+            margin: auto;
+            width: 600px;
+            border: 1px solid white;
+            text-align: center;
+            background-color: black;
+        }
+        td {
+            border: 5px solid red;
+        }
+        th {
+            border: 5px solid green;  
+        }
+        table thead {
+            background-color: rgb(86, 202, 86);
+        }
+        table tbody {
+            background-color: rgb(206, 66, 66);
+        }
+        td, th {
+            padding: 10px;
+
+        }
+        td:hover {
+            border: 5px solid purple;
+            background-color: rgb(168, 73, 168);
+        }
+        tbody tr:nth-child(even) {
+            background-color: rgb(63, 63, 158); /* Faz com que toda as células das linhas pares fiquem com essa cor de fundo */
+        }
+    </style>
+</head>
+<body>
+    <h1>Estilizando Tabelas com CSS</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Título Coluna 1</th>
+                <th>Título Coluna 2</th>
+                <th>Título Coluna 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>&#x274C;</td>
+                <td>0</td>
+                <td>&#x2714;</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM início</title>
+    <style>
+        body {
+            background-color: black;
+            color: aqua;
+        }
+        code {
+            color: red;
+        }
+        .comando-selecion {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="parag">Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <h1 name="h">Iniciando estudos DOM</h1>
+    <p>DOM significa <code>D</code>ocument <code>O</code>bject <code>M</code>odel (modelo de objetos para documentos), 
+        é um conjunto de objetos dentro do navegador que vai dar acesso aos 
+        componentes internos do website.</p>
+    <h2>Árvore DOM</h2>
+    <p>É essencial sabermos fazer a árvore DOM para nosso website, é nela onde fazemos um 
+        mapa dos comandos que vão ser executados nele durante a estadia do usuário.
+    </p>
+    <p>A Árvore DOM comença pela raíz, que é chamado de <code>window</code>, tudo no JS está dentro 
+     desse objeto. Dentro desse objeto temos vários outros, como por exemplo, 
+     <code><abbr title="informa a URL do site, ou seja, a localização do seu site, a página que você está, a página anterior, etc">location</abbr></code>, 
+     <code><abbr title="o documento atual">document</abbr></code> e 
+     <code><abbr title="guarda o caminho de onde você veio e para onde você vai, facilitando a navegação dentro do site">history</abbr></code>, etc.</p>
+    <p>Dentro de <code>document</code> temos um outro objeto muito importante, o <code>HTML</code>, que abriga a parte HTML do nosso site, 
+    dentro desse objeto, temos dois objetos principais, o <code>head</code> e o <code>body</code>, representando a cabeça e o corpo do nosso código HTML 
+    respectivamente.</p>
+    <p>É importante saber que todo objeto que abriga outro é <code>parent</code> do objeto abrigado, e todo objeto que se abriga em outro objeto é 
+    <code>child</code> do objeto que o abriga.</p>
+    <p>Dentro de <code>head</code> temos os objetos filho (<code>child</code>) <code>meta</code> e <code>title</code> por exemplo, já <code>body</code> 
+    é objeto pai (<code>parent</code>) dos objetos <code>h1</code>, <code>p</code> e <code>div</code> por exemplo. E por fim, dentro do objeto 
+    <code>p</code> temos o objeto filho (<code>child</code>) <code>strong</code>.</p>
+    <p>A árvore DOM possui níveis de hierarquia, onde a raíz é o mais alto nível hirarquico, quando mais longe dela o objeto estiver, mais baixo será seu nível 
+        na hierarquia.
+    </p>
+    <h3>Exemplificando Hierarquia</h3>
+    <ol>
+        <li><code>window</code></li>
+        <li><code>document</code></li>
+        <li><code>HTML</code></li>
+        <li><code>body</code></li>
+        <li><code>p</code></li>
+        <li><code>strong</code></li>
+    </ol>
+    <h2>Elementos</h2>
+    <p>É tudo o que aparece na árvore DOM, podemos selecionar eles para navegar dentro da árvore DOM.</p>
+    <h3>Selecionando Elementos</h3>
+    <p>Aqui serão mostradas 5 formas de Selecionar um Elemento, sendo elas:</p>
+    <ul>
+        <li>por Marca: Esse comando está dentro de <code>document</code>, esse comando permite que selecionemos mais 
+        mais de um objeto (Ex: o HTML possui duas tags p), o comando é esse: <code class="comando-selecion">getElementsByTagName()</code></li>
+        <li>por ID: <code class="comando-selecion">getElementByID()</code></li>
+        <li>por Nome: <code class="comando-selecion">getElementsByName()</code></li>
+        <li>por Classe: <code class="comando-selecion">getElementsByClassName()</code></li>
+        <!--Todo os comandos getElements devemos especificar o elementro dentro de [] sendo 0 o primeiro, no ID só aparece getElement, logo, não é 
+        necessário, já que não pode haver ID iguais no código-->
+        <li>por Seletor: é uma forma nova e é mais recomendada, usamos o comando: <code class="comando-selecion">querySelector()</code> e 
+            <code class="comando-selecion">querySelectorAll()</code></li>
+    </ul>
+    <a href="#">(Ler Comentário sobre os comandos listados acima no VisualStudio)</a>
+    <br>
+    <br>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName("p")[1] //No [] colocamos qual dos elementos com essa tag queremos selecionar, se é o primeiro [0], segundo [1], oitavo [7], etc
+        window.document.write("No segundo parágrafo está escrito assim: ", p1.innerText) //Com isso, escrevemos no final da página novamente o primeiro parágrafo dela, porém ele só copia o texto, ele não copiará a formatação
+        p1.style.color = 'Purple' //Com esse comando mudamos a cor das letras do primeiro parágrafo
+        window.document.write('No segundo parágrafo está escrito assim: ', p1.innerHTML)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'Pink'
+        d.style.color = 'Black'
+        d.innerText = 'É noite de cesta'
+        var titulo = window.document.getElementsByName('h')[0]
+        titulo.style.color = 'Pink'
+        var par = window.document.querySelector('p#parag') //Usamos o "#" pq estamos pegando o p com id parag, se fosse class, usariamos "."
+        par.style.background = 'Red'
+    </script>
+</body>
+</html>

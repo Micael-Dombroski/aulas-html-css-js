@@ -1,0 +1,35 @@
+Algoritmos (definição): São conjuntos de passos finitos e organizados que, quando executados, resolvem um determinado problema.
+ A reprodução de um padrão é causada por um algoritmo. Toda reprodução de padrões é denominada de rotina.
+Ex de Algoritmo na nossa vida cotidiana:
+
+Algoritmo Atravessar
+.	Olhar para a direita
+.	Olhar para a esquerda
+.	Se estiver vindo carro
+.	.	Não atravesse
+.	.senão
+.	.	Atravesse
+.	Fim-se
+Fim-Algoritmo
+
+-Obs: Os passos do algoritmo não podem ser colocados de qualquer forma, eles precisam estar numa ordem lógica, não faria setido colocar o passo "atravesse" antes de olhar para os olhar para os  dois lados. Os algoritmos são formados seguindo um pensamento lógico.
+
+Algoritmos em Computadores
+ Um programa de computador é desenvolvido para suprir uma necessidade (resolver um problema).Os algoritmos funcionam da seguinte maneira: 1-Você tem um problema; 2-Você conhece o padrão para resolver esse problema; 3-Ao invés de fazer isso manualmente você constrói algoritmos para resolver isso para você.
+
+Algoritmo Computacionais: s]ao passos a serem seguidos por um módulo processador (Computador, Celular, Tablet, Laptop, etc) e seus respectivos usuários que, quando executados na ordem correta, conseguem realizar determinada tarefa.
+
+Lógica de programação: todo algoritmo computacional começa com a criação da lógica de programação, ela está em nossa cabeça. A lógica de programção é a lógica que usaremos para criar os passos que devem ser seguidos em nosso algoritmo.
+
+Linguagem de programação: após criarmos os passos que o sftware deve seguir com nossa lógica de programação, nós traduzimos esses passos para uma linguagem de programação (Ex: JavaScript).
+
+Sistema Completo: é o software ou aplicativo criado com o algoritmo que criamos na linguagem de programação que escolhemos.
+
+Para estruturas a lógica de programação existem algumas ferramentas, abaixo estão as mais conhecidas:
+	1-Fluxograma
+		Representa a lógica de informações seguindo um fluxo 		de um ponto a outro.
+	2-Diagrama de Nassi Shneiderman
+		Representa a lógica do seu programa através de 			blocos.
+	3-Pseudocódigo/Portugol
+		Representa a lógica	 do seu programa escrito em sua 		linguagem nativa. Portugol não é uma linguagem de 		programação, é somente uma maneira de represantar a 		sua lógica de programação antes de passar ela para 		uma linguagem de programação.
+

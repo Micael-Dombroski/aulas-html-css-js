@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/sans.ico" type="image/x-icon">
+    <title>Fontes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Peso, Estilo e ShortHand</h1>
+    <h2>Peso</h2>
+    <p>O peso da fonte é defino pela declaração "<strong>font-weight</strong>",
+     dentro dos pesos existem alguns valores literais, o lighter (menor peso), 
+     normal (peso normal), bold (peso alto), bolder (maior peso), fora os valores 
+    literais, podemos também, definir o valor de peso da fonte de 1 a 900.</p>
+    <h2>Estilo</h2>
+    <p>O estilo da fonte é definido pela declaração "<strong>font-style</strong>", 
+    onde escolhemos se queremos que o estilo da fonte esteja em itálico ou não.</p>
+    <h2>Decoração</h2>
+    <p>Esse aqui é um extra, podemos sublinhar o texto usando a declaração "<strong>
+    text-decoration</strong>" (sendo o valor 'underline' o sublinhado padrão).</p>
+    <h2>ShortHand</h2>
+    <p>Agora vamos mostrar uma declaração que faz a mesma coisas que as 3 declarações 
+    anteriores, facilitando a nossa vida, a declaração usada é "<strong>font</strong>"
+     porém devemos seguir uma ordem nos valores a serem colocados, sendo a seguinte:
+    </p>
+    <ol>
+        <li>font-style: O estilo que você quer na fonte (itálico ou normal);</li>
+        <li>font-weight: O peso da fonte;</li>
+        <li>font-size: O tamanho da fonte e sua (em <code>em</code> ou <code>px</code>);</li>
+        <li>font-family: A família da fonte;</li>
+    </ol>
+    <p>Ex:</p>
+    <pre><code>
+        font: italic bolder 3em 'Gill Sans';
+    </code></pre>
+    <p><Strong>Importante:</Strong> Caso você não queira usar uma das propriedades, você 
+    pode fazer a declaração sem ela. Ex: <code>font: bolder 3em 'Gill Sans';</code></p>
+</body>
+</html>

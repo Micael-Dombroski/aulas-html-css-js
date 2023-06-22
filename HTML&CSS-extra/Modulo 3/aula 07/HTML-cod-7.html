@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif2.ico" type="image/x-icon">
+    <title>Formulários</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        p {
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: justify;
+        }
+        input {
+            margin-left: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <p>Os formulários são ferramentas muito usadas nas páginas, usamos eles quando precisamos 
+        que o usuário nos passe alguma informação, seja escolhendo uma das opções pre-definidas, seja 
+        inserindo dados. Vale lembrar que com somente HTML e CSS não é possível receber as informações 
+        que o usuário enviar, para isso seria necessário o uso de uma linguagem de programação.
+    </p>
+    <h2>Criando um formulário</h2>
+    <p>Iniciamos um formulário com a tag &lt;form&gt;&lt;/form&gt;. Vale lembrar que podem ser exibidos na tela 
+        do usuário mais de um formulário caso desejar. Essa tag pode receber o atributo "<code>action</code>" que 
+        vai dizer ao navegador para onde irão as informações inseridas no formulário, o valor inserido é o endereço 
+        para o qual as informações serão enviadas. Outro atributo que pode ser inserido nessa tag é o atributo 
+        "<code>method</code>" que especifica o método de envio das informações, esse atributo só recebe dois valores, 
+        <abbr title="joga as informações passadas pelo usuário para a URL da página">GET</abbr> e 
+        <abbr title="as informações não são exibidas na URL da página, usado por exemplo para informações de senha, que não devem ser exibidas livremente">
+            POST</abbr>.
+    </p>
+  <form action="sla.html" method="post">
+    <input type="text" name="oi" id="oi">
+    </form>
+</body>
+</html>

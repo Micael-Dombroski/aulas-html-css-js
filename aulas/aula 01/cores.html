@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Estudo de Cores</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+        p {
+            margin: 20px;
+            text-align: justify;
+        }
+        td {
+            border: 1px solid black;
+            text-align: justify;
+            padding: 10px;
+            margin: 5px;
+        }
+        #titulos {
+            background-color: gray;
+            color: white;
+        }
+        img {
+            height: 250px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #cores {
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        #azul {
+            color: blue;
+        }
+        #vermelho {
+            color: red;
+        }
+        #amarelo {
+            color: yellow;
+        }
+        #verde {
+            color: green;
+        }
+        #roxo {
+            color: purple;
+        }
+        #exemplo1 {
+            font-family: Arial;
+            background-image: linear-gradient(90deg, yellow, red);
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        #exemplo2 {
+            font-family: Arial;
+            background-image: radial-gradient(red 10%, yellow 40%, green 50%);
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudo das cores para as páginas</h1>
+    <p>A escolha das cores que serão usadas para nossa página implica 
+        na apresentação dela, se escolhido bem a paleta de cores, tudo ficará mais 
+        agradável visualmente para o leitor. Fazendo com que ele permaneça por mais 
+        tempo no seu site e até mesmo sendo decisivo para a efetivação de uma compra 
+        no mesmo.
+    </p>
+    <h2>A emoção das cores</h2>
+    <p>Segundo <strong>Neil Patel</strong> as pessoas levam cerca de 90 segundos para decidir 
+    se querem ou não um produto, e que 90% dessa decisão se baseia na sua cor.</p>
+    <p>As cores nos transmitem emoção mesmo que de isso não ocorra na maioria das 
+        vezes de forma totalmente consciente. Sentimos a emoção das cores de um site ou produto mesmo sem 
+        saber que quem o modelou usou a <strong>pscologia</strong> das cores para modelá-lo.
+    </p>
+    <p>Se pesquisarmos sem se aprofundar muito no tema da "psicologia das cores", já será possível 
+        observar várias sugestões de emoções voltadas para determinada cor. Um exemplo é a cor azul, que 
+        remete a <em>harmonia</em>, <em>equilíbrio</em>, <em>confiança</em>, <em>profissionalismo</em>, 
+        <em>integridade</em> e <em>segurança</em>. A cor azul é usada em vários logotipos como por exemplo: 
+        Facebook, Twitter, LinkedIn, Dell, HP e Intel. Claro que isso não é por acaso.
+    </p>
+    <h3>Sugestões de cores</h3>
+    <p>Abaixo um tabela com sugestão de Cores, o sentimento ao qual estão associadas, onde usar e onde evitar usar elas:</p>
+    <table>
+        <tr id="titulos">
+            <td>Cor</td>
+            <td>Associada a</td>
+            <td>Usar em</td>
+            <td>Evitar</td>
+        </tr>
+        <tr>
+            <td style="background-color: red; color: white;">Vermelho</td>
+            <td>Amor, emoção, energia, raiva, perigo</td>
+            <td>Comida, moda, entretenimento, serviços de emergência e saúde</td>
+            <td>Luxo, natureza, serviços em geral</td>
+        </tr>
+        <tr>
+            <td style="background-color: yellow;">Amarelo</td>
+            <td>Felicidade, alegria, otimismo, covardia</td>
+            <td>Dar luz, dar calma e felicidade, chamar atenção</td>
+            <td>Pode indicar que algo é barato ou spam</td>
+        </tr>
+        <tr>
+            <td style="background-color: orange; color: white;">Larajnja</td>
+            <td>Divertimento, ambição, calor, cautela</td>
+            <td>Comércio eletrônico, entretenimento, call-to-action</td>
+            <td>Pode se tornar cansativo se muito explorado</td>
+        </tr>
+        <tr>
+            <td style="background-color: green; color: white;">Verde</td>
+            <td>Saúde, natureza, dinheiro, sorte, inveja</td>
+            <td>Relaxamento, turismo, financeiros, meio ambiente</td>
+            <td>Luxo, tecnologia, meninas adolescentes</td>
+        </tr>
+        <tr>
+            <td style="background-color: blue; color: white;">Azul</td>
+            <td>Competência, sabedoria, calma, frio</td>
+            <td>Tecnologia, medicina, ciências, governo</td>
+            <td>Comida (reduz apetite)</td>
+        </tr>
+        <tr>
+            <td style="background-color:purple; color: white;">Roxo</td>
+            <td>Criatividade, poder, sabedoria, mistério</td>
+            <td>Produtos de beleza, astrologia, ioga, espiritualidade, adolescente</td>
+            <td>Não prende muito a ateção, indiferente</td>
+        </tr>
+        <tr>
+            <td style="background-color: brown; color: white;">Marrom</td>
+            <td>Terra, robustez, estabilidade, amizade</td>
+            <td>Alimentação, imobiliária, animais, finanças</td>
+            <td>Cor cosiderada conservadora</td>
+        </tr>
+        <tr>
+            <td style="background-color: black; color: white;">Preto</td>
+            <td>Elegância, autoriadade, mistério, morte</td>
+            <td>Luxo, moda, marketing, cosméticos</td>
+            <td>Desconforto e medo</td>
+        </tr>
+        <tr>
+            <td>Branco</td>
+            <td>Pureza, limpeza, felicidade, segurança</td>
+            <td>Medicina, saúde, tecnologia, luxo (com preto, outro, cinza)</td>
+            <td>Não chama atenção, deve ser combinado</td>
+        </tr>
+        <tr>
+            <td style="background-color: gray;">Cinza</td>
+            <td>Formalidade, sofisticação, frieza, indiferença</td>
+            <td>Bens de luxo, efeito calmante</td>
+            <td>Dá a sensação de frieza</td>
+        </tr>
+        <tr>
+            <td style="background-color: pink;">Rosa</td>
+            <td>Amor, romance, sinceridade, cuidados</td>
+            <td>Produtos femininos e cosméticos</td>
+            <td>Pode tornar muito sentimental e doce</td>
+        </tr>
+    </table>
+    <h2>Harmonia das cores</h2>
+    <p>Sempre devemos usar cores que fassam sentido juntas, para que quando o usuário 
+        visualize o site sinta aquela sensação de que tudo está em perfeito harmônia, fazendo-o 
+        parecer ainda mais belo. Por isso é importante decidirmos com cuidado qual será a 
+        <strong>paleta de cores</strong> usada na construção da página.
+    </p>
+    <h2>Cículo Cromático</h2>
+    <p>O círculo cromático é a base para saber escolher cores que vão gerar um sentido harmônico 
+        para o nosso site. Abaixo, uma imagem de um círculo cromático:
+    </p>
+    <img src="https://i2.wp.com/comodesenharecolorir.com/wp-content/uploads/2020/08/Como-Fazer-o-C%C3%ADrculo-Crom%C3%A1tico-e1596417017201-1024x589.jpg" alt="circulo cromatico">
+    <p>Podemos ver que no círculo cromático temos as três <strong>cores primárias</strong>, da junção 
+        das cores primárias temos as três <strong>cores secundárias</strong> e da junção de uma cor 
+        primária e uma secundária, temos as seis <strong>cores terciárias</strong>.</p>
+    <h3>Temperatura e Harmonia</h3>
+    <p>Olhando o círculo cromático, podemos também classificar as cores por sua temperatura:</p>
+    <img src="https://i0.wp.com/www.historiadasartes.com/wp-content/uploads/2019/08/m_quentes-e-frias.jpg?resize=492%2C500" alt="cores frias e quentes">
+    Além da temperatura, podemos classificar as cores por esquemas harmônicas.
+    <h3>Esquemas Harmonicos</h3>
+    <h4>Cores complementares</h4>
+    <p>São aquelas que apresentam maior contraste entre si. Elas estão localizadas do lado 
+        imediatamente oposto do círculo cromático. A cor complementar de uma cor primária 
+        sempre será uma cor secundária. A cor complementar de uma cor terciárias sempre 
+        será outra cor terciárias, sempre que juntamos duas cores complementares, obtemos a cor cinza.</p>
+    <img src="https://diario-de-casa.shoptime.com.br/wp-content/uploads/2021/02/circulo-cromatico-cores-complementares.png" alt="cores complementares">
+    <h4>Cores Análogas</h4>
+    <p>As cores análogas são cores que são vizinhas entre si. Por serem consecutivas elas
+         possuem um baixo contraste entre elas, mas criam uma bela harmonia quando combinadas em um mesmo design.
+    </p>
+    <img src="https://diario-de-casa.shoptime.com.br/wp-content/uploads/2021/02/circulo-cromatico-cores-analogas-ou-vizinhas.png" alt="cores análogas">
+    <h4>Cores análogas mais uma complementar</h4>
+    <p>Juntansdo os dois tipos anteriores, essa técnica quebra um pouco o ritmo semelhante das cores análogas, 
+        adicionando uma cor que criar um grande contraste com as três análogas.</p>
+    <img src="https://www.publicitarioscriativos.com/wp-content/uploads/2016/12/publicitarioscriaitvos4.jpg" alt="cores análogas mais complementar">
+    <h4>Cores análogas relacionadas</h4>
+    <p>Nesse tipo de harmonia, é escolhido duas cores análogas (consecutivas) e depois pulamos por uma 
+        terceira cor (em qualquer direção) e escolhemos a quarta. Essa técnica proporciona um pouco mais 
+        de contraste que a técnica das análogas sem precisar usar uma cor complementar.</p>
+    <img src="../../../imagens/cores relacionadas.jpg" alt="Cores análogas relacionadas">
+    <h4>Cores intercaladas</h4>
+    <p>É uma técnica de harmonia usada com menor frequência, já que nem sempre funciona como o esperado. 
+        Nessa técnica escolhemos uma cor e as duas seguintes escolhemos com intervalos contantes entre elas (
+            pulando a mesma quantidade de cores da cor 1 para a 2 e da 2 para a 3
+        ).
+    </p>
+    <img src="data:image/png;base64,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" alt="Cores intercaladas">
+    <h4>Cores triádiacas</h4>
+    <p>Essa técnica garante uma grande riqueza de cores, onde escolhemos três cores equidistantes 
+        (distância igual entre todos os 3 pontos) no círculo cromático. Esse esquema gera sempre 
+        um triângulo equilátero e cria uma opção que sempre possui um ótimo contraste entre as cores.</p>
+    <img src="https://www.designerd.com.br/wp-content/uploads/2021/01/combinacoes-triade-circulo-cromatico-1024x614.png" alt="Cores triádica">
+    <h4>Cores em quadrado</h4>
+    <p>Selecionamos quatro cores equidistantes. Essa técnica permite um contraste mais rozoável 
+        entre as cores escolhidas. Esse esquema sempre gera um quadrado perfeito com os pontos selecionados.</p>
+        <img src="https://www.designerd.com.br/wp-content/uploads/2021/01/combinacoes-quadrado-harmonico-circulo-cromatico-1024x614.png" alt="Cores em Quadrado">
+    <h4>Cores tetrádicas</h4>
+    <p>Com essa técnica vamos escolher dois pares de cores complementares, que não serão necessariamente 
+        análogas (consecutivas). Isso garante dois pares de cores com bastante contraste entre si.</p>
+    <img src="data:image/jpeg;base64,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" alt="Cores tetrádicas">
+    <h4>Monocromia</h4>
+    <p>Diferente das harmonias anteriores, essa usa apenas uma cor e varia apenas a sua saturação
+         e seu brilho. Essa técnicagera pouco contraste entre as cores escolhidas mas gera um visual 
+         agradável aos olhos, conhecido como "degradê".</p>
+    <img src="https://www.designerd.com.br/wp-content/uploads/2021/01/combinacoes-monocromatico-circulo-cromatico-1024x614.png" alt="Monocromia">
+    <h2>Como escolher uma paleta de cores?</h2> 
+    <p>Existem vários sites e serviços que podem te ajudar na escolha da paleta de cores do seu site. 
+        Um exemplo é o <strong>Adobe Color</strong> (disponível em: https://color.adobe.com/pt/), 
+        você pode acessar o site <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank">clicando aqui</a>.
+    </p>
+    <h2 id="cores">Aplicando 
+        <strong id="azul">C</strong><strong id="vermelho">O</strong><strong id="amarelo">R</strong><strong id="verde">E</strong><strong id="roxo">S</strong>
+         ao nosso site</h2>
+    <p>No CSS, ao criar uma propriedade relacionada a cores, se posicionarmos o cursos entre os dois 
+        pontos e o ponto de vírgula da declaração e darmos um clique e em sequência pressionar 
+        <strong>Ctrl + Espaço</strong> veremos todas as cores possíveis para serem escolhidas no CSS 
+        através do nome.
+    </p>
+    <p>Porém esse método é muito limitado, pois a tela moderna é capaz de exibir cerca de 65 milhões de cores.</p>
+    <p>Para conseguirmos mais possibilidades devemos recorrer aos códigos hexadecimais ou então 
+        às funções CSS <code>rgb ( )</code>, <code>rgba ( )</code>, <code><abbr title="Hue (matriz), Saturation (saturação), Lightness (luminância)">hsl</abbr> ( )</code> ou <code>hsla</code>. 
+        Para usar eese recurso, adicione qualquer vor textual e passe o mouse sobre o nome da cor (veja a imagem abaixo) 
+        e uma janela especial aparecerá.
+    </p>
+    <img src="../../../imagens/guia-cores-css.jpg" alt="guia cores">
+    <h3>Como representar uma cor?</h3>
+    <p>Todas as cores em uma tela são compostas da junção de três cores primárias: <strong>vermelho</strong> (red)
+    , <strong>verde</strong> (green) e <strong>azul</strong> (blue). <br>
+    Analisando a imagem abaixo, vemos que a junção das cores primárias nos leva a outras cores como o <strong>magenta</strong>, 
+    <strong>amarelo</strong> e <strong>ciano</strong>. Se usamos todas as cores primárias no máximo, chegamos ao <strong>branco</strong>. <br>
+     Com todas as três no mínimo, obtemos o <strong>preto</strong>.</p>
+    <img src="https://gkpb.com.br/wp-content/uploads/2020/07/rgb-sistema-aditivo.jpg" alt="Sistema RGB">
+    <p>Cada cor primária pode ter um valor <strong>entre 0 e 255</strong> totalizando <strong>256 possibilidades</strong> 
+    para cada elemento. Vejamos alguns exemplo de cores e seus respectivos códigos.</p>
+    <table>
+        <tr>
+            <td>Nome da cor <br>
+            #Código da cor em heexadecimal <br>
+            Código da cor em RGB</td>
+        </tr>
+        <tr>
+            <td style="color: white; background-color: RGB(164, 196, 0);">Lime <br> #A4C400 <br> RGB(164, 196, 0)</td>
+            <td style="color: white; background-color: RGB(96,169, 23);">Green <br> #60A917 <br> RGB(96,169, 23)</td>
+            <td style="color: white; background-color: RGB(0, 138, 0);">Emerald <br> #008A00 <br> RGB(0, 138, 0)</td>
+            <td style="color: white; background-color: RGB(0, 171, 169);">Teal <br> #00ABA9 <br> RGB(0, 171, 169)</td>
+        </tr>
+        <tr>
+            <td style="color: white; background-color: RGB(27, 161, 226);">Cyan <br> #1BA1E2 <br> RGB(27, 161, 226)</td>
+            <td style="color: white; background-color: RGB(0, 80, 239);">Cobalt <br> #0050EF <br> RGB(0, 80, 239)</td>
+            <td style="color: white; background-color: RGB(106, 0, 255);">Indigo <br> #6A00FF <br> RGB(106, 0, 255)</td>
+            <td style="color: white; background-color: RGB(170, 0, 255);">Violet <br> #AA00FF <br> RGB(170, 0, 255)</td>
+        </tr>
+        <tr>
+            <td style="color: white; background-color: RGB(244, 114, 208);">Pink <br> #F472D0 <br> RGB(244, 114, 208)</td>
+            <td style="color: white; background-color: RGB(216, 0, 115);">Magenta <br> #D80073 <br> RGB(216, 0, 115)</td>
+            <td style="color: white; background-color: RGB(162, 0, 37);">Crimson <br> #A20025 <br> RGB(162, 0, 37)</td>
+            <td style="color: white; background-color: RGB(229, 20, 0);">Red <br> #E51400 <br> RGB(229, 20, 0)</td>
+        </tr>
+        <tr>
+            <td style="color: white; background-color: RGB(250, 104, 0);">Orange <br> #fa6800 <br> RGB(250, 104, 0)</td>
+            <td style="color: white; background-color: RGB(240, 163, 10);">Amber <br> #F0A30A <br> RGB(240, 163, 10)</td>
+            <td style="color: white; background-color: RGB(227, 200, 0);">Yellow <br> #E3C800 <br> RGB(227, 200, 0)</td>
+            <td style="color: white; background-color: RGB(130, 90, 44);">Brown <br> #825A2C <br> RGB(130, 90, 44)</td>
+        </tr>
+        <tr>
+            <td style="color: white; background-color: RGB(109, 135, 100);">Olive <br> #6D8764 <br> RGB(109, 135, 100)</td>
+            <td style="color: white; background-color: RGB(100, 118, 135);">Steel <br> #647687 <br> RGB(100, 118, 135)</td>
+            <td style="color: white; background-color: RGB(118, 96, 138);">Mauve <br> #76608A <br> RGB(118, 96, 138)</td>
+            <td style="color: white; background-color: RGB(135, 121, 78);">Taupe <br> #87794E <br> RGB(135, 121, 78)</td>
+        </tr>
+    </table>
+    <p>Para obter versões de cores com transparência, basta arrastar a barra de transparência indicada à direita e perceber que 
+        mais um valor (<strong>alpha</strong>) será adicionado ao código.
+    </p>
+    <h3>Usando Gradientes em CSS</h3>
+    <p>Podemos gerar gradientes e aplicarmos a componentes visuais usando folhas de estilo. 
+        Vamos usar um exemplo simples. Abaixo foi criado uma div que receber a seguinte declaração no CSS:
+    </p>
+    <pre>
+    <code>&lt;style&gt;
+        body {
+            font-family: Arial;
+            <abbr title="O gradiente é considerado pelo navegador como uma imagem, por isso foi usado essa declaração">background-image</abbr>: linear-gradient(<abbr title="indica o ângulo de inclinação, nessa caso, 90 graus">90deg</abbr>,<abbr title="Cores do degradê"> yellow, red</abbr>);
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+    </code>
+    </pre>
+    <div id="exemplo1">Exemplo</div>
+    <h4>Gradientes radiais</h4>
+    <p>Podemos criar um gradiente em formato radial círcula, olhe o exemplo abaixo:</p>
+    <pre>
+    <code>&lt;style&gt;
+        body {
+            font-family: Arial;
+            background-image: radial-gradient(red 10%, yellow 40%, green 50%);
+            color: black;
+            text-align: center;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    &lt;/style&gt;
+    </code>
+    </pre>
+    <div id="exemplo2">Exemplo</div>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Fontes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes Externas</h1>
+    <p>Diferente das fontes que são exportadas para o navegador, as 
+        fontes externas estão baixadas no servidor do site, quando o site
+        é aberto, o servidor envia uma cópia do arquivo da fontes para o navegador,
+        que por sua vez vai deixar os elementos desejados com a fonte (somente os 
+        indicados no HTML/CSS).
+    </p>
+    <h2>Como aplicar fontes externas no CSS?</h2>
+    <p>Usamos a propriedade <code>@font-face</code> na primeira linha 
+    do nosso CSS/ &LT;style&GT;, essa propriedade exige que seja inserido dentro 
+    dela o <abbr title="font-family">nome da fonte Externa</abbr>onde ela es<abbr title="src">
+    URL</abbr>localizada dentro do servidor em relação ao arquivo HTML/CSS.</p>
+    <p>Ex de inserção de fonte:</p>
+    <code><pre>
+    &lt;style&gt;
+        @font-face {
+            font-family: '<abbr title="Aqui podemos escolher um nome para a família da fonte externa 
+            mas nem todo nome funciona">Love</abbr>';
+            src: url('love lerry.otf') <abbr title="format eistentes: opentype(otf), truetype(ttf), 
+            embedded-opentype, truetype-aat (Apple Advanced Typography), svg">format('opentype')</abbr>, 
+            url ('love-larry.ttf') format('truetype'); <!--otf e ttf são compativeis com quase todos os navegadores, 
+                por isso foram usados 2 url e 2 format() para inserir esses 2 formatos-->
+            font-weight: normal;
+            font-style: normal;
+        }
+        h1 {
+            font-family: 'Love', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+    &lt;/style&gt;
+    </pre></code>
+    <p>Um site muito usado para pegar fontes externas é o <a href="https://www.dafont.com/pt/" target="_blank">DaFont</a>, 
+    o Google Fonts também pode ser usado para isso, vale lembrar que sempre antes de baixarmos uma fonte externa para o 
+    nosso site devemos ver se ela suporta ou não caracteres especiais, além disso, algumas fontes só possuem os caracteres 
+    em maiúsculo ou em minúsculo.</p>
+    <h2>Dica</h2>
+    <p>É recomendado que as fontes externas do nosso site fiquem armazenadas em uma pasta separada dentro do local no servido 
+        onde a página é armazenada.
+    </p>
+</body>
+</html>

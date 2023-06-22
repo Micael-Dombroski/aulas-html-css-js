@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif.ico" type="image/x-icon">
+    <title>Input</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        p {
+            margin: 20px;
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <h1>Tag Input</h1>
+        <p>Através dessa tag podemos captar um tipo de informação vinda do usuário, criando campos de entrada de dados
+             no site. Essa tag não possui tag de fechamento (&lt;/&gt;).
+        </p>
+        <p>O principal atrbituto dessa tag é o atributo "<code>type</code>", onde será descrito o tipo de campo de entrada 
+        de dados será criada. O atributo "<code>type</code>" recebe os seguintes valores:</p>
+        <ul>
+            <li><strong>text</strong>: cria uma caixa de digitação, onde o usuário pode escrever dados.
+            <ul>
+                <li><strong>password</strong>: cria uma caixa de digitação, porém os dados inseridos são visualizados como "*", esse campo 
+                    é usado normalmente para o usuário inserir senhas.</li>
+                <li><strong>email</strong>: cria uma caixa de digitação, onde o usuário pode inserir um endereço de email. É obrigatório inserir 
+                "@" no meio das informações inseridas (não pode ser o último e nem o primeiro dado inserido) dentro dessa caixa de digitação, 
+                caso o contrário o usuário é notificado sobre a ausência desse símbolo.</li>
+            </ul></li>
+            <li><strong>checkbox</strong>: cria um campo de marcação onde pode ou não estar ativado e o usuário pode ativar/desativar clicando nele.</li>
+            <li><strong>radio</strong>: cria um campo de marcação onde pode ou não estar ativado e o usuário pode ativar/desativar clicando nele. 
+            Esse atributo é usado quando queremos dar várias opções para o usuário e ele só pode escolher uma, para isso, devemos colocar em todas os 
+        input radio do mesmo grupo o atributo "<code>name</code>" com o mesmo valor.</li>
+            <li><strong>submit</strong>: envia todos os dados inseridos no formulário.</li>
+        </ul>
+        <h2>Atributo <code>Name</code> na Tag &lt;input&gt;</h2>
+        <p>É importante colocarmos em todas as tags inputs o atributo "<code>name</code>" para que o navegador saiba que tipo de informação será 
+        inserida naquele campo.</p>
+        <h2>Colocando valores predefinidos no nosso formulário</h2>
+        <p>É possível colocar valores predefinidos no nosso formulário usando o atributo "<code>value</code>" dentro da tag &lt;input&gt; para caixas de 
+            digitação e para escrever algo dentro de um botão e o atributo "<code>checked</code>" quando for caixas de marcação (para deixar algumas 
+            marcada tanto para o tipo radio quanto para o tipo checkbox). Ex:</p>
+        <form action="#">
+            Escreva seu nome: <input type="text" name="nome" value="Ex.: Arnaldo">
+            <br>
+            Escolha seu time: <input type="radio" name="time" checked> Azul <input type="radio" name="time"> Amarelo 
+            <input type="radio" name="time"> Verde <input type="radio" name="time"> Vermelho 
+            <br>
+            <input type="send" value="Lança Pa Nóis">
+        </form>
+    <form action="pagina-login.html" method="get">
+        Input atributo: text
+        <input type="text" name="usuario" id="#" placeholder="Escreva algo aqui">
+        <br>
+        Input atributo: email
+        <input type="email" name="email-usuario" placeholder="Insira seu email">
+        <br>
+        Input atributo: password 
+        <input type="password" name="senha-usuario" placeholder="Escreva sua senha">
+        <br>
+        Input atributo: checkbox
+        <input type="checkbox" name="checkbox"><input type="checkbox"><input type="checkbox"><input type="checkbox">
+        <br>
+        Input atributo: radio
+        Sexo: <input type="radio" name="Sexo" id="M"> Masculino    <input type="radio" name="Sexo" id="F"> Feminino
+        <br>
+        Input atributo: submit <input type="submit">
+        <br>
+
+    </form>
+    <script>
+        window.alert('Aula 8 do Módulo 3!')
+    </script>
+</body>
+</html>

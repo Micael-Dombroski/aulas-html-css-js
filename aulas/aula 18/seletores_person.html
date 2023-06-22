@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Seletores Personalizados</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-left: 80px;
+        }
+        p {
+            text-indent: 40px;
+            text-align: justify;
+            margin: 20px;
+        }
+        .bordo {
+            color: rgb(150, 9, 9);
+        }
+        .selec-per {
+            color: red;
+        }
+        .value {
+            color: aqua;
+        }
+        .medida {
+            color: darkgreen;
+        }
+        .link {
+            color: blue;
+            text-decoration: underline; /*Deixando o texto sublinhado em baixo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Seletores Personalizados</h1>
+    <p>Para dar mais poder às CSS, criando estilos personalizados, 
+    precisamos aprender a utilizar os seletores de <code>id</code> 
+    (#) e de <code>class</code> (.) de maneira eficiente. Ao criar 
+    nosso conteúdo em HTML, podemos <strong>identificar</strong> um 
+    determinado elemento único com um <code>id</code>, ou <strong>agrupar
+    </strong> elementos múltiplos que tenham características semelhantes
+     com um <code>class</code>. Vamos olhar um exemplo simples de documento 
+     HTML, com propriedades identificadoras.
+    </p>
+    <code><pre>
+22    <strong class="bordo">&lt;body&gt;</strong>
+23        <strong class="bordo">&lt;h1</strong> <strong class="selec-per">id</strong>="<strong class="value">titulo-principal</strong>"&gt;Aprenda Desenvolvimento Web<strong class="bordo">&lt;/h1&gt;</strong>
+24        <strong class="bordo">&lt;h1&gt;</strong>Aprenda HTML<strong class="bordo">&lt;/h1&gt;</strong>
+25        <strong class="bordo">&lt;p</strong> <strong class="selec-per">class</strong>="<strong class="value">topico</strong>"<strong class="bordo">&gt;</strong>Semântica Web<strong class="bordo">&lt;/h2&gt;</strong>
+26        <strong class="bordo">&lt;p</strong> <strong class="selec-per">class</strong>="<strong class="value">texto</strong>"<strong class="bordo">&gt;</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Omnis eligendi numquam magni ducimus dicta sapiente dignissimos nostrum? Et voluptate 
+            harum culpa, iste iusto, repellendus molestias temporibus praesentium nulla soluta 
+            consequuntur!<strong class="bordo">&lt;/p&gt;</strong>
+27        <strong class="bordo">&lt;h1&gt;</strong>Aprenda CSS<strong class="bordo">&lt;/h1&gt;</strong>        
+28        <strong class="bordo">&lt;h2</strong> <strong class="selec-per">class</strong>="<strong class="value">topico</strong>"<strong class="bordo">&gt;</strong>Estilos Web<strong class="bordo">&lt;/h2&gt;</strong>
+29        <strong class="bordo">&lt;p&gt;</strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae nesciunt velit 
+            maxime sunt voluptate non suscipit porro, sit blanditiis atque eaque aut quo. 
+            Repudiandae pariatur ad recusandae enim velit sapiente!<strong class="bordo">&lt;/p&gt;</strong>
+30    <strong class="bordo">&lt;/body&gt;</strong>
+    </pre></code>
+    <p>Olhando atentamente para a <strong>linha 23</strong>, vimos que o 
+        <code>&lt;h1&gt;</code> principal se diferencia dos demais que 
+        estão nas <strong>linhas 24 e 27</strong>, pois ele possui um 
+        <code>id</code>.</p>
+        <p>Agora foque sua atenção nas <strong>linhas 25 e 28</strong> e perceba 
+        que os dois possuem o mesmo <code>class</code>.</p>
+        <p>Um <code>id</code> vai <strong>identificar</strong> um elemento único 
+        dentro da página atual. Essa identificação vai nos permitir criar um estilo 
+        especial para um elemento isolado. Já um <code>class</code> vai identificar 
+        uma <strong>class</strong> à qual um ou mais elementos pertençam, compartilhando
+         características em comum a todos os que façam parte desse grupo.</p>
+         <p>Em seguida, baseada no código HTML visto anteriormente, vamos criar um 
+            criando uma área <code>&lt;code&gt;</code> dentro da seção <code>&lt;head&gt;</code> 
+        do documento atual.</p>
+        <code><pre>
+7    <strong class="bordo">&lt;style&gt;</strong>
+8        <strong class="bordo">body</strong> {
+9            <strong class="selec-per">font</strong>: <strong class="value">normal</strong> <strong class="medida">1em</strong> <strong class="value">Arial</strong>, <strong class="value">Helvetica</strong>, <strong class="value">sans-serif</strong>;
+10        }
+11
+12        <strong class="bordo">h1</strong> {
+13           <strong class="selec-per">font-size</strong>: <strong class="medida">2em</strong>;
+14            <strong class="selec-per">color</strong>: <strong class="value">darkgreen</strong>;
+15        }
+16
+17        <strong class="bordo">h2</strong> {
+18            <strong class="selec-per">color</strong>: <strong class="value">green</strong>;
+19        }
+20    <strong class="bordo">&lt;/style&gt;</strong>
+        </pre></code>
+        <p>O que fizemos foi criar configurações simples de estilo baseadas nos 
+            elementos <code>h1</code> e <code>h2</code> do nosso HTML. Até o 
+            momento, não fizemos nenhuma personalizada para nenhum seletor. 
+            Perceba que mesmo o primeiro h1 possuindo um <code>id</code> 
+            ele ficou igual ao outro <code>h1</code> pois não foi usado nenhum 
+            seletor personalizado criado ainda..
+        </p>
+        <p>Agora vamos adicionar algumas declarações e seletores personalizados, 
+            ainda dentro da área <code>&lt;style&gt;</code> que criamos:</p>
+        <code><pre>
+21    <strong class="bordo">#titulo-principal</strong> {
+22        <strong class="selec-per">backgrond-color</strong>: <strong class="value">darkgreen</strong>;
+23        <strong class="selec-per">color</strong>: <strong class="value">white</strong>;
+24        <strong class="selec-per">text-align</strong>: <strong class="value">center</strong>;
+25    }
+26
+27    <strong class="bordo">.topico</strong> {
+28        <strong class="selec-per">text-align</strong>: <strong class="value">right</strong>;
+29    }
+30
+31    <strong class="bordo">.texto</strong> {
+32        <strong class="selec-per">text-align</strong>: <strong class="value">justify</strong>;
+33    }
+        </pre></code>
+    <p>No código acima, criamos seletores com simbologias novas. Isso porque 
+        não são seletores para elementos HTML, e sim seletores para <code>id</code> 
+        e <code>class</code>. Na <strong>linha 21</strong>, criamos um seletor 
+        personalizado para identificar <code>titulo-principal</code>, que está 
+        atribuído ao <code>h1</code>. Você deve ter percebido que colocamos um 
+        símbolo <code>#</code> antes do <code>id</code>.
+    </p>
+    <p>Já as <strong>linhas 27 e 31</strong> são seletores que receberão declarações 
+    para as classes <code>topico</code> e <code>texto</code>. Todos os seletores 
+    personalizados para uma <code>class</code> são identificados por um ponto que vem 
+    antes do nome da classe.</p>
+    <h2>Propriedades herdadas</h2>
+    <p>Como já sabemos, há  3 técnicas usadas para aplicar estilos aos nossos documentos HTML: 
+        <strong>inline</strong>, <strong>local</strong> e <strong>externa</strong>. 
+        Essas técnicas podem ser usadas em conjunto, e os estilos de cada serão combinados 
+        nessa ordem:
+    </p>
+    <ol>
+        <li>CSS externo</li>
+        <li>CSS interno/local</li>
+        <li>CSS inline</li>
+    </ol>
+    <p>Sendo assim, caso haja duplicidade nas configurações, o que fica valendo no final 
+        é a propriedade especificada nas configurações inline. Cada camada de aplicação de 
+        estilos vai adicionando propriedades novas e sobrescrevendo as configurações do 
+        nivel anterior. <br>
+        Quando nós aplicamos configurações personalizadas de <code>id</code> ou de <code>class</code>, 
+        também vai existir uma combinação de configurações.</p>
+        <p>Voltando ao exemplo dado anteriormente, logo no início do corpo, tínhamos dois 
+            elementos <code>h1</code>:
+        </p>
+        <code><pre>
+            <strong class="bordo">&lt;body&gt;</strong>
+                <strong class="bordo">&lt;h1</strong> <strong class="selec-per">id</strong>="<strong class="value">titulo-principal</strong>"&gt;Aprenda Desenvolvimento Web<strong class="bordo">&lt;/h1&gt;</strong>
+                <strong class="bordo">&lt;h1&gt;</strong>Aprenda HTML<strong class="bordo">&lt;/h1&gt;</strong>
+        </pre></code>  
+        <p>Logo em seguida, na área de estilo, criamos uma configuração especial para os 
+            elementos <code>h1</code>:</p>
+        <code><pre>
+            <strong class="bordo">h1</strong> {
+                <strong class="selec-per">font-size</strong>: <strong class="medida">2em</strong>;
+                <strong class="selec-per">color</strong>: <strong class="value">darkgreen</strong>;
+            }
+        </pre></code>  
+        <p>Essas duas configurações de tamanho e cor da fonte serão aplicadas aos dois títulos, 
+            já que ambos são do tipo <code>h1</code>. Por fim, adicionamos uma configuração específica 
+            para o elemento HTML que tem um <code>id</code> personalizado:
+        </p>
+        <pre><code>
+            <strong class="bordo">#titulo-principal</strong> {
+                <strong class="selec-per">backgrond-color</strong>: <strong class="value">darkgreen</strong>;
+                <strong class="selec-per">color</strong>: <strong class="value">white</strong>;
+                <strong class="selec-per">text-align</strong>: <strong class="value">center</strong>;
+            }    
+        </code></pre>
+        <p>Dessa maneira, o primeiro <code>h1</code> do código HTML (aquele que tem um <code>id</code>) 
+        ganhará mais três configurações - cor de fundo, cor da fonte e alinhamento de texto - graças 
+        a esse seletor extra. Note que na primeira configuração CSS dos elementos <code>h1</code>, 
+        dissemos que a cor era <code>darkgreen</code>.</p>
+        <p>Porém, quando aplicamos a segunda configuração de <code>color</code> no seletor 
+        <code>#titulo-principal</code>, ela vai sobrescrever o valor da propriedade <code>white.</code> 
+        As outras duas propriedades (<code>background-color</code> e <code>text-align</code>) 
+        serão adicionadas às configurações desse primeiro título. O segundo título não sofrerá alterações, 
+        já que apenas o primeiro possui o <code>id</code> referido no seletor.</p>
+        <h2>Pseudo-classes e pseudo-elementos</h2>
+        <p>Uma pseudo-classe CSS é uma palavra-chave adicionada às declarações de um seletor após um sinal 
+            de dois pontos e especificam um estado especial de um elemento. Existem várias psudo-classes 
+            para estilos, podemos citar <code>:hover</code>, <code>:visited</code>, <code>:active</code>, 
+            <code>:checked</code>, <code>:empty</code> e <code>:focus</code>.
+        </p>
+        <p>Já um pseduo-elemento CSS é uma palavra-chave adicionada às declarações de um seletor após dois 
+            sinais de dois pontos e permitem qee você formate um pedaço específico do elemento referenciado. 
+            Os principais pseudo-elementos usados nas CSS são <code>::before</code>, <code>::after</code>, 
+            <code>::first-letter</code>, <code>::first-line</code>.
+        </p>
+        <p>Vamos começar criando um exemplo bem simples e bastante usado para exemplificar o uso de pseudo-classes 
+            e pseudo-elementos: a personalização de links.
+        </p>
+<pre><code>
+43  <strong class="bordo">&lt;body&gt;</strong>
+44      <strong class="bordo">&lt;h1&gt;</strong>Personalizando um link<strong class="bordo">&lt;/h1&gt;</strong>
+45      <strong class="bordo">&lt;p&gt;</strong>
+46          Para aprender HTML5 e CSS3, acesse o 
+47          <strong class="bordo">&lt;a</strong> <strong class="selec-per">href</strong>="<strong class="link">https://gustavoguanabara.github.io</strong>"<strong class="bordo">&gt;</strong>
+48              GitHub do Guanabara
+49          <strong class="bordo">&lt;/a&gt;</strong>
+50      <strong class="bordo">&lt;/p&gt;</strong>
+51      <strong class="bordo">&lt;p&gt;</strong>
+52          Se quiser conhecer mais sobre os padrões, visite o site do 
+53          <strong class="bordo">&lt;a</strong> <strong class="selec-per">href</strong>="<strong class="link">https://www.w3c.br</strong>"<strong class="bordo">&gt;</strong>Escritório do W3C  no Brasil<strong class="bordo">&lt;/a&gt;</strong>
+54      <strong class="bordo">&lt;/p&gt;</strong>
+55      <strong class="bordo">&lt;p&gt;</strong>Para acompanhar os cursos, acesse o 
+56          <strong class="bordo">&lt;a</strong> <strong class="selec-per">href</strong>="<strong class="link">https://www.youtube.com/cursoemvideo/</strong>" <strong class="selec-per">class</strong>="<strong class="value">especial</strong>"<strong class="bordo">&gt;</strong>
+57              canal do cursoemvideo
+58          <strong class="bordo">&lt;/a&gt;</strong>
+59      <strong class="bordo">&lt;/p&gt;</strong>
+60  <strong class="bordo">&lt;/body&gt;</strong>
+</code></pre>
+        <p>Começando pelo corpo do documento só o HTML, vamos criar um texto com um título e três parágrafos, 
+            com três links. Note que o último link recebeu a atribuição de uma classe específica.</p>
+        <p>Vamos alterar uma pouco com CSS esses elementos. Crie a área <code>&lt;style&gt;</code> dentro de 
+        <code>&lt;head&gt;</code> e coloque os seguintes seletores.</p>
+<code><pre>
+8   <strong class="bordo">body</strong> {
+9       <strong class="selec-per">font</strong>: <strong class="value">normal</strong> <strong class="medida">1em</strong> <strong class="value"> Arial</strong>, <strong class="value">Helvetica</strong>, <strong class="value">sans-serif</strong>;
+10  }
+11
+12  <strong class="bordo">a</strong> {
+13      <strong class="selec-per">font-weight</strong>: <strong class="value">bold</strong>;
+14      <strong class="selec-per">text-decoration</strong>: <strong class="value">none</strong>;
+15      <strong class="selec-per">color</strong>: <strong class="value">red</strong>;
+16  }
+17
+18  <strong class="bordo">a:visited</strong> {
+19      <strong class="selec-per">color</strong>: <strong class="value">darkred</strong>;
+20  }
+21
+22  <strong class="bordo">a:hover</strong> {
+23      <strong class="selec-per">text-decoration</strong>: <strong class="value">underline</strong>;
+24  }
+</pre></code>
+        <p>Nas declarações acima, criamos três configurações para os links: a primeira (<strong>linha 12</strong>)
+             para links inéditos (não visitados), colocando o texto em negrito, removendo o sublinhado e colocando-os em cor vermelha.
+        </p>
+        <p>No segundo seletor para links (<strong>linha 18</strong>), configuramos as âncoras já visitadas (com 
+        a pseudo-classe <code>:visited</code>). Nele, apenas mudamos a cor para vermelho escuro.</p>
+        <p>Já na terceira declaração (<strong>linha 22</strong>), fizemos configurações para todos os links, quando 
+        passamos o mouse por cima (pseudo-classe <code>:hover</code>) e o sublinhado volta a aparecer.</p>
+        <p>Por fim, vamos adicionar algumas configurações relacionadas à classe <code>especial</code>, criada no documento 
+        HTML, para o terceiro link.</p>
+<code><pre>
+26  <strong class="bordo">.especial:hover</strong> {
+27      <strong class="selec-per">color</strong>: <strong class="value"> white</strong>;
+28      <strong class="selec-per">background-color</strong>: <strong class="value">black</strong>;
+29      <strong class="selec-per">text-decoration</strong>: <strong class="value">none</strong>;
+30  }
+31
+32  <strong class="bordo">.especial::before</strong> {
+33      <strong class="selec-per">content</strong>: <strong class="bordo">'&gt;&gt;'</strong>;
+34      <strong class="selec-per">font-weight</strong>: <strong class="value">lighter</strong>;
+35  }
+36
+37  <strong class="bordo">.especial::after</strong> {
+38      <strong class="selec-per">content</strong>: <strong class="bordo">'&lt;&lt;'</strong>;
+39      <strong class="selec-per">font-weight</strong>: <strong class="value">lighter</strong>;
+40  }
+</pre></code>
+        <p>Na primeira declaração do código acima (<strong>linha 26</strong>), dizemos que o link da classe especial 
+        vai ter letra branca, fundo preto e perderá o sublinhado apenas quando movermos o mouse sobre ele.</p>
+        <p>Nas próximas declarações (<strong>linhas 32 e 37</strong>), vamos adicionar um símbolo &gt;&gt; antes e outro 
+        símbolo &lt;&lt; depois usando os pseudo-elementos <code>::before</code> e <code>::after</code>, 
+        respectivamente.</p>
+    <h2>Mais um exemplo</h2>
+<pre><code>
+18  <strong class="bordo">&lt;body&gt;</strong>
+19      <strong class="bordo">&lt;h1&gt;</strong>Conteúdo especial<strong class="bordo">&lt;/h1&gt;</strong>
+20      <strong class="bordo">&lt;div&gt;</strong>
+21          Passe o mouse aqui
+22          <strong class="bordo">&lt;p&gt;</strong>SURPRESAAAA!<strong class="bordo">&lt;/p&gt;</strong>
+23      <strong class="bordo">&lt;/div&gt;</strong>
+24      <strong class="bordo">&lt;p&gt;</strong>Veja o conteúdo oculto aparecendo!<strong class="bordo">&lt;/p&gt;</strong>
+25  <strong class="bordo">&lt;/body&gt;</strong>
+</code></pre>
+        <p>Na <strong>linha 20</strong>, criamos um bloco especial com a tag <code>&lt;div&gt;</code>. Uma das grandes vantagens 
+            em usar divs é que elas podem ter outras tags dentro dela, assim como o parágrafo interno que criamos na 
+        <strong>linha 22</strong>.</p>
+        <p>Vamos criar nosso estilo agora, dentro da área <code>&lt;head&gt;</code>:</p>
+<pre><code>
+7 <strong class="bordo">&lt;style&gt;</strong>
+8       <strong class="bordo">div</strong> > <strong class="bordo">p</strong> {
+9           <strong class="selec-per">display</strong>: <strong class="value">none</strong>;
+10      }
+11
+12      <strong class="bordo">div:hover</strong> > <strong class="bordo">p</strong> {
+13          <strong class="selec-per">display</strong>: <strong class="value">block</strong>;
+14          <strong class="selec-per">background-color</strong>: <strong class="value">yellow</strong>;
+15      }
+16  <strong class="bordo">&lt;/style&gt;</strong>
+</code></pre>
+        <p>O primeiro seletor, na <strong>linha 8</strong>, vai esconder o parágrafo que está dentro da div (representado em 
+        CSS como <code>div > p</code>) através da propriedade <code>display</code> com o valor <code>none</code>.</p>
+        <p>O segundo seletor, na <strong>linha 12</strong>, vai fazer o parágrafo escondido reaparecer, com o fundo pintado 
+        de amarelo apenas quando passarmos o mouse sobre ele.</p>
+        <p><strong>Observação:</strong> Toda vez que usamos o símbolo > em um seletor, indicamos os filhos (<code><em>children</em></code>) 
+        imediatos de um elemento. No exemplo HTML que criamos, dizemos que o primeiro parágrafo é <em>direct children</em> da <code>div</code>.</p>
+</body>
+</html>

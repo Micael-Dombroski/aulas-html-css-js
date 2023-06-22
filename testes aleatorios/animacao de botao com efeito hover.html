@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com animação</title>
+    <style>
+        .botao {
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .btn {
+            width: 200px;
+            height: 50px;
+            font-weight: bold;
+            font-size: 30px;
+            border: none;
+            border-radius: 1000px;
+            color: lawngreen;
+            transition: all 1s ease-in-out 0s;
+            box-shadow: inset 0 0 10px black;
+        }
+        .btn:hover {
+            background: transparent;
+            color: purple;
+            transform: scale(2)rotate(360deg);
+            box-shadow: 0 0 60px blueviolet;
+            cursor: grab;
+            border: 2px solid purple;
+        }
+        .Joia {
+            width: 75px; 
+            height: 30px; 
+            font-weight: bolder;
+            font-size: 20px;
+            border: outset;
+            border-style: dotted;
+            border-radius: 1000px;
+            color: red;
+            transform: perspective(360deg);
+            box-shadow: 0px 0px 20px red;
+        }
+        .Joia:hover {
+            background-color: black;
+            color: aquamarine;
+            box-shadow: 0 0 30px aquamarine;
+            cursor: grabbing;
+            border: 2px solid aquamarine;
+
+        }
+        p {
+            text-align: center;
+            color: blue;
+        }
+        .colorir {
+            background-color: black;
+        }
+        .texto {
+            background-color: black;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="texto">
+    <h1>No CSS</h1>
+    <p>O comando width afeta na largura do seletor; o comando height afeta na altura do seletor; 
+        o comando font-weight faz com que o seletor fique com a letra mais grossa, tipo um negrito, ou mais fina;
+        font-size afeta o tamanho da fonte do seletor; border define o tipo da borda que o seletor terá; boder-style muda o estilo da borda;
+        border-radius muda a ponta da borda, pondendo arredondar ela; color define a cor da letra e da borda;
+        quando colocamos a class de um tag ".class:houver" no css, tudo o que for aplicado ali será a respeito do que acontecerá
+        com o botão após o mouse estar sobre ele; fazer com que a cor do botão mude quando o mouse estiver sobre ele com o background; 
+        com o color a gente muda a cor da palavra escrita no botão quando o mouse estiver sobre ele; com cursor, mudamos a forma do mouse quando sobre o botão;
+        com border mudamos a cor da borda do botão quando o mouse estiver sobre ele.
+Vale lembra que caso tenhamos mais de um botão e queiramos deixar animações diferentes em cada um deles, devemos aplicar classes para esses botões.
+    </p>
+</div>
+    <div class="botao">
+        <button class="btn">
+            Inscreva-se
+        </button>
+    </div>
+    <div class="colorir">
+    <button name="Lucky">Clique Aqui</button>
+    <p><button class="Joia">Teste</button></p>
+    <p>Abraços</p>
+    </div>
+</body>
+</html>

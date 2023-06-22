@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif2.ico" type="image/x-icon">
+    <title>Modelo de Caixas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+        p {
+            font-size: 1em;
+            text-align: justify;
+            margin: 20px;
+            text-indent: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-left: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-left: 40px;
+        }
+        div {
+            text-align: center;
+        }
+        .caixa > h1 {
+            width: 300px;
+            height: 50px;
+            background-color: lightgray;
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            padding: 20px;
+            outline-width: 30px;
+            outline-style: solid;
+            outline-color: blue;
+            margin: 50px;
+        }
+        #abrigo {
+            display: flex;
+            margin-left: 100px;
+            margin-right: 100px;
+            width: 500px;
+            border: 2px solid black;
+        }
+        nav {
+            display: block;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        h4 {
+            padding: 10px;
+            background-color: gray;
+            color: white;
+            border: 2px;
+            width: 229px;
+            text-align: center;
+            margin-top: 0px;
+        }
+        nav > p {
+            padding-left: 20px;
+        }
+        hr {
+            color: black;
+            font-weight: bolder;
+        }
+        .semanticboxes {
+            width: 600px;
+            margin: 20px;
+        }
+        .exsombra {
+            font: 1em Arial, Helvetica, sans-serif;
+            background-color: peachpuff;
+        }
+        div.exsombra {
+            padding: 30px;
+        }
+        article#caixa {
+            background-color: snow;
+            width: 400px;
+            margin: auto;
+            padding: 1px 10px;
+        }
+        article#caixa2 {
+            background-color: snow;
+            width: 400px;
+            margin: auto;
+            padding: 1px 10px;
+            box-shadow: 3px 5px 4px black;
+        }
+        article#caixa3 {
+            background-color: snow;
+            width: 400px;
+            margin: auto;
+            padding: 1px 10px;
+            box-shadow: 3px 5px 4px black;
+            border-radius: 10px;
+        }
+        article#caixa4 {
+            background-color: snow;
+            width: 400px;
+            margin: auto;
+            padding: 1px 10px;
+            box-shadow: 3px 5px 4px black;
+            border-radius: 10px 20px 30px 40px;
+        }
+        article#caixa5 {
+            background-color: snow;
+            width: 400px;
+            margin: auto;
+            padding: 1px 10px;
+            box-shadow: 3px 5px 4px black;
+            border-radius: 10px 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modelo de Caixas</h1>
+    <h2>O que é uma caixa?</h2>
+    <p>De forma simples e objetiva, baseado em um conceito chamado "<em>box model</em>", 
+    a grande maioria dos elementos HTML que temos no nosso site são como caixas. Elas são 
+    <em>containers</em> que armazenam conteúdos ou até mesmo outras caixas.</p>
+    <h3>Anatomia de uma caixa</h3>
+    <p>Vamos analisar como uma caixa vai ser aparesentada por todos os navegadores. Olhe 
+        atentamente o diagrama a seguir, que é exatamento o já citado <strong>modelo de 
+        caixa</strong>:
+    </p>
+    <div><img src="../../../imagens/box_model.jpg" alt="modelo de caixa"></div>
+    <p>Tudo começa a partir do <strong>conteúdo</strong> (<code>content</code>), que 
+        representamos acima com o <code>bla bla bla...</code>. Por padrão, toda caixa é 
+        composta apenas pelo conteúdo e não possui <code>padding</code>, nem 
+        <code>border</code>, nem <code>outline</code> e nem <code>margin</code>. Uma exceção 
+        curiosa é o elemento <code>&lt;body&gt;</code> que já vem com uma <code>margin</code> 
+        de 8px.</p>
+    <p>Todo conteúdo possui uma <strong>largura</strong> (<code>width</code>) e uma 
+        <strong>altura</strong> (<code>height</code>) e a esse conjunto de propriedades, 
+        damos o nome de <code>box-size</code> (tamanho da caixa). O tamanho da caixa não inclui 
+        as medidas de <code>padding</code>, <code>border</code>, <code>outline</code> e 
+        <code>margin</code>.</p>
+    <p>Depois do conteúdo e de seu tamanho, vamos nos forcas na <strong>borda</strong> que fica 
+        em volta dele. Ela pode ter uma espessura, uma cor e um formato.</p>
+    <p>Entre a borda e o conteúdo - da borda para dentro - temos o <strong>preenchimento</strong> 
+        (<code>padding</code>) e da borda para forma, temos a <strong>margem</strong> 
+        (<code>margin</code>).</p>
+    <p>Entre a margem e a borda, podemos determinar o <strong>contorno</strong> (<code>outline</code>) 
+    que é muito pouco utilizado, mas existe. Ele é  uma traçado visual que podemos criarfora da 
+    borda e o cálculo da sua espessura faz parte da margem estabelecida.</p>
+    <pre><code>
+    7   &lt;style&gt;
+    8       h1 {
+    9           width: 300px;
+    10          height: 50px;
+    11          background-color: lightgray;
+    12          border-width: 10px;
+    13          border-style: solid;
+    14          border-color: red;
+    15          padding: 20px;
+    16          outline-width: 30px;
+    17          outline-style: solid;
+    18          outline-color: blue;
+    19          margin: 50px;
+    21  &lt;/style&gt;
+    22 &lt;head&gt;
+    23 &lt;body&gt;
+    24      &lt;h1&gt; Exemplo de Caixa &lt;/h1&gt;
+    25 &lt;/body&gt;
+    26 &lt;/html&gt;
+    </code></pre>
+    <p>Todas as configurações serão aplicadas ao elemento <code>&lt;h1&gt;</code>, que é 
+    uma caixa e foi criada na <strong>linha 24</strong> do código acima. As <strong>
+    linhas 9 e 10</strong> configuram o <code>size</code> da caixa (largura e altura, respectivamente) 
+    e fará com que ela tenha 300x50 pixels.</p>
+    <p>As <strong>linhas de 12 a 14</strong>, configuram uma borda sólida, vermelha e com 10 pixels 
+    de espessura.</p>
+    <p>A <strong>linha 15</strong> vai criar um espaço interno de preenchimento (da borda para dentro) com 
+    20 pixel no elemento e a <strong>linha 19</strong> vai criar um espaço externo (da borda para fora) de 
+    50 pixels.</p>
+    <p>As <strong>linhas 16 a 18</strong> vão usar parte da margem para criar um contorno azul, sólido e 
+    com 30 pixels de espessura.</p>
+    <p><strong>TAMANHO TOTAL:</strong> Para calcular a largura e altura total de um elemento na tela, some 
+    os tamanhos do <strong>conteúdo + preenchimento + borda + margem</strong>. O contorno não vai entrar 
+    nessa conta, pois utiliza parte da medida da margem.</p>
+    <p>O resultado visual do código anterior será:</p>
+    <div class="caixa">
+        <h1>Exemplo de Caixa</h1>
+    </div>
+    <p>Olhando de perto, podemos analisar as medidas configuradas no código apresento.
+        As medidas de <code>height</code> e <code>width</code> (300x50) são medidas apenas 
+        pela parte pontilhada do conteúdo.
+    </p>
+    <p>A <code>border</code> de 10px ficou em vermelho e o <code>outline</code> de 30px ficou em azul. O 
+    <code>padding</code> de 20px fica da borda para dentro e a <code>margin</code> de 50px fica da borda 
+    para fora.</p>
+    <p>Sendo assim, a medida total que essa caixa vai ocupar é de 50 + 10 + 20 + 300 + 20 + 10 + 50 = 
+        <strong>460px de largura</strong> e 50 + 10 + 20 + 50 + 20 + 10 + 50 = <strong>210px de altura</strong>.</p>
+    <p><strong>NOVIDADE DAS CSS3:</strong> Existe a nova propriedade <code>box-sizing</code> onde podemos 
+    definir que as dimensões <code>height</code> e <code>width</code> não são medidas apenas a partir do 
+    conteúdo (<code>content-box</code>) e sim pela borda (<code>border-box</code>).</p>
+    <h3>Dá pra simplificar?</h3>
+    <p>As configurações de borda e contorno também possuem <em>shorthands</em> para simplificar o código anterior. 
+    A ordem para as duas configurações é sempre a mesma para as duas shorthands: largura (<code>-width</code>), 
+    estilo (<code>-style</code>) e cor (<code>-color</code>).</p>
+        <div id="abrigo">
+            <nav>
+                <h4>MODO COMPLETO</h4>
+                <code>...border-width: 10px; <br>
+                    ...border-style: solid;<br>
+                    ...border-color: red;<br>
+                    ...outline-width: 30px;<br>
+                    ...outline-style: solid;<br>
+                    ...outline-color: blue;</code>
+            </nav>
+            <hr>
+            <nav>
+                <h4>SHORTHAND</h4>
+                <code>...border: 10px solid red; <br>
+                ...outline: 30px solid blue;</code>
+            </nav>
+        </div>
+    <h2>Preenchimento e margem personalizados</h2>
+    <p>Todo elemento de caixa possui quatro valores para <code>padding</code> e quatro para 
+    <code>margin</code>, sempre nessa mesma ordem: superior (<code>-top</code>), direita 
+    (<code>-right</code>), inferior (<code>-bottom</code>) e esquerda (<code>-left</code>). 
+    Quando colocamos um único valor de dimensão para o preenchimento ou margem, esse mesmo valor 
+    é aplicado simetricamente a todas as direções, mas também podemos fazer código como:</p>
+    <div id="abrigo">
+        <nav>
+            <h4>MODO COMPLETO</h4>
+            <code>...padding-top: 10px; <br>
+                ...padding-right: 15;<br>
+                ...padding-bottom: 20;<br>
+                ...padding-left: 25px;</code>
+            <code><br>...margin-top: 0px; <br>
+                ...margin-right: 10px; <br>
+                ...margin-bottom: 20px; <br>
+                ...margin-left: 30px;</code>
+        </nav>
+        <hr>
+        <nav>
+            <h4>SHORTHAND</h4>
+            <code>...padding: 10px 15px 20px 25px; <br>
+            ...margin: 0px 10px 20px 30px;</code>
+        </nav>
+    </div>
+    <p>Também existe a opção de iniciar cada <em>sorthand</em> das propriedades de preenchimento e 
+    borda usando apenas duas medidas:</p>
+    <div id="abrigo">
+        <nav>
+            <h4>MODO COMPLETO</h4>
+            <code>...padding-top: 10px; <br>
+                ...padding-right: 20;<br>
+                ...padding-bottom: 10;<br>
+                ...padding-left: 20px;</code>
+            <code><br>...margin-top: 0px; <br>
+                ...margin-right: 15px; <br>
+                ...margin-bottom: 0px; <br>
+                ...margin-left: 15px;</code>
+        </nav>
+        <hr>
+        <nav>
+            <h4>SHORTHAND</h4>
+            <code>...padding: 10px 20px; <br>
+            ...margin: 0px 15px;</code>
+        </nav>
+    </div>
+    <p>Essa simplificação só é possível quando as medidas <code>-top</code> e <code>-bottom</code> 
+    forem iguais entre si e o mesmo também ocorrer entre as medidas <code>-right</code> e 
+    <code>-left</code>.</p>
+    <h2>Magens no automático</h2>
+    <p>Esse recurso pode fazer a centralização de blocos. Para que isso seja feito, devemos pedir que 
+        o navegador calcule automaticamente as margens da esqueda e da direita para que o bloco seja 
+        colocado no meio do navegador, independente do tamanho da janela.
+    </p>
+    <p>Para centralizar uma caixa, use a seguinte declaração no seu seletor: <br>
+    <code><strong style="color: red;">margin</strong>: <strong style="color: rgb(45, 147, 182);">auto</strong>;</code></p>
+    <h2>Tipos de Caixa</h2>
+    <p>Dependendo do comportamento da caixa, podemos classificar um elemento em uma de duas categorias:</p>
+    <h3>Caixa do tipo block-level</h3>
+    <p>Um elemento dito <em>block-level</em> sempre vai se iniciar em uma nova linha e vai ocupar a 
+        largura total do elemento onde ele está contido. Se não estiver contido em nenhuma outra caixa,
+         ele vai ocupar 100% do <code>&lt;body&gt;</code>.</p>
+    <p>O elemento <em>block-level</em> mais conhecido é o <code>&lt;div&gt;</code> e suas variações 
+        semânticas modernas da HTML5, como <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, 
+        <code>&lt;aside&gt;</code>, etc.</p>
+    <p>Na lista a seguir serão apresentados alguns elementos HTML que são block-level:</p>
+    <code><pre>
+    &lt;address&gt;         &lt;article&gt;       &lt;aside&gt;         &lt;bloquote&gt;          &lt;canvas&gt;        &lt;dd&gt;
+    &lt;div&gt;             &lt;dl&gt;            &lt;dt&gt;            &lt;fieldsel&gt;          &lt;figcaplion&gt;    &lt;figure&gt;
+    &lt;footer&gt;          &lt;form&gt;          &lt;h1&gt; - &lt;h6&gt;     &lt;header&gt;            &lt;hr&gt;            &lt;li&gt;
+    &lt;main&gt;            &lt;nav&gt;           &lt;noscript&gt;      &lt;ol&gt;                &lt;p&gt;             &lt;pre&gt;
+    &lt;section&gt;         &lt;table&gt;         &lt;tfoot&gt;         &lt;ul&gt;                &lt;video&gt;
+    </pre></code>
+    <h3>Caixa do tipo inline-level</h3>
+    <p>Um elemento do tipo <em>inline-level</em> não vai começar em uma nova linha, e sim no ponto exato 
+    onde foram definidos. E a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.</p>
+    <p>Abaixo estão listados alguns elementos <em>inline-level</em> usadas pela HTML:</p>
+    <code><pre>
+    &lt;a&gt;           &lt;abbr&gt;            &lt;acronym&gt;         &lt;b&gt;           &lt;bdo&gt;         &lt;br&gt;
+    &lt;button&gt;      &lt;cite&gt;            &lt;code&gt;            &lt;dfn&gt;         &lt;em&gt;          &lt;i&gt;
+    &lt;img&gt;         &lt;input&gt;           &lt;kbd&gt;             &lt;label&gt;       &lt;map&gt;         &lt;object&gt;
+    &lt;output&gt;      &lt;q&gt;               &lt;samp&gt;            &lt;script&gt;      &lt;select&gt;      &lt;small&gt;
+    &lt;span&gt;        &lt;strong&gt;          &lt;sub&gt;             &lt;textarea&gt;    &lt;tt&gt;          &lt;var&gt;            
+    </pre></code>
+    <h2>Grouping Tags e Samantic Tags</h2>
+    <p>A linguagem HTML padrão tinhas apenas duas tags de agrupamento genérico: a <code>&lt;div&gt;</code> e a 
+    <code>&lt;span&gt;</code>. A diferença básica entre elas é que a primeira é um elemento agrupador do tipo 
+    <em>block-level</em> e o segundo é <em>inline-level</em>. No mais, eles agem exatamente da mesma maneira, 
+    servindo para juntar vários outros elementos HTML.</p>
+    <p>Com o surgimento da HTML5, surgiram as tags semânticas de agrupamento. Isso não significa que as <code>
+        &lt;div&gt;</code> e <code>&lt;span&gt;</code> (agora chamadas de não-semânticas) deixaram de existir 
+        ou ficaram obsoletas, mas seu uso agora faz menos sentido, pois temos tags para dividir as partes do 
+        nosso documento HTML.</p>
+    <p>Vamos compreender a partir de agora os principais agregadores semânticos da HTML5</p>
+    <h3>Header</h3>
+    <p>Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até mesmo o cabeçalho de 
+        uma seção ou artigo. Normalmente inclui títulos <code>&lt;h1&gt; - &lt;h6&gt;</code> e subtítulos. 
+        Podem também conter menus de navegação.
+    </p>
+    <h3>Nav</h3>
+    <p>Define uma área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um 
+    <code>&lt;nav&gt;</code> pode estar dentro de um <code>&lt;header&gt;</code>.
+    </p>
+    <h3>Main</h3>
+    <p>É um agrupador usado para delimitar o conteúdo principal do nosso site, Normalmente concentra o conteúdo 
+        principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.
+    </p>
+    <h3>Section</h3>
+    <p>Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir conteúdos em
+         artigos com conteúdos específicos. Segundo a documentação oficial da W3C, "uma seção é um agrupamento temático
+          de conteúdos, tipicamente com um cabeçalho". 
+    </p>
+    <h3>Article</h3>
+    <p>Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizem respeito a 
+        um mesmo assunto. Podemos usar um <code>&lt;article&gt;</code> para delimitar um post de blog ou fórum, uma notícia, etc.
+    </p>
+    <h3>Aside</h3>
+    <p>Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente um conteúdo 
+        <code>&lt;aside&gt;</code> está posicionado ao lado de um determinado texto ou até mesmo no meio dele, exatamente 
+        como fizemos no bloco de texto apresentado anteriomente, falando sobre "MÚLTIPLOS NÍVEIS". 
+    </p>
+    <h3>Footer</h3>
+    <p>Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um 
+        conteúdo periférico (o que caracerizaria um <code>&lt;aside&gt;</code>), mas possui informações sobre autoria do 
+        conteúdo, links adicionais, mapa do site, documentos relacionados.
+    </p>
+    <p>A seguir, vou criar uma proposta de estrutura para um projeto de site. Não tome ela como a única possibilidade de criar 
+        o posicionamento de elementos de agrupamento semântico.
+    </p>
+    <img src="../../../imagens/semanticboxes.jpg" alt="exemplo de divs semânticas" class="semanticboxes">
+    <p>Analise o diagrama do lado esquerdo e o código do lado direito da imagem acima. Veja a hierarquia entre os elementos e 
+        quais deles estão dentro um do outro.
+    </p>
+    <h2>Sombras nas caixas</h2>
+    <p>As sombras são muito úteis para dar volume, para dar a sensação de que as caixas estão ali realmente. Para exemplificar, 
+        vamos criar o seguinte código base:
+    </p>
+<pre><code>
+    7       &lt;style&gt;
+    8            body {
+    9               font: 1em Arial, Helvetica, sans-serif;
+    10                background-color: peachpuff;
+    11            }
+    12            article#caixa {
+    13                background-color: snow;
+    14                width: 400px;
+    15                margin: auto;
+    16                padding: 1px 10px;
+    17                /* sombra aqui */
+    18            }
+    19        &lt;/style&gt;
+    20    &lt;/head&gt;  
+    21    &lt;body&gt;
+    22      &lt;article id='caixa'&gt;
+    23          &lt;h1&gt;Usando sombras&lt;/h1&gt;  
+    24          &lt;p&gt;Vamos aprender a usar sombras com esse exemplo simples.&lt;/p&gt;
+    25      &lt;/article&gt;
+    26    &lt;/body&gt;
+    27    &lt;/html&gt;        
+</code></pre>
+    <p>Olhando para o corpo da página, temos apenas um <code>&lt;article&gt;</code> (<strong>linha 22</strong>) com um breve 
+    conteúdo. A configuração de estilo (<strong>linha 7</strong> em diante) faz com que esse artigo seja configurado como uma 
+    pequena caixa centralizada. O resultado visual está apresentado a seguir:</p>
+    <div class="exsombra">
+        <article id="caixa">
+            <h1>Usando sombras</h1>
+            <p>Vamos aprender a usar sombras com esse exemplo simples.</p>
+        </article>
+    </div>
+    <p>Para criar uma sombra nessa caixa, vamos adicionar uma declaração especial na <strong>linha 17</strong>, 
+    substituindo o comentário que foi deixado lá.</p>
+    <p><code style="color: red;">box-shadow</code>: <code style="color: green;"> 3px 5px 4px</code> <code style="color: blue;"></code>;</p>
+    <div class="exsombra">
+        <article id="caixa2">
+            <h1>Usando sombras</h1>
+            <p>Vamos aprender a usar sombras com esse exemplo simples.</p>
+        </article>
+    </div>
+    <p>Veja que uma sombra bem forte já pode ser percebida, assim que adicionamos a propriedade <code>box-shadow</code> e seus quatro 
+    valores. A ordem é sempre essa:</p>
+    <ol>
+        <li><strong>Deslocamento horizontal</strong> (<em>h-offset</em>): quanto a sombra va andar para o lado direito (valores negativos
+             causam deslocamento para a esquerda)</li>
+        <li><strong>Deslocamento vertical</strong> (<em>v-offset</em>): quanto a sombra vai andar para baixo (valores negativos causam 
+            deslocamento para cima)</li>
+        <li><strong>Embaçamento</strong> (<em>blur</em>): quanto a sombra vai se espalhar pelo fundo</li>
+        <li><strong>Cor</strong> (<em>color</em>): cor da sombra. É possível usar uma transparência</li>
+    </ol>
+    <h2>Bordas decoradas</h2>
+    <p>As bordas das caixas não precisam ser sempre retangulares e podem ter alguns detalhes especiais. Vamos usar o mesmo exercício que 
+        estamos criando desde o item anterior onde aprendemos a usar sombras.
+    </p>
+    <h3>Vértices arredondados</h3>
+    <p>Podemos arredondar os vértices usando uma declaração simples usando a propriedade <code>border-radius</code>. Adicionando o seguinte 
+    comando ao seletor do artigo do exemplo que estamos criando: <code>boder-radius: 10px;</code></p>
+    <div class="exsombra">
+        <article id="caixa3">
+            <h1>Usando sombras</h1>
+            <p>Vamos aprender a usar sombras com esse exemplo simples.</p>
+        </article>
+    </div>
+    <p>Na declaração acima, todos os vértices foram levemente arredondados (<em>10px</em>) de forma simétrica. Se for necessário, podemos 
+    indicar quatro medidas diferentes, uma para cada vértice. Olhe atentamente para o resultado abaixo e perceba que cada ponta 
+    está diferente. <br>
+    <code>border-radius: 10px 20px 30px 40px;</code></p>
+    <div class="exsombra">
+        <article id="caixa4">
+            <h1>Usando sombras</h1>
+            <p>Vamos aprender a usar sombras com esse exemplo simples.</p>
+        </article>
+    </div>
+    <p>Assim como fizemos com as margens, também é possível indicar apenas dois valores, o que vai agir em vértices intercalados, partindo 
+        do canto superior esquerdo. <br>
+        <code>border-radius: 10px 30px;</code>
+    </p>
+    <div class="exsombra">
+        <article id="caixa5">
+            <h1>Usando sombras</h1>
+            <p>Vamos aprender a usar sombras com esse exemplo simples.</p>
+        </article>
+    </div>
+</body>
+</html>

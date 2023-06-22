@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A base geral do CSS</title>
+    <link rel="shortcut icon" href="../../../icons/favicon1.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        h1,h2,h3 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>A base geral do CSS</h1>
+    <h2>Formas de selecionar um elemento no CSS</h2>
+    <p> Existem diferentes formas de selecionar um elemento no CSS, abaixo estão algumas delas:</p>
+    <ul>
+        <li>Através do próprio nome ex: <code>h1 {color: red; size: 20px;}</code></li>
+    </ul>
+    <p> Nessa primeira forma, atribuimos a todos os elementos com essa tag os atributos, caso seja preciso atribuir a apenas um 
+        elemento determinado atributo, podemos usar esses 2 métodos:
+    </p>
+    <p> Dando um id para o elemento desejado, ex:</p>
+    <pre><code>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    #titulo1 {
+                        background-color: black;
+                        color: white;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1 id="titulo1"&gt;Título 1&lt;/h1&gt;
+                &lt;h1&gt;Título 2&lt;/h1&gt;
+                &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Quam et repudiandae quis obcaecati aut placeat fugiat, fugit perspiciatis odio blanditiis accusamus itaque dolorum, eveniet non commodi ab deleniti ratione unde.&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code></pre>
+    <p> Ou dando uma classe para o elemento desejado, ex:</p>
+    <pre><code>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    .letra-branca {
+                        background-color: black;
+                        color: white;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1 class="letra-branca"&gt;Título 1&lt;/h1&gt;
+                &lt;p class="letra-branca"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia 
+                et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+                &lt;h1&gt;Título 2&lt;/h1&gt;
+                &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia 
+                et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code></pre>
+    <h3>Quando usar <code>class</code> e <code>id</code>?</h3>
+    <p> Podemos usar o <code>id</code> sempre que quisermos aplicar atributos a somente um elemento, já o <code>class</code>, usamos 
+    quando queremos aplicar o mesmo atributo para elementos de tags diferentes ou em apenas alguns elementos de tags iguais. Note que a forma de chamarmos um elemento por <code>id</code> e <code>class</code> são diferentes, 
+para chamarmos um id no CSS devemos antes de escrever seu nome inserir "<strong>#</strong>" e para chamarmos um class devemos color "<strong>.</strong>" antes do nome da class.</p>
+        <h2>Como aplicar atributos para <code>id</code> e <code>class</code> simultâneamente?</h2>
+        <p>Para isso fazemos o seguinte:</p>
+        <pre><code>
+            &lt;html&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                        .letra-branca, #titulo-1 {
+                            background-color: black;
+                            color: white;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1 class="letra-branca"&gt;Título 1&lt;/h1&gt;
+                    &lt;p class="letra-branca"&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia 
+                    et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+                    &lt;h1 id="titulo-1"&gt;Título 2&lt;/h1&gt;
+                    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia 
+                    et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+                &lt;/body&gt;
+            &lt;/html&gt;
+        </code></pre>
+    <p>Note que usamos <strong>vírgula</strong> para atribuir os atributos a mais de um item (no caso o item id titulo-1 e o item class letra-branca).</p>
+     <h2>Como selecionar um elemento dentro de outro com CSS?</h2>
+     <p>Para isso fazemos o seguinte:</p>
+     <pre><code>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                   ol li {
+                       background-color: red;
+                       color: white;
+                   } 
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;Item 1&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code></pre>  
+    <p>Note que indicamos no CSS que queremos mudar os atributos do elemento presente na tag &lt;li&gt;&lt;/li&gt; dentro da tag &lt;ol&gt;&lt;/ol&gt;</p>
+    
+</body>
+</html>

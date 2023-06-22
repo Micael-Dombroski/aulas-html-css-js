@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <link rel="shortcut icon" href="../../../icons/lucif.ico" type="image/x-icon">
+    <style>
+        * {box-sizing: border-box;}
+        body {
+            font-size: 1em;
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        p {
+            text-align: justify;
+            text-indent: 20px;
+            margin: 20px;
+        }
+        nav {
+            margin-left: 20px;
+        }
+        h2 {
+            text-indent: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grouping Tags</h1>
+    <p>É importante saber como agrupar as tags dentro de caixas em seu site para 
+        que ele fique bem organizado.
+    </p>
+    <p>Antigamente as únicas tags de agrupamento eram a tag <code>&lt;div&gt;</code> que é 
+    do tipo box-level, e a tag <code>&lt;span&gt;</code> do tipo inline-level. Embora atualmente 
+    essas tags ainda possam ser usadas, elas não possuem um significado semântico, que é muito buscado 
+    no HTML5, por isso elas não são muito usadas em sites profissionais, ao invés delas, usamos outras 
+    tags de agrupamente que possuem significado semântico. Veja a seguir algumas delas:</p>
+    <h2>Tags Semânticas do Tipo Box-level</h2>
+    <ol>
+        <li><code>&lt;header&gt;</code>: tag usada para marcar o cabeçalho da página.</li>
+        <li><code>&lt;nav&gt;</code>: tag usada para marcar aonde será o menu da sua página.</li>
+        <li><code>&lt;main&gt;</code>: tag usada para indicar aonde ficará o conteúdo da página.</li>
+        <li><code>&lt;footer&gt;</code>: tag usada para indicar aonde ficará o rodapé da página.</li>
+        <li><code>&lt;section&gt;</code>: tag usada para indicar seções na nossa página.</li>
+        <li><code>&lt;article&gt;</code>: tag usada para indicar artigos na página.</li>
+        <li><code>&lt;aside&gt;</code>: tag usada para colocar conteúdo periférico em relação ao artigo, 
+            por exemplo, da página, como por exemplo o nome do autor do artigo.</li>
+    </ol>
+
+    <header>
+        <h1>Esse título está dentro da tag <code>&lt;header&gt;</code></h1>
+        <nav>
+            <a href="#">Essa lista</a>
+            <a href="#">está dentro </a>
+            <a href="#">da tag <code>&lt;nav&gt;</code></a>
+        </nav>
+    </header>
+    <main>
+        <p>Esse parágrafo está dentro da tag <code>&lt;main&gt;</code>.</p>
+    </main>
+    <footer><p>Esse parágrafo está dentro da tag <code>&lt;footer&gt;</code>.</p></footer>
+</body>
+</html>

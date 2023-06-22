@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 20px;
+    background-color: rgb(110, 107, 107);
+}
+h1, h2 {
+    text-align: center;
+}
+div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+img {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    padding-bottom: 20px;
+
+}
+#criando img {
+ height: 160px;
+ width: 160px;
+ border-radius: 80px;
+ margin-top: 20px;
+ margin-left: 30px;
+}
+#res p {
+    font-size: 20px;
+    text-align: center;
+}
+#res {
+    background-color: rgba(0, 0, 0, 0.644);
+    border: 2px dashed rgb(0, 247, 255);
+    color: white;
+}

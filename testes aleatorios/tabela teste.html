@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        
+        *{
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: rgb(34, 35, 53);
+            color: white;
+        }
+        #Menu {
+            list-style: none;
+            padding: 0;  
+        }
+        #Menu ul li {
+            display: inline;
+        }
+        #Menu ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            display: inline-block;
+        }
+        #Menu ul li a:hover {
+            background-color: aqua;
+            transition: 1s;
+        }
+        #Menu ul li:last-child a {
+            background-color: aqua;
+            float: right;
+        }
+        table {
+            background-color: white;
+            border: 10px;
+            margin: auto;
+            width: 100%;
+        }
+        caption {
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+        }
+        td {
+            background-color: black;
+            padding: 5px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav id="Menu">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Informações</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Opções</a></li>
+            <li><a href="#">Entrar</a></li>
+        </ul>
+    </nav>
+    <table>
+    <caption>
+        Legenda na parte de cima da tabela
+    </caption>
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>Célula 1</td>
+                    <td>Célula 2</td>
+                    <td>Célula 3</td>
+                </tr>
+                <tr>
+                    <td>Célula 4</td>
+                    <td>Célula 5</td>
+                    <td>Célula 6</td>
+                </tr>
+            </table>
+        </td>
+        <td>Célula 7</td>
+    </tr>
+    <tr>
+        <td>Célula 8</td>
+        <td>Célula 9</td>
+    </tr>
+    </table>
+
+</body>
+</html>

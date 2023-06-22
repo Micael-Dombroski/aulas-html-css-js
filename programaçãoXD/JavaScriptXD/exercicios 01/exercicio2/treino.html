@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../../icons/lucif.ico" type="image/x-icon">
+    <title>Treino</title>
+    <link rel="stylesheet" href="treino.css">
+</head>
+<body>
+    <h1>Crie seu Personagem</h1>
+        <div id="criando">
+            <p> Escolha a foto do personagem: <br>
+                <input type="radio" name="personagem" id="sans" checked> <img src="sans.jpg" alt="sans">
+                <input type="radio" name="personagem" id="fellsans"> <img src="fellsans.jpg" alt="fellsans"> <br>
+                <input type="radio" name="personagem" id="fellchara"><img src="fellchara.jpg" alt="fellchara">
+                <input type="radio" name="personagem" id="corefrisk"><img src="corefrisk.jpg" alt="corefrisk">
+            </p>
+            <p>Escreva o nome do personagem: 
+                <input type="text" name="nome" id="nome">
+            </p>
+            <p>Escreva uma frase para o personagem: 
+                <input type="text" name="frase" id="frase">
+            </p>
+        <p>Clique aqui para criar o personagem: 
+            <input type="submit" value="Enviar" onclick="criar()">
+        </p>
+        </div>
+        <h2>Personagem Criado:</h2>
+        <div id="res">
+        
+        </div>
+
+
+    <script src="treino.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/lucif2.ico" type="image/x-icon">
+    <title>Formulário</title>
+    <style>
+        body {
+            text-align: justify;
+        }
+        form, h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criando Formulários</h1>
+    <p>Usamos a tag &lt;form&gt;&lt;/form&gt; para criar um campo na página que vai abrigar todo
+         o formulário. Os campos de entrada onde o usuário vai inserir dados, usamos a tag &lt;input&gt;, podemos usar diferentes valores  
+         no atributo <strong>type</strong> que podem mudar o tipo de informação que o usuário poderá nos enviar através do formulário.
+    </p>
+    <p>Devemos colocar sempre na tag &lt;input&gt; o atributo <strong>name</strong> pois ele define o nome da variável que receberá o conteúdo do campo. É essencial para a criação de qualquer campo de entrada de dados;</p>
+    <p>Usamos o atributo <strong>placeholder</strong> para deixar um texto dentro da caixa de digitação por padrão, ajuda a guiar o usuário.</p>
+    <h2>Valores usados no atributo type</h2>
+    <ul>
+        <li><strong>text:</strong> cria um campo de digitação onde o usuário pode escrever coisas. Use o atributo <strong>maxlength</strong> para especificar o comprimento máximo do valor que pode ser inserido e <strong>size</strong> 
+            para especificar a quantidade de digitor que podem ser visualizados no campo;</li>
+        <li><strong>radio:</strong> cria uma caixa de verificação, geralmente usamos ela para dar mais de uma opção para o usuário porém só podendo selecionar uma. Usar o atributo <strong>value</strong> para definir 
+            o valor a ser enviado por este item. Use o atributo <strong>checked</strong> para indicar se este item deve estar selecionado por padrão. Botões de escolha que têm o mesmo valor para o atributo name estão no mesmo "grupo de botões de escolha"; apenas um botão de escolha no grupo pode estar selecionado de cada vez;</li>
+        <li><strong>checkbox:</strong> cria uma caixa de verificação, geralmente usada para dar várias opções ao usuário e permitir que ele selecione mais de uma delas;</li>
+        <li><strong>submit:</strong> cria um botão que quando clicado envia o formulário (caso tenha um destino para onde o formulário possa ser enviado);</li>
+        <li><strong>reset:</strong> cria uma botão que quando clicado reseta todos os dados inseridos no formulário para o dados iniciais dele;</li>
+        <li><strong>data:</strong> cria um campo de digitação para o usuário inserir dia, mês e ano;</li>
+        <li><strong>datatime-local:</strong> cria uma campo de digitação para inserir data e horário, sem fuso horário;</li>
+        <li><strong>email:</strong> cria uma campo de digitação para inserir o email;</li>
+        <li><strong>password:</strong> cria um campo de texto com uma só linha cujo valor é obscurecido. Use o atributo <strong>maxlength</strong> para especificar o comprimento máximo do valor que pode ser inserido (server para TEXT também) e <strong>size</strong> 
+            para especificar a quantidade de digitor que podem ser visualizados no campo (serve para TEXT também);</li>
+        <li><strong>number:</strong> cria um campo de texto onde podem ser escritos somente números inteiros;</li>
+        <li><strong>range:</strong> cria uma linha com uma bola onde podemos mover a bola para a direita para aumentar o valor ou para a esquerda para diminuir. Por padrão os valores dos atributos <strong>min</strong> e <STRONG>max</STRONG> são 0 e 100 espectivamente;</li>
+        <li><strong>search:</strong> cria um campo de texto para pesquisa de termos de busca;</li>
+        <li><strong>hidden:</strong> define um campo invisível, cujo o conteúdo é enviado junto com os demais;</li>
+        <li><strong>tel:</strong> cria um campo de texto para inserir o número de telefone;</li>
+        <li><strong>time:</strong> cria um campo de texto para inserir o horário;</li>
+        <li><strong>file:</strong>  Permite ao usuário selecionar um arquivo do seu computador. Use o atributo <strong>accept</strong> para definir os tipos de arquivo (.png, .jpg, etc) que serão exibidos na procura;</li>
+        <li><strong>week:</strong> cria um campo onde podemos inserir a semana do ano (exemplo: semana 20 de 2022);</li>
+
+    </ul>
+    <h1>Formulário</h1>
+    <form action="input">
+        Nome: <input type="text" name="nome">
+        <p>Sexo:
+            <input type="radio" name="sexo" value="m" checked>Masculino
+            <input type="radio" name="sexo" value="f">Feminino
+        </p>
+        <p>Assinale abaixo os programas de computador que você domina:
+            <br><input type="checkbox" name="prog" value="word">Word
+            <br><input type="checkbox" name="prog" value="excel">Excel
+            <br><input type="checkbox" name="prog" value="access">Access
+            <br><input type="checkbox" name="prog" value="powerpoint">Power Point
+        </p>
+        <p>Data: <input type="date" name="data"></p>
+        <p>Outra Data e hora: <input type="datetime-local" name="data e hora"></p>
+        <p>Email: <input type="email" name="seu email" placeholder="xxxxxx@xxxxxx.com"></p>
+        <p>Senha: <input type="password" name="sua senha" maxlength="8" placeholder="Senha deve ter até 8 digitos"></p>
+        <p>Arquivo: <input type="file" name="arquivo" accept=".png, .jpg, .jpeg"></p>
+        <p>Número aleatório: <input type="number"></p>
+        <p>Diminua &lt; ou aumente &gt;: <input type="range" name="não sei"></p>
+        <p>Pesquisar: <input type="search" name="procurar" placeholder="Pesquise aqui"></p>
+        <p>Escondido: <input type="hidden" name="escondido"></p>
+        <p>Telefone: <input type="tel" name="número de telefone" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}" placeholder="(xx) xxxxx-xxxx"></p>
+        <p>Horário: <input type="time" name="horário"></p>
+        <p>URL: <input type="url" name="link"></p>
+        <p>Semana do ano: <input type="week" name="Semana do ano"></p>
+        <p class="Oi">
+            <input type="submit" value="Enviar">
+            <input type="reset" name="Apagar Campos">
+        </p>
+    </form>
+</body>
+</html>

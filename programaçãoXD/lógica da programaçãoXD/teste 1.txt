@@ -1,0 +1,40 @@
+Algoritmo "Calculadora"
+var
+	N1, N2, R: Real
+	N1:0
+	N2:0
+	R:0
+inicio
+	Escreval ("Digite o primeiro número:")
+	Leia (N1)
+	Escreval ("Digite o segundo número:")
+	Leia (N2)
+	Escreval ("Que operação você deseja fazer? +,-,*,/,\,^,%: ")
+	FAÇA CASO
+		CASO o usuário digite +
+			R <- N1+N2
+			Escreval ("A soma entre ", N1, " e ", N2 " resulta em ", R)
+		CASO o usuário digite -
+			R <- N1-N2
+			Escreval ("A subtração entre ", N1, " e ", N2 " resulta em ", R)
+		CASO
+			SE o usuário digite *
+			R <- N1*N2
+			Escreval ("A multiplicação entre ", N1, " e ", N2 " resulta em ", R)
+		CASO o usuário digite /
+			R <- N1/N2
+			Escreval ("A divisão entre ", N1, " e ", N2 " resulta em ", R)
+		CASO o usuário digite \
+			R <- N1\N2
+			Escreval ("A divisão inteira entre ", N1, " e ", N2 " resulta em ", R)
+		CASO o usuário digite ^
+			R <- N1^N2
+			Escreval (N1, " elevado a ", N2 " potência resulta em ", R)
+		CASO o usuário digite %
+			R <- N1%N2
+			Escreval ("O módulo entre ", N1, " e ", N2 " resulta em ", R)
+		OUTRO CASO
+			Escreval ("O valor inserido é inválido, por favor insira algum dos valores mostrados acima")
+
+	FIM CASO
+fimalgoritmo 

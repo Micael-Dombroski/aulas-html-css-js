@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(0, 0, 0);
+    margin: 0px;
+}
+h1 {
+    color: rgba(255, 255, 255, 0.767);
+    text-align: center;
+    display: block;
+    margin-left: 30px;
+}
+#perfil {
+    height: 200px;
+    border-radius: 100px;
+}
+#fundo {
+    width: 100%;
+}
+header {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+.head2 {
+    display: block;
+    float: right;
+    width: 60%;
+}
+.head1 {
+    display: flex;
+    float: left;
+    width: 40%;
+    align-items: center;
+    margin: 10px;
+}
+#infos {
+    text-align: center;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+#infos a {
+    text-decoration: none;
+    color: rgba(0, 255, 255, 0.808);
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
+#infos a:hover {
+    color: black;
+    background-color: rgba(0, 255, 255, 0.808);
+}
+.head2 li {
+    color: white;
+    margin: auto;
+    display: inline-block;
+    padding: 10px;
+}
+.head2 li:hover {
+    background-color: black;
+}
+.head2 ul {
+    text-align: right;
+    margin-top: 10px;
+    width: 59.15%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#conteudo {
+    display: flex;
+    margin: 0px;
+    height: auto;
+}
+section {
+    padding: 10px;
+    text-align: center;
+    float: right;
+    height: auto;
+    margin-left: 20px;
+    background-color: rgb(27, 27, 27);
+    width: 70%;
+}
+nav {
+    float: left;
+    display: 30%;
+    text-align: center;
+    background-color: black;
+    padding-bottom: 20%;
+}
+form {
+    display: flex;
+    border: 1px 1 white;
+    background-color: black;
+    height: auto;
+    width: 290px;
+    border-radius: 50px;
+    align-items: center;
+    padding: 5px;
+    margin: auto;
+}
+input {
+    margin-left: 10px;
+    color: white;
+    background-color: black;
+    height: 40px;
+}
+#env-coment:hover {
+    cursor: pointer;
+}
+.menu-nav {
+    text-align: justify;
+    font-size: 20px;
+}
+.menu-nav li {
+    padding: 10px;
+}
+nav li:hover {
+    background-color: rgb(32, 32, 32);
+    cursor: pointer;
+}
+.sobre {
+    font-size: 20px;
+    color: rgba(0, 255, 255, 0.562);
+    text-align: center;
+}
+.postagem {
+    margin-top: 20px;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: justify;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgb(19, 18, 18);
+    padding: 20px;
+    color: white;
+}
+.postagem img {
+    width: 100%;
+}

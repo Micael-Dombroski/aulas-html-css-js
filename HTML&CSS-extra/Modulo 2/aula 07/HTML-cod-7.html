@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores no CSS</title>
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: 'Cloister Black';
+            src: url('cloister-black.otf') format('opentype');
+        }
+        body {
+            background-color: rgb(8, 8, 41);
+            color: rgb(255, 255, 255);
+        }
+        h1, h2, h3 {
+            font-family: "Cloister Black";
+            text-align: center;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 35px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            text-align: justify;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .corpo {
+            border-radius: 10px;
+            background-color: rgba(71, 71, 160, 0.15);
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 2%;
+            padding: 10px;
+        }
+        header {
+            display: flex;
+            background-color: rgb(21, 21, 46);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -8px;
+        }    
+        img {
+            height: 30px;
+            margin: 10px;
+            display: flex;
+        }
+        .Simbol {
+            height: 60px;
+            margin-right: 30px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        ul {
+            display: flex;
+            padding: auto;
+            margin-right: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .legenda {
+            margin-top: 15px;
+            padding-right: 10px;
+        }
+        a {
+            color: white;
+            display: flex;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: cyan;
+        }
+        .Pag_NAme {
+            margin-right: auto;
+            color: rgba(51, 36, 119, 0.60);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/RGB_Colorcube_Corner_White.png" alt="RBG" class="Simbol"> <h1 class="Pag_NAme">A Vida É Feita De Cores, Escolha A Sua!</h1>
+        <ul type="none">
+            <a href="#"><li><img src="http://cdn.onlinewebfonts.com/svg/img_213460.png" alt="Home"></li><li class="legenda">Entrar</li></a>
+            <a href="#"><li><img src="http://cdn.onlinewebfonts.com/svg/img_406982.png" alt="Options"></li><li class="legenda">Configurações</li></a>
+            <a href="#"><li><img src="https://cdn0.iconfinder.com/data/icons/cosmo-symbols/40/help_1-512.png" alt="Help"></li><li class="legenda">Ajuda</li></a>
+        </ul>
+    </header>
+    <nav>
+        <div class="corpo">
+            <h1>Cores no CSS</h1>
+            <p>Podemos alterar a cor da fonte e fundo de diversos elementos HTML, como <em>links</em>, títulos, parágrafos, códigos, etc.
+            Para isso, existem 3 formas de aplicar cores a elementos HTML no CSS, veja a seguir quais são.</p>
+            <h2>Color name</h2>
+            <p>Esse é o método mais fácil, nele escrevemos apenas o nome da cor que queremos em inglês, no entanto, esse método é limitado pois o CSS só reconhece o nome de cerca de 140
+                cores diferentes.
+            </p>
+            <h2>RGB</h2>
+            <p>Por padrão em munitores e computadores as cores são formadas pela mistura de 3 cores em diferentes proporções, sendos estar Vermelho (Red), Verde (Green) e Azul (Blue), formando o
+                que chamamos de Sistema de Cores RGB (Red, Green, Blue). A proporção de cada uma dessas cores varia de 0 a 255, caso todas estejam em 0 a cor formada será preto, caso todas estejam em 255 a cor formada será branco.
+            </p>
+            <h3>Motivo de 255 ser o valor máximo</h3>
+            <p>Um código RGB é uma representação dos valores das cores primárias juntas, cada cor pode ser representada por um número de 0 a 255. (o número máximo é 255 pois por mais que haja 16 números possíveis e 16x16=256, quando são
+                2 zeros o valor é igual ao de somente 1 zero, então é desconciderado 1 desses zeros, ficando assim 256-1=255).</p>
+            <h2>RGB Hexadecimal</h2>
+            <p>Um código RGB é uma representação dos valores das cores primárias juntas, só que em Hexadecimal. 
+                Podemos perceber que os códigos RGB são sempre formados com 6 dígitos, o que dá 2 dígitos para cada cor. 
+                Se em 2 dígitos hexadecimais conseguimos valores de 00 a FF, então conseguimos representar valores de 0 a F(15)  da base decimal.</p>
+        </div>
+    </nav>
+</body>
+</html>

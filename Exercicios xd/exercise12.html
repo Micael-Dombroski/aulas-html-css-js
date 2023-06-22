@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/lucif2.ico" type="image/x-icon">
+    <style>
+        #code-interno {
+            background-color: blue;
+            color: red;
+            margin: 0px;
+            padding: 0px;
+        }
+        #code-externo {
+            background-color: black;
+            color: pink;
+            font-size: 10px;
+        }
+    </style>
+    <title>CSS</title>
+</head>
+<body>
+    <h1>CSS</h1>
+    <h2>O que é CSS?</h2>
+    <p>CSS é uma sigla para <strong>Cascading Style Sheets</strong> isto é, folhas de estilo em cascata.</p>
+    <h2>Qual a utilidade do CSS?</h2>
+    <p>O HTML ele é responsável por inserir o conteúdo na nossa página, no entanto, se esse conteúdo não estiver bem organizado, efeitado, de forma que 
+        vá puxar a atenção do usuário para ela, ela poderá perder muito de seu potencial. O CSS é responsável por fazer essa estilização da nossa página.
+    </p>
+    <h3>Formas de aplicar o CSS ao nosso documento HTML</h3>
+    <p>Existem 3 formas de aplicarmos CSS a nossa página HTML, podemos aplicar o <strong>CSS inlie style</strong>, <strong>CSS internal style</strong> e 
+        <strong>CSS external style</strong>. Iremos abordar essas formas logo a seguir.</p>
+        <h4>CSS inline style</h4>
+        <p>É a forma mais simples de aplicar estilos. <br> Nesse estilo o CSS é inserido dentro da tag do elemento que queremos mudar os atributos. Ex:</p>
+        <p style="font-family: Arial, Helvetica, sans-serif; color: blue;"><code>&lt;p <strong>style="font-family: Arial; color: blue;"</strong>&gt;Lorem 
+            ipsum dolor sit amet consectetur, adipisicing elit. Illo officiis amet, esse ullam veniam vero odio at quaerat excepturi 
+            facere tempore error. Consequatur, illum commodi libero sit aliquid repellendus laborum?&lt;/p&gt;</code></p>
+    <p>Note que o CSS foi inserido na tag &lt;p&gt;&lt;/p&gt; através do atributo <code>style</code>. <br> Esse método não é muito usad devido a poluição do código 
+    já que é preciso colocar o atributo <code>style</code> dentro de cada tag que desejamos mudar os atributos, é recomendado usar ela apenas para mudar os atributos de poquíssimas tags 
+    ao invés de todas as tags da página.</p>
+    <h4>CSS internal style</h4>
+    <p>É a forma mais interessante de aplicar estilos. <br> Para usarmos essa forma de inserirmos CSS na nossa página, devemos inserir dentro da tag 
+        &lt;head&gt;&lt;/head&gt; a tag &lt;style&gt;&lt;/style&gt;, e é nessa tag onde especificaremos o elemento presente no documento HTML ao qual queremos 
+        atribuir novas formatações e as formatações que queremos aplicar. Veja esse exemplo:</p>
+    <pre><code>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;style&gt;
+                    h1 {
+                        background-color: black;
+                        color: white;
+                    }
+                    p {
+                        background-color: blue;
+                        color: red;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            <div id="code-interno">
+                <pre style="background-color: black; color: white;">               &lt;h1&gt;Título 1&lt;/h1&gt;</pre>
+                    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia
+                et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+                <pre style="background-color: black; color: white;">               &lt;h1&gt;Título 2&lt;/h1&gt;</pre>
+                    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia
+                et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+            </div>
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code></pre>
+    <h4>CSS external style</h4>
+    <p>Nessa forma de aplicar o CSS criamos um arquivo externo que irá abrigar todo o código CSS (o arquivo deve possuir extensão .css), 
+        essa forma de usar CSS é muito útil quando queremos aplicar o mesmo estilo a mais de uma página (muito usado para estilizar páginas que são extensões 
+        da página principal). O lado bom dessa forma de usar CSS é que precisamos criar somente um arquivo .css para estilizar inúmeras páginas que possuiram o mesmo estilo. 
+        <br> Conectamos o arquivo .css ao arquivo html inserindo um link dentro da área &lt;head&gt;&lt;/head&gt;.
+    </p>
+    <pre><code>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;<a href="exercise 12.1.html">link rel="stylesheet" href="style.css"</a>&gt; 
+            &lt;/head&gt;
+            &lt;body&gt;
+            <div id="code-externo">
+                <pre>               &lt;h1&gt;Título 1&lt;/h1&gt;</pre>
+                    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia
+                et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+                <pre>               &lt;h1&gt;Título 2&lt;/h1&gt;</pre>
+                    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor laborum, facilis rem, eius aperiam quia
+                et molestiae numquam, quidem fugit impedit sit at explicabo itaque beatae quam expedita aliquid vitae.&lt;/p&gt;
+            </div>
+            &lt;/body&gt;
+        &lt;/html&gt;
+    </code></pre>
+    <h4>Ordem de preferência entre as formas de aplicar o CSS</h4>
+    <p>Existe uma ordem de preferência de qual estilo aplicar se o documento HTML possuir as 3 formas de inserção de CSS nela. Está é a ordem:</p>
+    <ol>
+        <li>CSS Inline Style</li>
+        <li>CSS Internal Style</li>
+        <li>CSS External Style</li>
+    </ol>
+    <p>Sempre o estilo aplicado de forma Inline irá se sobrepor diante os outros e sempre o estilo External será o último a ser aplicado e só será aplicado em tags 
+        que não são afetadas pelo CSS Inline e Internal.
+    </p>
+</body>
+</html>

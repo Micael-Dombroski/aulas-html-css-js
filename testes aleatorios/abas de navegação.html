@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abas de Navegação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ddd;
+            font-family: Arial;
+        }
+        .nav_tabs {
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            position: relative;
+        }
+        .nav_tabs ul{
+            list-style: none;
+        }
+        .nav_tabs ul li {
+            float: left;
+        }
+        .nav_tabs label {
+            width: 100px;
+            padding: 25px;
+            background-color: #363b48;
+            display: block;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+        }
+        .rd_tabs:checked ~ label {
+            background-color: #e54e43;
+        }
+        .rd_tabs {
+            display: none;
+        }
+        .content {
+            border-top: 5px solid #e54e43;
+            background-color: #fff;
+            display: none;
+            position: absolute;
+            height: 320px;
+            width: 600px;
+            left: 0;
+        }
+        .rd_tabs:checked ~ .content {
+            display: block;
+        }
+        .content article {
+            padding: 10px;
+        }
+        button {
+            background-color: black;
+            border-radius: 500px;
+            width: 200px;
+            height: 50px;
+        }
+        .b1 {
+            cursor: pointer;
+            border-color: rebeccapurple;
+            color: rebeccapurple;
+        }
+        .b2 {
+            cursor: alias;
+            border-color: transparent;
+            box-shadow: 0 0 20px black;
+            color: white;
+        }
+        .b3 {
+            cursor: copy;
+            border-color: aqua;
+            color: aqua;
+        }
+        .container {
+            position: absolute;
+        top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+        }
+        .btn {
+            display: flex;
+            position: relative;
+            width: 150px;
+            height: 55px;
+            border-radius: 7px;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(black, gray);
+            animation: efeito 1.3s ease infinite;
+            transition: 1s ease;
+        }
+        @keyframes efeito{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .container:hover .btn::before{
+            background: grey;
+        }
+        a {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            width: 147px;
+            height: 52px;
+            background-color: #363b48;
+            text-align: center;
+            line-height: 52px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav_tabs">
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab1" checked>
+                <label for="tab1">Tab 1</label>
+                <div class="content">
+                    <article>
+                        Sou o eclipse que hoje devora o Sol, e eu já nem espero a noite para sair a caça, todo hashira teme pois minha presença abala, 
+                        a lua superior facilmente te mata, facilmente mata.
+                    </article>
+                    <button class="b1">Clique Aqui</button>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+                <label for="tab2">Tab 2</label>
+                <div class="content">
+                    <article>
+                        Não existe céu ou inferno, só meu inferno gelado, mudo clima com o aparecer de um buda congelado.
+                    </article>
+                    <button class="b2">Clique Aqui</button>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+                <label for="tab3">Tab 3</label>
+                <div class="content">
+                    <article>
+                        Mesmo que minha cabeça seja arrancada, basta eu regenerar e de novo vou vencer, acredite eu só morro se eu desejar morrer.
+                    </article>
+                    <button class="b3">Clique Aqui</button>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+                <label for="tab4">Tab 4</label>
+                <div class="content">
+                    <article>
+                        Triste, 'cê' me deixa triste, toda essa fraqueza, você me deprime.
+                    </article>
+                    <div class="container">
+                        <div class="btn">
+                            <a href="#">Botão</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

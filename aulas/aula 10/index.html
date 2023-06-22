@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/lucif.ico" type="image/x-icon">
+    <title>Fontes em CSS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace; /*SAFE COMBINATION COM NOME GENÉRICO NO FINAL*/
+        }
+        p {
+            text-align: justify;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabahlando com fontes</h1>
+    <p style="font-family: Arial;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Soluta placeat quod unde, rem, voluptatibus quis magni 
+        accusantium cumque necessitatibus quam, esse omnis veniam
+         vitae voluptatum alias autem voluptatem laboriosam <!--Fonte não serifada-->
+         blanditiis.</p>
+    <!--Nem todos os dispositivos possuem a mesma fonte, por isso, devemos ver as Web Safe Combinations 
+        (Ex: Font1, Font2, Font3, Nome Genérico [Nome da família da fonte]), que são as combinações 
+        de fontes que podemos colocar que sempre uma das fontes terá no dispositivo daquela família, 
+        toda Safe Combination deve terminar com um nome genérico, ex: Sans-serif (com isso o navegador 
+        escolherá uma fonte padrão da família escolhida)-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptas dolores deserunt voluptate omnis, beatae cumque 
+        expedita quod obcaecati adipisci accusantium dicta hic 
+        totam quos nam recusandae quo doloremque dolorem aliquam.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Laborum quae maxime qui sapiente nesciunt eligendi pariatur 
+        aspernatur natus reiciendis saepe, repellat et commodi! 
+        Ducimus id expedita dolorum natus labore exercitationem.</p>
+    <h2>Subtítulo de exercício</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Placeat cupiditate cum fugit impedit distinctio dignissimos 
+        tempore optio tenetur eveniet possimus ipsum quos error, a 
+        laudantium similique earum voluptatem magnam temporibus!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Accusamus voluptatibus, minima, aliquid laboriosam laborum, 
+        saepe architecto ipsam adipisci vero hic qui ullam earum 
+        dolor. Eligendi veniam aut ullam aliquid esse.</p> 
+        <!--Por padrão todos os outros parágrafos fora o primeiro, 
+            estão em fonte serifada-->
+    <p style="text-align: center; font-style: italic;">Olhar Observações no Código :)</p>
+</body>
+</html>

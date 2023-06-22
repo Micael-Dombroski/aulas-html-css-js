@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altura & Largura CSS</title>
+    <style>
+        div {
+            width: 50%;
+            background-color: black;
+            height: 200px;
+            text-align:  center;
+        }
+        img {
+            height: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1>Como definir a altura de um item com CSS</h1>
+    <p>Para isso usamos no CSS o atributo <strong>height</strong> para o item. <br>Esse atributo 
+    pode receber o valor em <abbr title="Em relação a proporção da tela do navegador">
+        %</abbr>, cm (centímetros) e em px (pixels) por exemplo, também podemos usar o valor auto onde o 
+        item irá se ajudar automaticamente ao espaço disponível, sempre se expandido o 
+        máximo possível dentro do seu limite, o valor inherit também chamado de herança, faz com que o elemento 
+    pegue o mesmo valor de altura ao do item no qual ele está aninhado (dentro).</p>
+    <p>Podemos usar o atributo <strong>max-height</strong> para definir uma altura máxima que o item seja permitido se expandir, 
+        não podendo passar desse valor máximo, e um valor mínimo no qual o item é proíbido de ficar menor que 
+        esse valor com <strong>min-height</strong>.</p>
+    <h1>Como definir a largura de um item com CSS</h1>
+    <p>Para isso usamos no CSS o atributo <strong>width</strong> para o item. <br>Esse atributo 
+        pode receber o valor em <abbr title="Em relação a proporção da tela do navegador">
+            %</abbr>, cm (centímetros) e em px (pixels) por exemplo, também podemos usar o valor auto onde o 
+            item irá se ajudar automaticamente ao espaço disponível, sempre se expandido o 
+            máximo possível dentro do seu limite, o valor inherit também chamado de herança, faz com que o elemento 
+            pegue o mesmo valor de largura ao do item no qual ele está aninhado (dentro).</p>
+            <p>Podemos usar o atributo <strong>max-width</strong> para definir uma altura máxima que o item seja permitido se expandir, 
+                não podendo passar desse valor máximo, e um valor mínimo no qual o item é proíbido de ficar menor que 
+                esse valor com <strong>min-width</strong>.</p>
+            <div><img src="../../../imagens/beelzebub.gif" alt=""></div>
+</body>
+</html>

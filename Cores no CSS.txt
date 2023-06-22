@@ -1,0 +1,8 @@
+Aplicar cor no elementos do CSS.
+Existem 3 formas de aplicarmos cores para os elementos com CSS:
+
+	A primeira é usando o nome da cor em inglês(color:red;), o CSS suporta +de 100 nomes de cores; 
+	
+	A segunda forma é usando 6 números em hexadecimal para as cores, colocamos uma # antes de inserirmos os valores, os 2 primeiros números representam a cor vermelha, os dois seguintes representam a cor verde, e os dois últimos a cor azul, cada número pode variar de 0 a f (que representa o número 15 em hexadecimal), #rrggbb, onde #0000 é preto e #ffffff é branco (color:#435e0a); 
+
+	O último jeito é usarmos o sistema rgb/rgba, o código é escrito dessa forma: rgba(r, g, b, a), r=vermelho, g=verde, b=azul, a=alpha, os valores r,g,b variam de 0 a 255, o alpha está relacionado à opacidade da cor, seu valor varia de 0.0 (totalmente transparente) até 1.0 (totalmente opaco), caso não queiramos alterar a opacidade da cor podemos usar apenas o sistema rgb(r, g, b), ex: rgba(234, 54, 172, 0.7).RGB(000, 000, 000)= preto, RGB(255, 255, 255)=branco.

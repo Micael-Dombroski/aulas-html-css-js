@@ -1,0 +1,236 @@
+Comandos de entrada no visualg:
+Os comandos de entrada solicitam alguma informação para o usuário que está usando o sistema.
+Ex: 
+	Algoritmo "teste 1"
+	var
+		Nome: Caractere
+	inicio
+		Nome <- "Gustavo"
+		Escreva ("Muito prazer ", Nome)
+	fimalgoritmo
+
+Este exemplo mostra apenas "Muito prazer Gustavo", e não mostra o nome do usuário que esta usando o programa. Com comandos de entrada podemos fazer isso. Abaixo um exemplo de um algoritmo com um comando de entrada:
+
+	Algoritmo "teste 2"
+	var
+		Nome: Caractere
+	inicio
+		Escreva ("Digite seu Nome: ")
+		Leia (Nome)
+		Escreve ("Muito prazer ", Nome)
+	fimalgoritmo
+
+	1-Leia: é uma comando de entrada, ele é o comando padrão de entrada do visualg.
+
+Vamos mostra um exemplo onde pedimos 2 números para o usuário e somamos este número e apresentamos o resultado para o usuário.
+Ex: 
+	Algoritmo "teste 3"
+	var
+		N1, N2, S: Inteiro
+	inicio
+		Escreva ("Informe um numero: ")
+		Leia (N1)
+		Escreva ("Informe outro numero: ")
+		Leia (N2)
+		S <- N1 + N2
+		Escreva ("A soma entre ", N1 " e ", N2 " resulta em ", 		S)
+	fimalgoritmo
+
+	Note que criamos três variáveis e que os valores delas serão apenas números inteiros (1,2,3,5346,...).
+	Primeiro pedimos que o usuário escreva a variável N1 e que o programa Leia a variável para que esse valor ocupe o espaço da variável N1 e depois fizemos a mesma coisa para a variável N2. Os valores inseridos nas variáveis só podem ser números inteiros.
+	Após isso falamos para o programa somar o valor das variáveis N1 e N2 e atribuir (símbolo de atribuição: <- ) o valor resultante na variável S.
+	Vale notar que foi usado o operador + para representar uma soma, mas nem todos os operadores são representados da forma que conhecemos nos algoritmos, sendo estes os "operadores aritméticos". Abaixo mostraremos alguns operadores que são suportados pela maioria das linguagens:
+	+ = Adição
+	- = Subtração
+	* = Multiplicação
+	/ = Divisão
+	\ = Divisão Inteira
+	^ = Exponenciação
+	% = Módulo
+
+Agora vamos mostrar algumas constas usando esses operadores:
+
+	Adição
+		2+3= 5
+
+	Subtração
+		2-3= -5
+
+	Multiplicação
+		2*3= 6
+
+	Divisão
+		2/3= 1.5
+
+	Divisão Inteira
+		2\3= 1
+
+	Exponenciação
+		2^3= 8
+
+	Módulo
+		2%3= 1 (2x1=2 e para chegar a 3 falta 1)
+
+	Nas linguagem devemos usar o "." ou invés da "," pois nos EUA ele é o separador de decimais.
+
+ 	
+	Agora vamos ver a ordem de precedência numa expressão aritmética:
+	1- () Parênteses
+	2- ^ Exponenciação
+	3- * Multiplicaçã e / Divisão
+	4- + Adição e - Subtração
+
+	Ex:
+		3+2/2=4
+		(3+2)/2=2.5
+	Embora seja usado os mesmos números em ambas as contas o resultado é diferente por na segunda o 3 e o 2 estão entre () e ele está no topo na ordem de precedência, logo, tudo dentro dele deve ser resolvido antes que o resto.
+
+Vamos fazer algora uma algoritmo que pede para o usuário inserir 2 valores para que seja feito a média entre esses valores:
+
+	Algoritmo "teste 4"
+	var
+		N1, N2, M: Inteiro
+	inicio
+		Escreva ("Informe um numero: ")
+		Leia (N1)
+		Escreva ("Informe outro numero: ")
+		Leia (N2)
+		M <- (N1 + N2)/2
+		Escreva ("A media entre ", N1 " e ", N2 " e ", M)
+	fimalgoritmo
+
+	Ao usar esse algoritmo ela não vai funcionar, pois assim que inserimos o símbolo de divisão na operação a linguagem passa a trabalhar com valores reais e não inteiros (Pois caso o resultado da soma entre N1 e N2 fosse um número impar, não seria possível ter um resultado inteiro ao dividir por 2 para obter a média), então devemos deixar o algoritmo assim:
+
+	Algoritmo "teste 4"
+	var
+		N1, N2: Inteiro
+		M: Real
+	inicio
+		Escreva ("Informe um numero: ")
+		Leia (N1)
+		Escreva ("Informe outro numero: ")
+		Leia (N2)
+		M <- (N1 + N2)/2
+		Escreva ("A media entre ", N1 " e ", N2 " e ", M)
+	fimalgoritmo
+
+	Como podemos observar, apenas alterando o tipo da variável M para Real, o programa já funcionará adequandamente. Se não deixarmos N1+N2 entre () o valor seria diferente, uma vez que a ordem de precedência seria passa para a divisão, então N2 seria dividido por 2 e depois somado a N1.
+
+	O visualg possui algumas funções para tratamento aritmético dos números, vamos ver algumas delas e exemplos com suas respostas:
+	Abs - Valor Absoluto		Abs(-10)			10
+	Exp - Exponenciação			Exp(3,2)			9
+	Int - Valor Inteiro			Int(3.9)			3
+	RaizQ - Raiz Quadrada		RaizQ(25)			5
+	Pi - Retorna Pi			Pi				3.14...
+	Sen - Seno (rad)			Sen(0.523)		0.5
+	Cos - Cosseno (rad)			Cos(0.523)		0.86
+	Tan - Tangente (Rad)		Tan(0.523)		0.57
+	GraupRad - Graus para Rad	GraupRad(30)		0.52
+
+Vamos mostrar aqui alguns exemplos do uso dessas funções:
+	
+	Neste exemplo criamos a variável A e dizemos que o valor de A 	é igual ao valor absoluto de -50.
+		algoritmo "teste 5"
+		var
+			A: Inteiro
+		inicio
+			A <- Abs (-50)
+			Escreva (A)
+		fimalgoritmo
+							Resultado: 50
+
+	Neste exemplo definimos o valor de A é igual a 9 elevado na 	quinta potência, com isso mudamos o tipo de A para real para 	que não haja problema com números grandes.
+		algoritmo "teste 6"
+		var
+			A: Real
+		inicio
+			A <- Exp (9,5)
+			Escreva (A)
+		fimalgoritmo
+							Resultado: 59049
+
+	No exemplo a seguir vamos mudar o valor de A para a raíz 	quadrada de 81.
+		algoritmo "teste 7"
+		var
+			A: Inteiro
+		inicio
+			A <- RaizQ (81)
+			Escreva (A)
+		fimalgoritmo
+							Resultado: 9
+
+Podemos também juntar várias expressões, abaixo mostrarei algns exemplos:
+
+	No exemplo a seguir definimos que o valor de A é equivalente 	a parte inteira da raíz quadrada de 90.
+		algoritmo "teste 8"
+		var
+			A: Inteiro
+		inicio
+			A <- Int (RaizQ (81))
+			Escreva (A)
+		fimalgoritmo
+							Resultado: 9
+
+	No exemplo abaixo definimos que o valor de A é igual a 90º em 	radianos.
+		algoritmo "teste 9"
+		var
+			A: Inteiro
+		inicio
+			A <- GraupRad(90)
+			Escreva (A)
+		fimalgoritmo
+							Resultado: 1.5707963267943
+
+	No exemplo a seguir definimos que o valor de A é equivalente 	ao Seno de 90º em radianos.
+		algoritmo "teste 9"
+		var
+			A: Inteiro
+		inicio
+			A <- Sen (GraupRad(90))
+			Escreva (A)
+		fimalgoritmo
+							Resultado: 1
+
+	No exemplo abaixo criamos duas variáveis do tipo real:  angulo e S; e pedimos para que o usuário insira um valor para a variável angulo e definimos que o valor de S seja igual ao Seno do angulo em graus para radiano que o usuário inserirá.
+		algoritmo "teste 10"
+		var
+			angulo, S: Real
+		inicio
+			Escreva("Informe um angulo: ")
+			Leia (angulo)
+			S <- Sen (GraupRad (angulo))
+			Escreva ("O Seno de ", angulo, " e igual a " S)
+		fimalgoritmo
+
+	O resultado de S irá mudar de acordo com o valor que o 		usuário atribuirá para a variável angulo.
+
+		Se o usuário inserir o valor da variável angulo como 90 		o programa irá ler essa variável e armazenar ela na 			memória do PC e em seguida irá usar esse valor para 			definir o valor de S, que nesse caso seria igual a 1.
+
+	Abaixo eu criei um código para calcular a área de um círculo:
+		algoritmo "teste 11"
+		var
+			π, Raio, Area: Real
+		inicio
+			π <- 3.14
+			Escreva ("Informe um Raio: ")
+			Leia (Raio)
+			Area <- (π)*(Raio)^2
+			Escreva ("A Area do circulo cujo o raio e igual a ", 			Raio, " e " Area)
+		fimalgoritmo
+
+	Abaixo eu criei um código para calcular a fórmula de 	bhaskara;
+			algoritmo "teste 12"
+		var
+			X',X",A,B,C: Real
+		inicio
+			Escreva ( "Informe o valor de A: ")
+			Leia (A)
+			Escreva ( "Informe o valor de B: ")
+			Leia (B)
+			Escreva( "Informe o valor de C: ")
+			Leia (C)
+			X' <- (-(B)+(RaizQ((B)^2-4*(A)*(C))))/2*(A)
+			X" <- (-(B)-(RaizQ((B)^2-4*(A)*(C))))/2*(A)
+			Escreva ("Dados os valores A=", A, ", B=", B, ", 			C=", C, ", o valor de X' e igual a ", X', " e o 			valor de X" e igual a ", X")
+		fimalgoritmo
+

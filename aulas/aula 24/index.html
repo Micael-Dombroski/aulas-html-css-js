@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            padding: 0px;
+            margin: 0px;
+            font: 1em sans-serif;
+        }
+        h1 {
+            margin: auto;
+            border: 10px solid darkslategray;
+            height: 300px;
+            width: 300px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            outline: 5px dashed salmon;
+            /* outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon; */
+        }
+        h2 {
+            margin-left: 30px;
+            font-size: 1.7em;
+            padding: 5px;
+        }
+        p {
+            font: 0.8em;
+            text-align: justify;
+            text-indent: 10px;
+            margin: 20px;
+        }
+        a {
+            /*
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            */
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modelo de Caixa</h1>
+    <h2>Tipos de Modelo de Caixas e diferenças</h2>
+    <p>Existem dois tipos de caixas, o tipo <em>block-level</em> onde o elemento que possui esse tipo vai 
+    ocupar a largura total permitida pelo navegador, impedindo que outros elementos sejam colocados ao seu 
+    lado e caso seja colocado após um elemento o elemento tipo block-level será colocado na linha abaixo do 
+    elemento que o precede, e o tipo <em>inline-level</em>, onde o elemento é inserido exatamente na linha em que foi colocado 
+    e podendo ser inserido elementos ao lado deste.</p>
+    <h2>Caixas do tipo Box-level</h2>
+    <p>Exemplos de caixas box-level: <br>
+    Parágrafos também são exemplos de caixas do tipo <em>box-level</em>, mas os <a href="#">links</a> são 
+    exemplos de caixas do tipo <em>inline-level</em>. </p>
+    <p>Para alinhar uma caixa com o meio horizontal do navegador usamos o atributo <code>margin</code> com o 
+    valor <code>auto</code>.</p>
+    <p>Por padrão os elementos do tipo <code>block-level</code> tem <code>display: block;</code> já as caixas 
+    do tipo <code>inline-level</code> tem <code>display: inline;</code>.</p>
+    <p><strong>OBSERVAÇÃO:</strong> o tracejado ao redor do <code>h1</code> é o <code>outline</code> uma linha 
+    que fica entre a borda e a margin do elemento, a presença do <code>outline</code> não aumenta a distância entre 
+    a margin e a borda.</p>
+</body>
+</html>

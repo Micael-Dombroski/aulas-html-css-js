@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        p {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de Dados e Variáveis</h1>
+    <p>Podemos escrever comentários nos nossos código em JavaScript, existem duas formas de 
+        fazermos isso, a primeira é colocando "//" antes de escrever o comentário (//Comentário), usamos 
+        essa forma de escrever comentários para escrevermos uma única linha de comentário; 
+        a segunda é colocando o comentário  entre "/*" e "*/" (/*Comentário*/), usamos essa forma de escrever 
+        comentários para escrever mais de uma linha de comentário. <br>
+        Abaixo mostrarei alguns exemplos de como e quando usar esses tipos de comentários:
+    </p>
+    <pre>
+        <code>
+        &lt;script&gt;
+            window.alert('Hello Everyone')
+            window.confirm('Do you wanna have a MAD time?') //Janela com botão (Ok e Cancelar)
+            window.prompt('Qual é seu nome?') //Vai perguntar ao usuário seu nome
+        &lt;/scrip&gt;
+        </code>
+    </pre>
+    <h2>O que é uma Variável?</h2>
+    <p>A memória do computador possui espaços vazio que podem ser ocupados por dados. Se colocarmos dados de forma 
+        desordenada vamos acabar perdendo dados, para que isso não ocorra devemos organizar o armazenamento de dados 
+        na memória do computador com variáveis. Para crairmos uma variável inserimos a palvra "var" no nosso código, para 
+        identificar a variável usamos identificadores que são nada mais que nomes que irão representar determinada variável. 
+    Podemos atribuir valores para as variáveis usando o sinal "=" (que em JavaScript significa "recebe") entre o nome da 
+    variável e o valor que será atribuído a ela. var indentificador=valor . Abaixo um exemplo:</p>
+    <p>var <abbr title="identificador da variável/Nome da variável">Caixa_de_Som</abbr> <abbr title="recebe">=</abbr> 
+        <abbr title="valor atribuído para a variável">CD_dos_Baroes_da_Pisadinha</abbr><br>
+    Podemos ler esse código da seguinte forma: "A variável Caixa_de_Som recebe CD_dos_Baroes_da_Pisadinha"</p>
+    <p>Ao inserirmos um valor para a variável ele será atribuído a ela dentro da memória do computador.</p>
+    <p>Existem variáveis de tamanhos diferentes.</p>
+    <H3>Identificadores</H3>
+    <p>Os identificadores são os nomes que damos para as variáveis, para atribuirmos um nome para uma variável devemos seguir algumas regras:</p>
+    <ul>
+        <li>O nome do identificador pode iniciar com uma letra, com $ ou com _ (Ex: Churros; $ucesso; _Agaragã;etc);</li>
+        <li>O nome do identificador não pode começar com um número (Ex: 3squeleto;etc);</li>
+        <li>O nome do identificador pode conter letras e números (Ex: P4r4l3l3p1p3d0;etc);</li>
+        <li>O nome do identificador pode conter acentos ou símbolos (Ex: Média; Saúde&Sucesso; etc);</li>
+        <li>O nome do identificador não pode conter espaços em branco, no lugar deles usamos _ (Ex: Olá_eu_sou_o_Goku; etc);</li>
+        <li>O nome do identificador não pode ser uma palavra reservada (Ex: Palavras usadas para escrever comandos, como a palavra var; etc).</li>
+    </ul>
+
+    <p>Dicas para dar nomes para variáveis:</p>
+    <ul>
+        <li>Letras maiúsculas e minúsculas fazem diferença, se você dar o nome de uma variável usando letras maiúsculas, você deve escrevar o nome dessa variável 
+            sempre em maiúsculo, se só uma letra estiver em maiúsculo, essa letra deve ser colocada em maiúsculo sempre;
+        </li>
+        <li>Devemos escolher nomes coerentes para as variáveis, não faz sentido eu colocar o nome Batata-Doce para uma variável que represente um salário;</li>
+        <li>Evite se tornar um 'programador alfabeto', aquele que da o nome das variável conforme o alfabeto (variável1 nome: A, variável2 nome: B, etc), ou 
+            um 'programador contador', aquele que todas variáveis estão em ordem numérica (n1,n2,n3);
+        </li>
+    </ul>
+    <h2>Tipos de Dados</h2>
+    <p>Existem diferentes tipos de dados, sendo estes: <abbr title="nesse grupo estão todos os tipos de números, seja ele inteiro (1,234,-123) ou real (0.5,-234.4,23.23434)">number</abbr>,
+         <abbr title="cadeia de caracteres que podem possuir pontos, traços, letras, números, sempre são colocados entre 'meias aspas' ">'string'</abbr>, 
+        <abbr title="valor booleneano, representado por true ou false">boolean</abbr>.</p>
+        <p>Esses 3 são os tipos primitivos primordiais na liguagem de JavaScript.</p>
+        <p>Existem outros tipos primitivos, como por exemplo, o tipo primitivo "number" possui dois valores internos importantes, o "Infinity" e o "<abbr title="Not a Number">NaN</abbr>". <br> 
+        Também existem os tipos primitivos "null", "undefined", "object" (já que o JS é uma linguagem direcionada a objetos, o null é considerado object), existem o tipo "array" que é um tipo primitivo interno do object, 
+        o tipo primitivo "function" já que ela também funciona no paradigma funcional.</p>
+    <p>Para trabalharmos com esse tipos todos existe um comando no JS chamado <strong>typeof</strong></p>
+    <p>Podemos mudar o tipo de uma variável, veja o exemplo abaixo:</p>
+    <pre>
+    <code>
+&lt;script&gt;
+    var n = 354
+    typeof n        (Resultado visualizado: number)
+    var n = "Suco de maracujá"
+    typeof n        (Resultado visualizado: string)
+    <em>
+    //Note que mudamos o valor da variável n e o seu tipo, antes seu valor era 354 e seu tipo era
+     number, depois passamos seu valor para "Suco de maracujá" e seu tipo mudou para string.
+    </em>
+&lt;/scrip&gt;
+    </code>
+    </pre>
+</body>
+</html>

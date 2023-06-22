@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            display: block;
+        }
+        div {
+            height: 400px;
+            width: 317px;
+            border: solid 1px black;
+            background-color: white;
+            float: right;
+        }
+        img {
+            height: 100%;
+            display: block;
+            margin: auto;
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            text-align: left;
+        }
+        #fecha {
+            color: white;
+            background-color: red;
+            padding: 2px;
+            margin-bottom: 5px;
+            display: none;
+        }
+        div:target {
+            position: fixed;
+            min-width: 500px;
+            height: 600px;
+            top: 15px;
+            left: 32%;
+            right: 32%;
+            padding: 10px 10px 30px 10px;
+            border: solid 1px #333;
+            box-shadow: 0px 0px 25px 10px #000;
+            border-radius: 5px;
+        }
+        .img:target #fecha{
+            display: inline;
+        }
+        content {
+            background-color: white;
+            color: black;
+            max-width: 800px;
+            display: block;
+            margin: 0px auto;
+            align-items: center;
+            border-radius: 10px;
+            z-index: 4;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.301);
+        }
+    </style>
+</head>
+<body>
+    <content>
+        <h1>O que é Omori?</h1>
+                <div class="img" id="img1">
+                    <a href="#" id="fecha">X</a>
+                    <a href="#img1">
+                        <img src="https://cdn.donmai.us/original/e4/4a/e44a1fbd0c27c072852a71bb828bafda.png" alt="omori no espelho">
+                    </a>
+                </div>
+                <p>Omori é um jogo Indie que foi feito pela desenvolvedora e ilustradora independente OMOCAT.
+                    A temática de depressão e ansiedade é extensamente abordada e pode ser considerada uma
+                    constante dentro da história. O time de desenvolvedores não teve medo de explorar as nuances
+                    dessa doença psíquica, que é o ponto de partida para a narrativa fantasiosa e até mesmo as
+                    atitudes do protagonista. No mundo real do jogo, descobrimos que uma tragédia aconteceu há
+                    alguns anos, e esse foi o motivo do afastamento do grupo de amigos e do eventual isolamento
+                    de Sunny (protagonista), que passou a ser assombrado por visões que ele chama de Something (Algo).
+                </p>
+                <p>Em OMORI, nada é o que parece. Enquanto nos aventuramos no mundo dos sonhos, exploramos, ao mesmo tempo,
+                    a mente fragmentada e traiçoeira de Sunny - e sua fuga da 'verdade', que catalisa seus traumas e sua depressão.
+                    O que se inicia como a busca por um amigo perdido se torna, aos poucos, a busca pelas memórias que o personagem
+                    enterrou nas camadas mais profundas de sua mente, que podemos chamar de Black Space (Espaço Preto).</p>
+    </content>
+</body>
+</html>

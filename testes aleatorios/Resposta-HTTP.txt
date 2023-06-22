@@ -1,0 +1,19 @@
+Respostas HTTP:
+100-199 (Information Response) = São enviadas para dizer que parte da solicitação foi aceita e você pode continuar enviando o resto da solicitação. Não são muito comuns.
+200-299 (Sucess) = Esse status de código é usado para dizer que a solicitação foi bem-sucedida.
+300-399 (Redirection) = São usadas para redirecionar a solicitação para outro recurso. Pode ser para uma página diferente ou um site diferente.
+400-499 (Client Errors) = Usado para informar que houve um erro com sua solicitação.
+500-599 (Server Errors) = É reservado para erros que acontecem no server-side e normalmente indica um grande problema com o servidor que está processando a informação.
+
+Status Codes de HTTP Comuns:
+200-OK : Solicitação concluída com sucesso.
+201-Created : Um recurso foi criado (como um novo usuário ou uma nova publicação em um blog).
+301-Permanent Redirect : Redireciona o navegador para uma nova página ou informa que a página foi movida e que é para você procurar nessa outra página.
+302-Temporary Redirect : Similar ao anterior, mas é apenas para mudanças temporárias e pode mudar novamente num futuro próximo.
+400-Bad Request : Diz ao navegador que algo deu errado ou algo está ausente em seu pedido. Pode ser usado se um recurso do servidor esperava um parâmetro que não foi enviado pelo cliente.
+401-Not Authorised : Você não pode ver o recurso até ser autorizado pela aplicação web, normalmente com um usernam e senha.
+403-Forbidden : Você não tem permissão para ver o recurso se você não está logado.
+404-Page Not Found : A página/resurso solicitado não existe.
+405-Method Not Allowed : Não é permitido a solicitação do recurso, por exemplo, você envia um solicitação de GET para o recurso /create-account quando ele esperava uma requisição de POST.
+500-Internal Service Error : O servidor encontrou um tipo de erro com sua solicitação e não sabe o que fazer apropriadamente.
+503-Service Unavailable : O servidor não pode lidar com sua solicitação porque está sobrecarregado ou inativo para manutenção.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/favicon1.ico" type="image/x-icon">
+    <title>CSS</title>
+    <style>
+        body {
+            font-family: 'Times New Roman';
+        }
+    </style>
+</head>
+<body>
+    <h1>O que é e como usar o CSS?</h1>
+    <p>O CSS é responsável por alterar e inserir novas propriedades nos elementos presentes no documento HTML (aumentar o tamanho do elemento, mudar a cor da fonte do texto, etc).</p>
+    <p>Enquanto o HTML é responsável por fornecer a estrutura para a página <em>web</em>, o CSS é responsável por estilizar
+     a página, deixando ela mais apresentável para os usuários.</p>
+     <h2>Como usar o CSS</h2>
+     <p>Existem 3 formas de inserirmos o CSS no HTML:</p>
+     <ul>
+         <li><abbr title="o CSS é inserido num documento HTML através do atributo style na tag desejada">CSS inline</abbr>. 
+            Ex: &lt;p style="color: aqua;"&gt;&lt;/p&gt;</li>
+         <li><abbr title="o CSS é inserido num documento HTML através da tag &lt;style&gt;&lt;/style&gt; dentro da tag 
+            &lt;head&gt;&lt;/head&gt;">CSS interno</abbr>. Ex:
+             <pre>
+                 <code>
+                    &lt;head&gt;
+                    &lt;style&gt;
+                        body {
+                            font-family: 'Times New Roman';
+                        }
+                    &lt;/style&gt;
+                    &lt;/head&gt;
+                </code>
+             </pre>
+         </li>
+         <li><abbr title="é inserido através de um link dentro da tag &lt;head&gt;&lt;/head&gt;, o arquivo CSS possui extensão .css">CSS externo</abbr>
+            Ex: 
+            <pre><code>
+                &lt;head&gt;
+                &lt;link rel="style sheet" href="<a href="../aula 04/CSS-for-cod-04.html">Link-Externo-CSS.css</a>"&gt;
+                &lt;/head&gt;
+            </code></pre>
+     </ul>
+     <p style="color: aqua;"></p>
+</body>
+</html>

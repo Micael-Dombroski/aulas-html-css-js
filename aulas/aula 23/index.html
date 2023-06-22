@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        p {
+            text-align: justify;
+            text-indent: 20px;
+            margin: 20px;
+        }
+        h2 {
+            margin: 40px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modelos de Caixas</h1>
+    <p>Também chamado de Box Model é uma teoria onde diz que tudo que é exibido 
+        em um documento HTML está dentro de uma caixa, essa caixa pode guardar 
+        outras caixas e isso é chamado de aninhamento. Todo elemento HTML é uma caixa
+         e cada caixa possui um tamanho que pode ser definida pela  altura (height) 
+         e largura (width), um exemplo de caixa é a tag &lt;h1&gt;, onde o título 
+         é o conteúdo dentro da caixa h1, por padrão a caixa é do tamanho exato do 
+         conteúdo, podemos aumentar a distância do conteúdo e a borda da caixa usando 
+         o padding, podemos aumentar a distância da borda e o conteúdo de uma vez só com 
+         medidas iguais ou ir uma por uma podendo deixar distâncias diferentes para cada 
+         lado da borda. Podemos distânciar ou aproximar as bordas de duas caixas, para isso 
+         basta configurar a margem (margin) da borda das caixas. Temos também outro elemento 
+         que é o outline, um tipo de tracejado que envolve exteriormente a borda da caixa.
+    </p>
+    <h2>Tipos de Caixas</h2>
+    <p>Existem dois tipos de caixa, o <strong>box-level</strong> e o <strong>inline-level</strong>. 
+    As caixas do tipo box-level sempre são inseridas uma linha abaixo da caixa anterior e 
+    sempre ocupam a largura máxima da tela, caso outra caixa seja inserida após a box-level, 
+    ela será colocada uma linha abaixo da box-level. Já as caixas inline-level, quando inseridas 
+    após outra caixa são colocadas ao lado dessa caixa e possuem o tamanho exato pra comportar o 
+    conteúdo contido nela, e caso outra caixa seja inserida a seguir, ela ficará ao lado da caina 
+    inline-level.</p>
+    <h3>Exemplos de Box-level e Inline-level nas tags HTML</h3>
+    <p>A tag Box-level mais usada em HTML é a <code>div</code>, já um tipo de tag Inline-level é a 
+    tag <code>span</code>.</p>
+    <p>Mais exemplos...</p>
+    <ul> Tags Box-level
+        <li><code>&lt;div&gt;</code></li>
+        <li><code>&lt;h1&gt;-&lt;h6&gt;</code></li>
+        <li><code>&lt;p&gt;</code></li>
+        <li><code>&lt;main&gt;</code></li>
+        <li><code>&lt;header&gt;</code></li>
+        <li><code>&lt;nav&gt;</code></li>
+        <li><code>&lt;article&gt;</code></li>
+        <li><code>&lt;aside&gt;</code></li>
+        <li><code>&lt;footer&gt;</code></li>
+        <li><code>&lt;form&gt;</code></li>
+        <li><code>&lt;video&gt;</code></li>
+    </ul>
+    <ul> Tags Inline-level
+        <li><code>&lt;span&gt;</code></li>
+        <li><code>&lt;a&gt;</code></li>
+        <li><code>&lt;code&gt;</code></li>
+        <li><code>&lt;small&gt;</code></li>
+        <li><code>&lt;strong&gt;</code></li>
+        <li><code>&lt;em&gt;</code></li>
+        <li><code>&lt;sup&gt;-&lt;sub&gt;</code></li>
+        <li><code>&lt;label&gt;</code></li>
+        <li><code>&lt;button&gt;</code></li>
+        <li><code>&lt;input&gt;</code></li>
+        <li><code>&lt;select&gt;</code></li>
+    </ul>
+</body>
+</html>

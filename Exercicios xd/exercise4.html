@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/justice.ico" type="image/x-icon">
+    <title>Hierarquia de Títulos</title>
+    <style>
+        body {
+            background-color: aqua;
+            margin: 0px;
+        }
+        .topo {
+            background-color: #f8f8de;
+            box-sizing: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0px;
+        }
+        section {
+            background-color: black;
+            color: white;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .final {
+            background-color: white;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul {
+            text-align: end;
+            float: right;
+        }
+        li {
+            color: black;
+            display: inline-flex;
+            cursor: pointer;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        li:hover {
+            color: aqua;
+        }
+    img {
+        filter: invert(100%);
+    }
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+    }
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
+    }
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        border-color: red;
+        border: 20px;
+    }
+    td {
+        color: white;
+        background-color: black;
+    }
+    td:hover {
+        cursor: pointer;
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <div class="topo">
+        <img src="../imagens/hellltakername.jpeg.png" alt="Helltaker"><ul type="none" > <li>Menu</li> <li>Ajuda</li> <li>Contato</li> </ul>
+    </div>
+    <div conteúdo>
+        <section>
+            <p>Os títulos possuem uma hierarquia de vai do primeiro nível (o título principal) até o sexto nível. <br> A tag responsável por inserir
+            títulos é a tag &lt;h(1,2,3,4,5 ou 6)&gt;. Vamos mostrar abaixo a diferença de cada um dos títulos, començando do 1 até o 6.</p>
+            <h1>Falta de Sintonia</h1>
+            <h2>Pense Antes de Agir</h2>
+            <h3>Passe mais Tempo com seu Desafeto</h3>
+            <h4>Saiba com Quem está Lidando</h4>
+            <h5>Tenha Objetividade</h5>
+            <h6>Título nível 6 xd</h6>
+        </section>
+        <div class="final">
+            <p>Muitos dizem que o h1 serve para deixar a letra grande, mas isso não é verdade. <br>O uso dos níveis de hierarquia
+            ajudam ao navegadores saberem qual é o título principal, etc. Uma página pode possui sim mais de 1 título principal.</p>
+        </div>
+    </div>
+    <table cellspacing="10px">
+        <h1>Tabela</h1>
+        <tr><td>1</td><td>2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+        <tr><td>7</td><td>8</td><td>9</td></tr>
+    </table>
+</body>
+</html>

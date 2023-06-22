@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Listas</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        h1,h2, h3 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listas no HTML</h1>
+    <p>Temos no HTML a tag &lt;ul&gt;&lt;/ul&gt; que faz listas desordenadas e a tag 
+        &lt;ol&gt;&lt;/ol&gt; que faz listas ordenadas, elas são as principais listas que usamos no nosso dia a dia.</p>
+    <h2>Estilizando Listas</h2>
+    <p>Podemos mudar os marcadores tanto das listas desordenadas quanto das listas ordenadas. Para isso, colocamos 
+        dentro desse elemento, no CSS, o atributo 'list-style-type' para a lista desordenada os seguintes valores: 
+        <abbr title="valor padrão">disc</abbr>, <abbr title="torna os marcadores em quadrados negros">square</abbr>, 
+        <abbr title="torna os marcadores em círculos brancos de borda preta">circle</abbr>,
+         <abbr title="remove os marcadores da lista">none</abbr>; <br>
+        e o atributo 'type' dentro da tag &lt;ol&gt;&lt;/ol&gt;, que recebe os seguintes valores: <abbr title="os marcodores estarão em ordem numérica">1</abbr>
+        , <abbr title="os marcadores estarão em ordem alfabética em letras minúsculas">a</abbr>, 
+        <abbr title="os marcadores estarão em ordem alfabética em letras maiúsculas">A</abbr>, 
+        <abbr title="os marcadores estarão em ordem numérica, porém em números romanos em minúsculo">i</abbr>, 
+        <abbr title="os marcadores estarão em ordem numérica, porém em números romanos em maiúsculo">I</abbr>
+    </p>
+    <h3>Definindo início de contagem das listas ordenadas</h3>
+    <p>Para definirmos o número pelo qual a lista deve começar, devemos colocar dentro da tag &lt;ol&gt;&lt;/ol&gt; o atributo 'start', o valor 
+        inserido será o número pelo qual a listagem iniciará.
+    </p>
+    <ul style="list-style-type: disc;">
+        <li>oi</li>
+    </ul>
+    <ul style="list-style-type: square;">
+        <li>oi</li>
+    </ul>
+    <ul style="list-style-type: circle;">
+        <li>oi</li>
+    </ul>
+    <ul style="list-style-type: none;">
+        <li>oi</li>
+    </ul>
+    <ol type="1">
+        <li>o</li>
+        <li>o</li>
+        <li>o</li>
+    </ol>
+    <ol type="A">
+        <li>o</li>
+        <li>o</li>
+        <li>o</li>
+    </ol>
+    <ol type="a">
+        <li>o</li>
+        <li>o</li>
+        <li>o</li>
+    </ol>
+    <ol type="I">
+        <li>o</li>
+        <li>o</li>
+        <li>o</li>
+    </ol>
+    <ol type="i">
+        <li>o</li>
+        <li>o</li>
+        <li>o</li>
+    </ol>
+    <ol start="89">
+        <li>o</li>
+        <li>o</li>
+        <li>o</li>
+    </ol>
+</body>
+</html>

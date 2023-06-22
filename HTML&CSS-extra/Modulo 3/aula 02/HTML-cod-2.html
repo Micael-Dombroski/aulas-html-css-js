@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/search.ico" type="image/x-icon">
+    <title>Formatação de texto no CSS</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p, li {
+            text-align: justify;
+        }
+        p {
+            margin: 20px;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .lowercase {
+            text-transform: lowercase;
+        }
+        .letter-spacing {
+            letter-spacing: 10px;
+        }
+        .word-spacing {
+            word-spacing: 20px;
+        }
+        .line-height {
+            line-height: 50px;
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 1px red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatação de texto no CSS parte 2</h1>
+    <p>Aqui serão mostradas outras formatações de texto com CSS que, embora não sejam as 
+        principais, são interessantes de usar.
+    </p>
+    <ul>
+        <li><strong>text-transform:</strong> os principais valores colocados nesse atributo são:
+            <ul>
+                <li><strong>uppercase:</strong> deixa todas as letras do texto dentro do elemento que 
+                    recebe esse valor em maiúscula</li>
+                <li><strong>lowercase:deixa todas as letras do texto dentro do elemento que 
+                    recebe esse valor em minúscula</strong></li>
+            </ul>
+        </li>
+        <li><strong>letter-spacing:</strong> define o espaçamento entre um letra e outra (em px por exemplo)</li>
+        <li><strong>word-spacing:</strong> define o espaçamento entre uma palavra e outra (em px por exemplo)</li>
+        <li><strong>line-height:</strong> define o espaçamento entre um linha e outra de texto (em px por exemplo)</li>
+        <li><strong>text-shadow:</strong> usado para criar uma sombra em baixo do conteúdo dentro do elemento de recebe esse atributo</li>
+        <li><strong>:</strong> </li>
+    </ul>
+    <p>Exemplos:</p>
+    <pre>
+        <code class="uppercase"><strong>p {</strong>
+        text-transform: uppercase;
+        <strong>}</strong></code>
+        <code class="lowercase"><strong>p {</strong>
+            text-transform: lowercase;
+            <strong>}</strong></code>
+        <code class="letter-spacing"><strong>p {</strong>
+            letter-spacing: 10px;
+            <strong>}</strong></code>
+        <code class="word-spacing"><strong>p {</strong>
+            word-spacing: 20px;
+            <strong>}</strong></code>
+        <code class="line-height"><strong>p {</strong>
+            line-height: 50px;
+            <strong>}</strong></code>
+        <code class="text-shadow"><strong>p {</strong>
+            text-shadow: <abbr title="deslocamento para a direita">1px</abbr> <abbr title="deslocamento para baixo">1px</abbr> 
+            <abbr title="espaço para esfumaçamento, se o valor for 0 a sombra será igual a letra sem nenhuma distorção">1px</abbr> <abbr title="cor">red</abbr>;
+            <strong>}</strong></code>
+</body>
+</html>

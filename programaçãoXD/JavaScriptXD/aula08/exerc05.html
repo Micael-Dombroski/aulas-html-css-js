@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Operadores</title>
+    <style>
+        strong {
+            background-color: aqua;
+        }
+        .true {
+            background-color: white;
+            color: green;
+        }
+        .false {
+            background-color: white;
+            color: red;
+        }
+        #ternario {
+            border: 2px solid purple;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Operadores relacionais</h1>
+    <p>São responsáveis por fazer uma relação entre dois valores, essa relação pode resultar em 
+        Verdadeiro ou Falso. Abaixo estão esses operadores:
+    </p>
+    <ul>
+        <li><strong>&gt;</strong>: Maior que</li>
+        <li><strong>&lt;</strong>: Menor que</li>
+        <li><strong>&gt;=</strong>: Maior ou igual a</li>
+        <li><strong>&lt;=</strong>: Menor ou igual a</li>
+        <li><strong>==</strong>: igual a (apenas 1 sinal de igual, representa atribuição em JS)</li>
+        <li><strong>!=</strong>: diferente de</li>
+    </ul>
+    <p>Exemplos: <br>
+    5 &lt; 2 <strong class="true">True</strong> <br>
+    7 &gt; 4 <strong class="false">False</strong> <br>
+    8 &gt;= 8 <strong class="true">True</strong> <br>
+    9 &lt;= 7 <strong class="false">False</strong> <br>
+    5 == 5 <strong class="true">True</strong> <br>
+    4 != 4 <strong class="false">False</strong> <br>
+    48 = 'HellTaker' <strong class="false">False</strong> <br>
+    (4*5)/2 != 8*3 <strong class="true">True</strong></p>
+    <p>Note que nesse último exemplo usamos os operadores relacionais e os operadores aritméticos, os 
+        operadores relacionais sempre serão executados depois dos operadores aritméticos.</p>
+        <p>Como é possível ver no penúltimo exemplo, é possível usar tanto números como strings 
+            para fazer relações com os operadores relacionais. </p>
+    <h2>Operadores relacionais de identidade</h2>
+    <p>São usados para que somente possam ter resultados verdadeiro para uma comparação de igualdade 
+        caso os dois elementos possuam o mesmo valor e a mesma class, ele é representado
+         por 3 sinais seguido de igual (<strong>===</strong>), pois o JavaScript não faz a diferenciação entre 
+         classes, ele apenas analisa se os valores são iguais ou não, olhe os exemplos a seguir: <br>
+        5 == 5 <strong class="true">True</strong> <br>
+        5 == '5' <strong class="true">True</strong> <br>
+        5 === '5' <strong class="false">False</strong> <br>
+        5 === 5 <strong class="true">True</strong> <br>
+        5 != '5' <strong class="false">False</strong> <br>
+        5 <strong><abbr title="sinal de diferente com restrição de classes, ou seja, por mais que o valor seja igual, se a classe for diferente os números serão diferentes segundo esse operador, resultando em True">!==</abbr></strong> '5' <strong class="true">True</strong></p>
+        <h1>Operadores Lógicos</h1>
+        <p></p>
+        <ul>
+            <li><strong>!</strong>: Representa Negação</li>
+            <li><strong>&&</strong>: Representa Conjunção</li>
+            <li><strong>||</strong>: Representa Disjunção</li>
+        </ul>
+        <p>Exemplo de Negação: "Me empresta uma caneta que não seja vermelha?" (Nesse exemplo você pode emprestar qualquer cor de caneta desde que não seja vermelha)</p>
+        <p>Exemplo de Conjunção: "Me empresta uma caneta azul e uma vermelha?" (Nesse exemplo receber ambas é o que conta, apenas uma não atende ao pedido)</p>
+        <p>Exemplo de Disjunção: "Me empresta uma caneta azul ou uma vermelha?" (Nesse exemplo uma das opções é o suficiente, mas receber ambas também já vale) <br>
+        <code>
+            ! <strong class="true">true</strong> &gt; <strong class="false">false</strong> <br>
+            ! <strong class="false">false</strong> &gt; <strong class="true">true</strong>
+        </code></p>
+        <p>O operador de negação (!) é tratado como um operador unário, ou seja, só pode receber ou o valor True ou o valor False, não ambos, caso o valor seja True então a expressão é falsa e calso o valor seja False a expressão é verdadeira.</p>
+        <p>O operador de conjunção (&&) é um operador binário, ou seja, há dois valores lógicos, um em cada lado do operador, esse valores vão dar uma resultado lógico para essa expressão. Na conjunção ambos os valores lógicos precisam 
+            ser verdadeiros para o resultado da expressão ser True.<br>
+        <code>
+            <strong class="true">true</strong> && <strong class="true">true</strong> > <strong class="true">true</strong><br>
+            <strong class="true">true</strong> && <strong class="false">false</strong> > <strong class="false">false</strong><br>
+            <strong class="false">false</strong> && <strong class="true">true</strong> > <strong class="false">false</strong><br>
+            <strong class="false">false</strong> && <strong class="false">false</strong> > <strong class="false">false</strong>
+        </code>
+        </p>
+        <p>O operador de disjunção (||) é um operador binário, ou seja, há dois valores lógicos, um em cada lado do operador, esse valores vão dar uma resultado lógico para essa expressão. Na disjunção, apenas 1 dos valores lógicos precisa 
+            ser verdadeiro para o resultado da expressão ser True. <br>
+            <code>
+                <strong class="true">true</strong> || <strong class="true">true</strong> > <strong class="true">true</strong><br>
+                <strong class="true">true</strong> || <strong class="false">false</strong> > <strong class="true">true</strong><br>
+                <strong class="false">false</strong> || <strong class="true">true</strong> > <strong class="true">true</strong><br>
+                <strong class="false">false</strong> || <strong class="false">false</strong> > <strong class="false">false</strong>
+            </code></p>
+        <p>Importante: Caso a expressão possua todos os  3 operadores, a ordem de execução sempre será primeiramente o operador de negação, seguido pelo de conjunção e por último o de disjunção.</p>
+        <p>Exemplos de fixação: <br>
+            Caso você queira saber se a idade da pessoa está entre 15 e 17: idade >= 15 && &lt;= 17 <br>
+            Caso você queira saber se a pessoa mora no Estado do RJ ou SP: estado == 'RJ' || estado == 'SP' <br>
+            Caso você queira saber se a pessoa ganha mais que 1500 e não é homem: salário > 1500 && sexo != 'M'</p>
+        <h1>Ordem de precedência dos operadores</h1>
+        <ol>
+            <li>Operadores aritméticos</li>
+                <ol>
+                    <li>()</li>
+                    <li>**</li>
+                    <li>/,%,*</li>
+                    <li>+,-</li>
+                </ol>
+            <li>Operadores relacionais</li>
+                <ul>
+                    <li>Não há uma ordem de precedência entre eles, então são feitos da esquerda para a direita</li>
+                </ul>
+            <li>Operadores lógicos</li>
+                <ol>
+                    <li>Negação</li>
+                    <li>Conjunção</li>
+                    <li>Disjunção</li>
+                </ol>
+        </ol>
+        <h1>Operadores Ternários</h1>
+        <p>Possue esses dois símbolos dentro de uma expressão: <strong> ? :</strong>. É chamado de ternário pois possui 3 blocos, o primeiro bloco é um teste lógico, o segundo é o que vai acontecer caso o resultado para o teste seja True, o último é o que vai acontecer caso o resultado para o teste seja False. <br>
+        </p>
+        <p id="ternario"><code>Teste <strong>?</strong> <strong class="true">true</strong><strong>:</strong><strong class="false">false</strong></code></p>
+        <p>Ex: <br>
+        <code>Media >= 7.0 ? "Aprovado" : "Reprovado"</code> <br>
+    Nesse exemplo, se a media for maior ou igual a 7.0 a mensagem "Aprovado" aparece, caso seja menor que 7.0, aparece a mensagem "Reprovado".</p>
+    <p><code>var x = 8 <br>
+    var res= x <abbr title="resto da divisão">%</abbr> 2 == 0 ? 5 : 9</code> <br>
+    Nesse exemplo, a variável <code>res</code> vai receber 5 ou 9, dependendo do resultado lógico gerado pela expressão, como o resultado é True, então ela receberá o valor 5.</p>
+</body>
+</html>

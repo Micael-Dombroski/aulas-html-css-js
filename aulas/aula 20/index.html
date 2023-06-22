@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>Seletores Personalizados</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #9789F0;
+        }
+        h1 {
+            text-align: center;
+            background-color: #464070;
+            color: white;
+        }
+        p {
+            text-align: justify;
+            margin: 20px;
+            text-indent: 15px;
+            color: #3A2F5E;
+        }
+        h2 {
+            text-indent: 40px;
+            color: #3D3263;
+        }
+        .oi { font-weight: bold;}
+        #ola { font-weight: bolder;}
+        #ea { font-weight: lighter;}
+        .arroz { background-color: #3A2F5E; color: white;}
+    </style>
+</head>
+<body>
+    <h1>Diferença entre ID e Class</h1>
+    <h2>ID</h2>
+    <p>Usamos o ID para identificar um elemento. Por mais que seja 
+        possível colocar o mesmo ID em mais de um elemento é errado 
+        fazer isso.
+    </p>
+    <h2>Class</h2>
+    <p>Usamos o Class para classificar um grupos de elementos que podem 
+        ser diferentes.
+    </p>
+    <p><span class="oi arroz">1</span><span id="ola">2</span><span id="ea">3</span></p>
+</body>
+</html>

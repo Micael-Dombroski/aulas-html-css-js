@@ -1,0 +1,30 @@
+//Mudando o Nome do Usuário: (Recomendado que seja o mesmo nome da Conta do GitHub)
+git config --global user.name "NovoNome"
+
+//Vendo o Nome do Usuário:
+git config --global user.name
+
+//Mudando o Email do Usuário: (Recomendado que seja o mesmo email da Conta do GitHub)
+git config --global user.email "NovoEmail"
+
+//Vendo o Email do Usuário:
+git config --global user.email
+
+//Vinculando a Pasta com o Repositório do GitHub com o Repositório da Máquina
+1-echo "# CoisasMinhas" >> README.md
+2-git init
+3-git add README.md
+4-git commit -m "first commit"
+5-git branch -M main
+6-git remote add origin https://github.com/Micael-Dombroski/NomeDoRepositorio.git
+
+//Enviando o arquivo para o repositório do GitHub
+7-git push -u origin main
+
+//Para ver se tem algum arquivo que novo não adicionado ao GitHub
+git status
+
+//Para adicionar os novos arquivos ao repositório
+1-git add .
+2-git commit -m "second commit"
+3-git push

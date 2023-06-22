@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title> Loopings Part 1 </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 20px;
+            text-align: center;
+        }
+        p, ul, pre {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estruturas de Controle</h1>
+    <p>Como já sabemos, existem as seguintes estruturas de controle:</p>
+    <ul>
+        <li><strong>Sequências</strong>: A estrutura de controle mais simples, nela os passos 
+        são executados sequencialmente do ponto A até o ponto B, tendo somente uma possibilidade 
+        de caminho a ser seguido;</li>
+        <li><strong>Condição</strong>: Nessa estrutura de controle, existe a opção de passos que podem 
+        ou não ser seguidos e que, de qualquer forma, levaram do ponto A ao ponto B;</li>
+    </ul>
+    <h2>Estruturas da Repetição / Looping / Laços</h2>
+    <p>Assim como nas condições, temos a presença de um teste lógico, porém, se a condição for <strong>verdadeira</strong>, 
+        o programa vai executar todos os comandos dentro da estrutura de repetição até que o resultado 
+        para a condição seja <strong>falso</strong>. Quando a condição resultar em falso, o ciclo é quebrado e 
+        os comandos seguintes são executados.
+    </p>
+    <h3>While ( )</h3>
+    <p>Dentre as estruturas de repetição temos a estrutura "<strong>while()</strong>" (Enquanto...Faça) em JS. Veja 
+    a sintaxe dessa estrutura de repitação a seguir:</p>
+    <pre style="background-color: black; color:white; padding: 10px;">
+        <code><strong style="color: crimson;">while (</strong>condição<strong style="color: crimson;">)</strong> <strong style="color: orange;">{</strong><br>
+            Bloco de Comandos a serem seguidos <br>
+        <strong style="color: orange;">}</strong></code>
+    </pre>
+    <p>Sempre que todos os comandos da estrutura de repetição <strong>while ()</strong> são executados, o computador 
+    volta para o topo da estrutura e checa a condição e caso ela resulte em falso desta vez, ele avançará para os próximos 
+    passos sem passar pelos passos de dentro da estrutura de repetição.</p>
+    <p>Conhecida também como estrutura de repetição com teste lógico no início.</p>
+    <h3> Do { } while ( )</h3>
+    <p>Diferente da estrutura de repetição vista anteriormente, esta estrutura de repetição possui seu teste lógico no final de sua execução. 
+        A estrutura "<strong>Do While ( )</strong>" (Repita... Enquanto), possui seu teste lógico no fim de sua estrutura. Abaixo veremos a sintaxe 
+        de sua estrutura:
+    </p>
+    <pre style="background-color: black; color:white; padding: 10px;">
+        <code><strong style="color: crimson;">do</strong></strong> <strong style="color: orange;">{</strong><br>
+            Bloco de Comandos a serem seguidos <br>
+        <strong style="color: orange;">}</strong> <strong style="color: crimson;">while (</strong>condição<strong style="color: crimson;">)</code>
+    </pre>
+
+    <script>
+        window.alert('Vamos começar a ver sobre estruturas de repetição ;)')
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/favicon1.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <title>Omori</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url("https://pbs.twimg.com/media/FByAvZdUcAEEye7.jpg:large");
+            background-repeat: repeat-x;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: black;
+            color: white;
+            height: 270px;
+        }
+        header img {
+            height: 150px;
+            width: 400px;
+            display: block;
+            margin: -30px auto 30px auto;
+        }
+        nav {
+            max-width: 500px;
+            background-color: black;
+            display: block;
+            margin: 0px auto;
+            padding: 20px;
+        } 
+        nav div {
+            display: flex;
+            justify-content: space-between;
+        }
+        #menu a {
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            background-color: black;
+            padding: 10px;
+            font-family: 'Special Elite', cursive;
+        }
+        #menu a:hover {
+            cursor: pointer;
+            color: black;
+            border:2px solid black;
+            background-color: white;
+            outline: 1px solid white;
+        }
+        content {
+            background-color: white;
+            color: black;
+            max-width: 800px;
+            display: block;
+            margin: 0px auto;
+            align-items: center;
+            border-radius: 10px;
+            z-index: 4;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.301);
+        }
+        article {
+            padding: 20px;
+            margin: 10px;
+        }
+        article h1 {
+            font-size: 3em;
+            font-family: 'Special Elite', cursive;
+            text-align: center;
+            margin: 20px;
+        }
+        .art1 p {
+            text-align: justify;
+            width: 500px;
+        }
+        .art1 img {
+            height: 300px;
+            float: right;
+            margin: 20px;
+        }
+        p {
+            padding-bottom: 10px;
+            text-indent: 20px;
+            text-align: justify;
+        }
+        h2 {
+            font-family: 'Special Elite', cursive;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        img {
+            height: 200px;
+            display: block;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        h3, h4 {
+            font-family: 'Special Elite', cursive;
+            margin: 10px;
+        }
+        h4 {
+            text-indent: 40px;
+        }
+        .personagens img {
+            float: right;
+        }
+        #final img {
+            display: block;
+            margin: 0px auto;
+            height: 400px;
+        }
+        footer {
+            height: 100px;
+            background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 13%,black 60%);
+            color: white;
+            margin-top: -10px;
+            padding: 70px 10px 10px 10px;
+            position: relative;
+        }
+        footer p {
+            text-align: center;
+        }
+        footer a {
+            font-weight: bolder;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+        .img:target img {
+            position: fixed;
+            height: auto;
+            width: 50%;
+            top: 15px;
+            left: 25%;
+            border: solid 5px white;
+            outline: solid 1px #333;
+            box-shadow: 0px 0px 25px 10px #000;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://forums.launchbox-app.com/uploads/monthly_2021_06/1643692444_OMORIwlogoupscaledv3.png.1852aaa9461b878f3944672b74d2a22f.png" alt="omori">
+            <nav>
+                <div id="menu">
+                    <a href="#">Página Inicial</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Opções</a>
+                    <a href="#">Contato</a>
+                </div>
+            </nav>
+    </header>
+    <content>
+        <article class="art1">
+            <h1>O que é Omori?</h1>
+            <div class="img" id="img1">
+                <a href="#img1">
+                    <img src="https://cdn.donmai.us/original/e4/4a/e44a1fbd0c27c072852a71bb828bafda.png" alt="omori no espelho">
+                </a>
+            </div>
+            <p>Omori é um jogo Indie que foi feito pela desenvolvedora e ilustradora independente OMOCAT. 
+                A temática de depressão e ansiedade é extensamente abordada e pode ser considerada uma 
+                constante dentro da história. O time de desenvolvedores não teve medo de explorar as nuances 
+                dessa doença psíquica, que é o ponto de partida para a narrativa fantasiosa e até mesmo as 
+                atitudes do protagonista. No mundo real do jogo, descobrimos que uma tragédia aconteceu há 
+                alguns anos, e esse foi o motivo do afastamento do grupo de amigos e do eventual isolamento 
+                de Sunny (protagonista), que passou a ser assombrado por visões que ele chama de Something (Algo).
+            </p>
+            <p>Em OMORI, nada é o que parece. Enquanto nos aventuramos no mundo dos sonhos, exploramos, ao mesmo tempo, 
+                a mente fragmentada e traiçoeira de Sunny - e sua fuga da 'verdade', que catalisa seus traumas e sua depressão. 
+                O que se inicia como a busca por um amigo perdido se torna, aos poucos, a busca pelas memórias que o personagem 
+                enterrou nas camadas mais profundas de sua mente, que podemos chamar de Black Space (Espaço Preto).</p>
+            
+        </article>
+        <article>
+            <h2>Surgimento de Omori</h2>
+            <p>Omori nasceu como uma história de um otaku deprimido. Seu criador escreveu a pequena história sobre o personagem em 2012 
+                e ilustrou uma novela gráfica.</p>
+        </article>
+        <article>
+            <h2>Personagens Principais</h2>
+            <p>Durante o jogo nos são apresentados inúmeros personagens marcantes porém, não tão marcantes 
+                quanto os principais amigos do nosso querido protagonista, Sunny. Veremos a seguir os principais 
+                personagens desse jogo.
+            </p>
+            <div class="img" id="img2">
+                <a href="#img2">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh0k5QbMwCdYnVfkUW5MFtiXT9i8fViOLgD6Ys2rgzMXSQQdZE40Zj7NaRMsePge0G_Y6av19vQSuYvYiF3ehDPORYrPKH2HDzW0kmFUWAmFid7DZ3qNv1mD1Trck9AVKgXmGFsW2TmLGz5ffKyVvPmoDP-WRhly6PFwOxCMd0CLgxg8tq2cgjBHNaP" alt="Omori e amigos" style="margin: 10px auto;">
+                </a>
+                <a href="file:///C:/Users/GUSTAVO/Downloads/Vareusin%20T-T/prg/Micael%20original.Xd/Curso%20em%20video%20HTML%20Mod2/desafios%20B)/testeboy/omori.html#" class="fecha">Fechar</a>
+            </div>
+            <div class="personagens">
+                <h3>Omori/Sunny</h3>
+                <div class="img" id="img3">
+                    <a href="#img3">
+                        <img src="https://static.wikia.nocookie.net/omori/images/7/79/Omori_origin.png/revision/latest/scale-to-width-down/250?cb=20210327063225" alt="Sunny">
+                    </a>
+                </div>
+                <h4>Sunny</h4>
+                <p>Sunny é o nosso tão querido protagonista, Sunny é como nosso personagem é conhecido quando não está dormindo.</p>
+                <p>Quando mais novo Sunny era descrito por seus amigos e família como um garoto tímido. Ele costumava praticar
+                    violino com sua irmã Mari para tocar junto a ela em seus recitais.
+                </p>
+                <h4>Omori</h4>
+                <p>Omori é a identidade que nosso protagonista assume dentro de seus sonhos. Omori é um protagonista quieto, o Omori foi criado
+                    para que Sunny pudesse esconder um terrível segredo.
+                </p>
+                <hr>
+                <h3>Kel</h3>
+                <div class="img" id="img4">
+                    <a href="#img4">
+                        <img src="https://static.wikia.nocookie.net/omori/images/e/ea/Kel_Sleeping.png/revision/latest/scale-to-width-down/250?cb=20210109082157" alt="Kel">
+                    </a>
+                </div>
+                <p>Quando criança, Kel era um pouco malcriado, impulsivo e rude, sempre se envolvendo em pequenas brigas com seus amigos. Ele era muito
+                    competitivo, sempre tentando ganhar nos jogos ou corridas, ele é na verdade muito energético e rápido. Embora ele sempre fosse escandaloso
+                    e irrite seus amigos ele se preocupa muito com eles a ponto de protegê-los constantemente com seu forte senso de justiça.
+                </p>
+                <p>Embora o Kel atual ainda possua várias das características de quando criança, ele aparenta estar mais maduro e compreensível com os outros. Ele
+                    é muito sociável e gosta de falar com estranhos quando Sunny está ocupado com trabalhos. Vale ressaltar que Kel foi o primeiro a contatar o Sunny
+                    durante o jogo e o responsável por fazer o Sunny sair de dentro de sua casa após tantos anos(se a rota Hikikomori não for escolhida).
+                </p>
+                <hr>
+                <h3>Aubrey</h3>
+                <div class="img" id="img5">
+                    <a href="#img5">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/1863927493164401073/8E50493DDCB1A89E4503F69E9BFEAC8B8BB2907A/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Aubrey">
+                    </a>
+                </div>
+                <p>Quando criança, Aubrey era muito alegre e sempre estava feliz em brincar com seus amigos. Sempre agindo de acordo com seus sentimentos e
+                    força de vontade, Aubrey serve como uma fonte constante de moral para seus amigos.
+                </p>
+                <p>A Aubrey atual possui fortes sentimentos de ódio por seus antigos amigos incorporado em suas ações. Ela se sentiu sobrecarregada com a sensação
+                    de solidão proporcionada por dois fatores, a morte de sua melhor amiga, assim como a falta de suporte entre ela e seus amigos para lidarem com o
+                    luto. Ele se tornou pavio-curto e violenta, descontando nos outros, uma das principais vítimas de seus ataques era Basil, que sofria constantemente
+                    bullying.
+                </p>
+                <hr style="margin-top: 50px;">
+                <h3>Basil</h3>
+                <div class="img" id="img6">
+                    <a href="#img6">
+                        <img src="https://i.kym-cdn.com/photos/images/original/002/084/221/a24" alt="Basil">
+                    </a>
+                </div>
+                <p>Na infância Basil costumava usar uma coroa de flores na cabeça. Basil adorava cuidar de plantas e perdoava facilmente as pessoas. Basil era bastante amigável, e
+                    sua timidez parece ser causado por pensar humildemente sobre si e colocar as necessidades dos outros acima das próprias. Ele é muito sentimental, guardando
+                    memória de seus amigos em fotos e plantando plantas que o lembrem deles. Sua empatia é mostrada com suas plantas também, mostrando muita precupação quando elas
+                    correm perigo de se machucarem, e falando com elas como faria com seus amigos.
+                </p>
+                <p>O Basil atual quando comparado ao Basil antigo mostra ser mais ansioso e sensível. Ele  aparenta temer grandes mudanças em sua vida e fica mais confortável deixando sua
+                    vida os mais descomprometida possível. Isso explica seu conforto por trás de possem físicas que o fazem lembrar de boas memórias. Ele é um alvo do bullying de Aubrey e
+                    seus amigos mas ele normalmente é salvo por Kel e Sunny. Em algumas cenas, em que ele está transcodo sozinho em seu quarto, ele parece está mais fechado que o normal.
+                </p>
+                <hr>
+                <h3>Hero</h3>
+                <div class="img" id="img7">
+                    <a href="#img7">
+                        <img src="https://cdn.donmai.us/original/4b/d5/4bd5a6136464627bb6f2e9d8324dcc8a.png" alt="Hero">
+                    </a>
+                </div>
+                <p>Quando mais novo, Hero era o pacifista do grupo, quem sempre tentava conter seus amigos quando ficavam muito agitados. Ele era descrito tendo uma personalidade leve e
+                    como alguém apaixonado por trabalho doméstico como assar, cozinhar e limpar, fazendo dele o empregado ideal. Hero também tem um lado carismático que ele usa para encantar
+                    os outros. Seu carisma permite que ele convença os outros a aceitarem seus pedidos. Contudo, ele pode ser influenciado quando confrontado, e tem dificuldade de  recusar
+                    pedidos dos outros. Hero gostava da Mari.
+                </p>
+                <p>Atualmente, Hero se mantém sendo amigável. Ele é amado pelo pessoal de FARAWAY e admirado por seu carisma também. Kel o descreve como sendo "naturalmente bom em tudo", e tem
+                    orgulho dele por isso. É notável que ele possui talente em ter sucesso em tudo que ele tenta, no entando ele admite que sua reputação é muito exagerada. Hero é bastante calmo
+                    e compreensível com todos que ele encontra, até tentando confortá-los em momentos de angústia.
+                </p>
+                <hr>
+                <h3>Mari</h3>
+                <div class="img" id="img8">
+                    <a href="#img8">
+                        <img src="https://pbs.twimg.com/profile_images/1539829681632862209/bXOwa1Qt_400x400.jpg" alt="Mari">
+                    </a>
+                </div>
+                <p>Mari é a irmã mais velha de Sunny. Ela sempre é descrita sendo amável e gentil, ela desempenha o papel de irmã mais velha no seu grupo de amigos (Sunny, Hero, Kel, Aubrey e Basil).
+                    Em sua primeira aparição ela mostra que tem um lado travesso, zombando dos maneirismos de Kel e Aubrey, e depois provocando Hero.
+                </p>
+                <p>Infelizmente a Mari veio a morrer em um triste acidente, isso acabou abalando todo o grupo fazendo-o se desfazer, deixando feridas que não foram curadas...</p>
+                <hr style="margin-top: 70px;">
+            </div>
+        </article>
+        <article id="final">
+                <h2>Finalização</h2>
+                <p>Espero que vocês tenham gostado, essa página é só um teste para ver como estão minhas habilidades mas foi divertido fazê-la.</p>
+                <div class="img" id="img9">
+                    <a href="#img9">
+                        <img src="https://rare-gallery.com/mocahbig/43131-Basil-Omori-Hero-Omori-Aubrey-Omori-Sunny.jpg" alt="Omori e Amigos">
+                    </a>
+                </div>
+        </article>
+    </content>
+    <footer>
+        <p>Página feita por <a href="#"><em>@DustCrap</em></a> um fan de <a href="#">Omori</a></p>
+    </footer>
+</body>
+</html>

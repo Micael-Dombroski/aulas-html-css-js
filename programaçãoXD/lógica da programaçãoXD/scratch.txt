@@ -1,0 +1,1 @@
+Scratch é um aplicativo criado com o intuito de ensinar crianças e jovens a criar algoritmos de formar simples, possibilitando ver a execução desse algoritmo.

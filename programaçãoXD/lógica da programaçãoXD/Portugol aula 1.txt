@@ -1,0 +1,110 @@
+ Segundo o visualg, essa é a estrutura básica de um algoritmo segundo a visão desse aplicativo:
+
+	algoritmo "nome-do-algoritmo"
+	var
+		(Área de variáveis)
+	início
+	fimalgoritmo
+
+ Entre a parte "início" e "fimalgoritmo" é corpo do algoritmo.
+
+Comandos de saído do visualg:
+	1-Escreva ("Qualquer coisa")
+-Obs: O uso das "" dentro dos algoritmos é muito importante, tudo o que estiver entre "" é considerado como mensagem, um cadeia de caracteres.
+
+Exemplo de algoritmo:
+
+	algoritmo "primeiro"
+	var
+	
+	início
+	Escreva("Olá, Mundo!")
+	Escreva("Me livrei da maldicao")
+	fimalgoritmo
+
+Note que as mensagens "Olá, Mundo!" e "Me livrei da maldicao" vão aparecer uma ao lado da outra, para que isso não aconteça devemos usar outro comando de saída.
+
+	2-Escreval("Qualquer coisa")
+-Obs: ele funciona da mesma forma que o Escreva, porém ao invés do próximo comando seguir na mesma linha que ele, ele será passado para a linha de baixo. O "l" significa linha, ou seja, escreva e pule uma linha.
+
+	Ex:
+
+	algoritmo "segundo"
+	var
+	
+	início
+	Escreval("Olá, Mundo!")
+	Escreva("Me livrei da maldicao")
+	fimalgoritmo
+
+Var: Área de variáveis
+	O que são variáveis?
+	São espaços vazios que podem ser preenchidos com valores, esses valores são as variáveis.
+
+	Para inserirmos uma variável, devemos dar um nome para a variável e um valor para ela.
+	var
+	identificador:tipo
+
+
+	identificador; identifica determinada variável. No visualg existem 6 regras para a nomeação de identificadores:
+		
+	1.O identificador deve começar com uma letra;
+	2.Os proxímos caracteres podem ser letras ou números;
+	3.Não pode utilizar nenhum símbolo no nome de um 			identificador, exceto _ (para substituir os espaços 		entre as palavras);
+	4.Identificadores não podem conter espaços em branco;
+	5.Identificadores não podem conter acentuações;
+	6.Não pode ser uma palavra reservada (palavras para 			comandos e que fazem parte da estrutura básica de um 		algoritmo segundo o visualg).
+
+	Ex de nomes válidos para identificadores:
+	Nota1; Inicio_Algoritmo; Bala_de_Canhao.
+
+	Ex de nomes inválidos para identificadores:
+	Média (possui acento); Salário Bruto (possui acento e 	espaço em braco); 9dade (começa com um número); Algoritmo 	(é uma palavra reservada).
+
+Tipos primitivos:
+	Inteiro: permite que a variável só abrigue números 			inteiros (1,2,3356,-32,etc);
+	Real: permite que a variável abrigue somente números 		reais (0.5;6.5;3.14;-5665.3454;etc);
+	Caractere: permite que a variável seja um caractere, 		caractere é tudo aquilo que é colocado entre "" 		("abacaxi";"453546";"Algoritmo";etc);
+	Logico: guarda apenas dois valores: verdadeiro e falso.
+
+	Ex:
+	algoritmo "terceiro"
+	var
+	msg: caractere
+	início
+	Escreval("Olá, Mundo!")
+	Escreva("Me livrei da maldicao")
+	fimalgoritmo
+
+Quando adicionamos uma variável, o sistema colocará na memória do computador uma etiqueta em um espaço vazio para guarda msg do tipo caractere.
+Para podermos colocar algo dentro desse espaço precisamos para uma atribuição. para fazer uma atribuição devemos usar esse código abaixo da variável: indentificador <- mensagem "<-" é o símbolo de atribuição.
+
+	Ex:
+	algoritmo "quarto"
+	var
+	msg: caractere
+	início
+	msg <- "Olá, Mundo!"
+	Escreval("Olá, Mundo!")
+	Escreva("Me livrei da maldicao")
+	fimalgoritmo
+
+Com isso podemos substituir no Escreval "Olá, Mundo!" por msg, com isso aparecerá a mensagem Olá, Mundo da mesma forma que sem inserir a variável e substituir "Olá, Mundo!". Dessa forma:
+
+	algoritmo "sexto"
+	var
+	msg: caractere
+	início
+	msg <- "Olá, Mundo!"
+	Escreval(msg)
+	Escreva("Me livrei da maldicao")
+	fimalgoritmo
+
+Se colocassemos a variável msg entre "" ela seria considerado um caractere e não uma variável.
+
+Caso escrevamos da seguinte forma:
+	Escreval("mensagem", msg)
+O resultado mostrado no site será esse:
+	mensagemOlá, Mundo!
+Para que a mensagem não fica colada devemos colocar junto com as "" que envolvem a palavra "mensagem" um espaço em branco. Desta forma:
+	Escreval("mensagem ", msg)

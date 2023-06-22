@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>JavaScript</title>
+</head>
+<body>
+        <script type="text/javascript">
+            alert("Casada?");
+            function myFunction()
+    {
+    var x;
+
+    var idade=prompt("Digite sua idade:");
+
+    if (idade!=null)
+    {
+    x="Idade: " + "faz " + idade + " anos que você é gay.";
+    document.getElementById("demo").innerHTML=x;
+    }
+    }
+        </script>
+    <h1>Teste 1</h1>
+    <p id="paragrafo">Hotel? Trivago</p>
+    <p>Clique para exibir.</p>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("paragrafo").innerText = "O comedor de casadas chegou!";
+    </script>
+
+<button onclick="myFunction()">Clique aqui</button>
+</body>
+</html>

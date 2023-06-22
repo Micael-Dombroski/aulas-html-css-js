@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/sans.ico" type="image/x-icon">
+    <title>Borda personalizada</title>
+    <style>
+        h1 {
+            border: 15px solid black;
+            padding: 10px;
+            /*
+            border-image-source: url('../../../imagens/bordamicael.png');
+            border-image-slice: 24;
+            border-image-repeat: repeat;
+            short-hand mostrada abaixo (a ordem dos valores deve ser igual a ordem mostrada acima)
+            */
+            border-image: url('../../../imagens/bordamicael.png') 24 repeat;
+        }
+        h2 {
+            border: 15px solid black;
+            padding: 10px;
+            border-image: url('../../../imagens/bordamicael.png') 24 stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de borda com repeat</h1>
+    <p>Podemos inserir imagens como bordas aplicando o atributo '<strong><code>border-image-src</code></strong>', 
+    onde inserimos o valor '<code> url(caminha-na-pasta-ate-chegar-no-arquivo)</code>', também podemos 
+    usar o atributo '<strong><code>border-image,slice</code></strong>' para fatiar a imagem usada na borda e por 
+    fim o atributo '<strong><code>border-image-repeat</code></strong>' que pode receber valores como '<code>repeat</code>' 
+    que faz com que partes da imagem se repitam, e o valor '<code>stretch</code>' que faz com que partes da imagem usada 
+    sejam esticadas.</p>
+    <h2>Teste de borda com stretch</h2>
+</body>
+</html>

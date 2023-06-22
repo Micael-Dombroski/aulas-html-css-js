@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Escreva uma frase:
+            <input type="text" name="frase" id="frase">
+        </p>
+        <p>Evie a frase: 
+            <input type="submit" value="enviar" onclick="ler()">
+        </p>
+    </div>
+    <div id="res">
+        Olá
+    </div>
+    <script>
+        function ler () {
+            var res = document.getElementById('res')
+            var frase = document.getElementById('frase')
+            var palavra = String(frase.value)
+            res.innerHTML = `${palavra}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Dados</title>
+</head>
+<body>
+    <p>Existem diferentes principais tipos de dados no JavaScript sendo estes: <abbr title="nesse grupo estão todos os tipos de números, seja ele inteiro (1,234,-123) ou real (0.5,-234.4,23.23434)">number</abbr>,
+        <abbr title="cadeia de caracteres que podem possuir pontos, traços, letras, números, sempre são colocados entre 'meias aspas' ">'string'</abbr>, 
+       <abbr title="valor booleneano, representado por true ou false">boolean</abbr>.</p>
+    <p>Para convertermos um dado do tipo <strong>string</strong> para <strong>number</strong> podemos usar vários métodos, como por exemplo:</p>
+    <ul>
+        <li><code><strong>Number.parseInt(</strong>n<strong>)</strong></code> ou <code><strong>parseInt(</strong>n<strong>)</strong></code>: onde em n inserimos o valor que queremos converter, esse primeiro comando converte números para números inteiros (Ex: 4)</li>
+        <li><code><strong>Number.parseFloat(</strong>n<strong>)</strong></code> ou <code><strong>parseFloat(</strong>n<strong>)</strong></code>: onde em n inserimos o valor que queremos converter, esse segundo comando converte números para números reais (Ex:5.4, o "." é chamado de ponto flutuante)</li>
+    </ul>
+    <p>Devemos escolher de acordo com o tipo de dado desejamos, pois caso convertermos o número para inteiro não poderá ser inserido números reais. <br>
+    Atualmente podemos usar um comando mais atualizado que é o: <code><strong>Number(</strong>n<strong>)</strong></code>, nele inserimos o valor de n e o computador definirá se o número é inteiro ou real e faz a conver~soa para o tipo definido.</p>
+    <p>Para convertemos um número para uma string podemos usar os seguintes comandos:</p>
+    <ul>
+        <li><code><strong>String(</strong>n<strong>)</strong></code>, o n representa valor o que queremos conveter para uma string.</li>
+        <li><code>n<strong>.toString()</strong></code>, colocamos nesse código o valor que queremos transformar em string caso seja necessário futuramente no código.</li>
+    </ul>
+
+    <p>Na ultimas versões de JS podemos usar o template para escrevermos uma frase com várias variáveis, olhe abaixo um exemplo de código com concatenação e outro com template: (Assuma que os valores das variáveis nome, idade e nota são respectivamente: Gustavo, 41 e 5.5)</p>
+    <p>Código com concatenação: <br>
+    <code>'O aluno ' + <strong>nome</strong> + ' com ' + <strong>idade</strong> + ' anos tirou a nota ' + <strong>nota</strong></code> <br>
+    Resultado exibido: O aluno Gustavo com 41 anos tirou a nota 5.5</p>
+    <p>Código com template: <br>
+    <code>`O aluno ${<strong>nome</strong>} com ${<strong>idade</strong>} anos tirou a nota ${<strong>nota</strong>}`</code> <br>
+    Note que o resultado exibido é o mesmo porém o segundo exemplo possui uma linha mais curta de código.</p>
+    <p>Para formatar strings, usando strings junto a variáveis:</p>
+        <ul>
+            <li>
+                "Eu estou apendendo<strong> s</strong>(s representa uma variável)" //Não faz interpolação
+            </li>
+            <li>
+                "Eu estou apendendo" + <strong>s</strong> //usa concatenação
+            </li>
+            <li>
+                "Eu estou aprendendo ${<strong>s</strong>}" //Usa template string
+            </li>
+        </ul>
+        <p>Podemos fazer outras coisas com strings, por exemplo:</p>
+        <ul>
+            <li><strong>s</strong>.lenght //revela quantos caracteres a string tem</li>
+            <li>s.toUpperCase() //transforma todas as letras da string para letras maiúsculas</li>
+            <li>s.toLowerCase() ////transforma todas as letras da string para letras minúsculas</li>
+        </ul>
+        <p>Podemos definir quantas casas após a vírugla serão exibidas em uma variável usando o seguinte comando: nome-da-variável.toFixed(número de casas após a vírgula)</p>
+        <p>Com o comando nome-da-variável.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) transformamos a variável numérica em reais.</p>
+    <script>
+           var n1 = Number.parseFloat(window.prompt('Digite um número: ')) //O comando window.prompt retorna o resultado como string, mesmo que seja um número. Então precisamos converter o n1 e o n2 de string para número
+           //Acima fizemos a conversão de n1 direto para um número real
+           var n2 = Number(window.prompt('Digite outro número '))
+           var s = n1 + n2
+           window.alert('A soma entre os valores ' + n1 + ' e ' + n2 + ', resulta em: ' + s)
+           //O sinal + pode servir para adição e também para concatenação, no primeiro teste, o resultado mostrado para o usuário foi n1n2 (Ex: n1=2 e n2=4, s=24)
+           // Para que isso não aconteça devemos especificar que o + deve somar, para isso, precisamos que as duas variáveis sejam do tipo de dado number, já para o + de concatenção precisamos que as variáveis sejam do tipo de dado string
+           //adição: (number) + (number)
+           //concatenação: (string) + (string)
+       </script>
+</body>
+</html>

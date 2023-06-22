@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+        p, pre, li {
+            text-align: justify;
+        }
+        p {
+            text-indent: 20px;
+        }
+        li { 
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Function</h1>
+    <p>Funções são um conjunto de passos que o computador deve seguir para  realizar 
+        uma tarefa. Vamos ver abaixo um exemplo.</p>
+        <p>Ex: Sua mãe te chama, te entrega dinheiro e pede para você comprar um leite 
+            na mercearia.
+        </p>
+        <ol>
+            <li>Assim como sua mãe te chama para pedir que você compre o leite, para uma 
+                função ser executada ela precisa ser <strong>chamada</strong>. Nem sempre 
+                as funções precisam ser chamadas para serem executadas, as vezes elas são 
+                executadas devido a algum evento, como por exemplo: recolher a roupa quando 
+                esta chovento, onde nesse caso, a <strong>função recolher a roupa</strong> 
+                é executado quando o <strong>evento chover</strong> ocorre.
+            </li>
+            <li>Assim como você precisa do dinheiro para comprar o leite, a função precisa de <strong>parâmetros</strong> 
+                que devem ser atendidos para a função ser executada, nesse caso os parâmetros são a ordem de sua mãe e o dinheiro.
+            </li>
+            <li>O processo de ir  até a mercearia e comprar o leite é o que chamamos dentro de uma 
+                função como <strong>ação</strong>.
+            </li>
+            <li>Da mesma forma que ao retornar para casa você entrega o leite para sua mãe, a função também 
+                deve retornar algo e isso é chamado de <strong>retorno</strong>.
+            </li>
+        </ol>
+    <p>Vale lembrar que  não são todas as funções que usam <strong>parâmetros</strong> e que dão algum <strong>retorno</strong> durante ou 
+        ao término de sua execução</p>
+    <h2>Definição de Função na Programação</h2>
+    <p>Funções são <strong>ações</strong> executadas assim que são <strong>chamadas</strong> ou em decorrência 
+    de algum <strong>evento</strong>.</p>
+    <p>Uma <strong>função</strong> pode receber <strong>parâmetros</strong> e retornar um <strong>resultado</strong>.</p>
+    <p>Vamos dar um exemplo em JS.</p>
+    <pre style="background-color: black; padding: 10px; color: white;"><code>
+1        <strong style="color: crimson;">function</strong> <strong style="color: yellow;">parimp</strong><strong style="color: white;">(</strong><strong style="color: gray;">n</strong><strong style="color: white;">)</strong> <strong style="color: yellow;">{</strong>
+2            <strong style="color: crimson;">if</strong> <strong style="color: white;">(</strong><strong style="color: gray;">n</strong><strong style="color: white;">%2==0)</strong> <strong style="color: yellow;">{</strong>
+3                <strong style="color: crimson;">return</strong> <strong style="color: gray;">'par'</strong>
+4            <strong style="color: yellow;">}</strong> <strong style="color: crimson;">else</strong> <strong style="color: yellow;">{</strong>
+5                <strong style="color: crimson;">return</strong> <strong style="color: gray;">'impar'</strong>
+6            <strong style="color: yellow;">}</strong>
+7        <strong style="color: yellow;">}</strong>
+8        <strong style="color: crimson;">let</strong> <strong style="color: white;">res = </strong><strong style="color: yellow;">parimp</strong><strong style="color: white;">(</strong><strong style="color: gray;">11</strong><strong style="color: white;">)</strong>
+    </code></pre>
+    <p>Nesse exemplo, na linha 8 temos a chamada para a nossa função, e na mesma linha já é determinado 
+        o parâmetro para a nossa função, na linha 1 temos a função, na linha 2 temos uma condição que averigua se 
+        o parâmetro fornecido na linha 8 quando dividido por 2 terá o resto da divisão como 0, caso isso esteja correto 
+        será retornado o valor 'par' presente na linha 3, caso esteja errado, será retornado o valor 'impar' que está 
+        presente na linha 5. Com isso podemos determinar se o número é par ou impar.
+    </p>
+    <p>Também é possível usar uma função como valor de variável (olhe o exemplo no arquivo JS dessapasta).</p>
+    
+</body>
+</html>

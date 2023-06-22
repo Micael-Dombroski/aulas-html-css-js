@@ -1,0 +1,159 @@
+
+:root {
+    --background-color: white;
+    --color: black;
+    --content: ' off'
+}
+
+html {
+    background-color: #01011d;
+    max-height: 100%;
+}
+
+body, ul, li {
+    
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial;
+    background-color: var(--background-color);
+    margin-bottom: 100px;
+}
+
+#darkmodeToggle {
+    display: none;
+    background-color: transparent;
+}
+
+#darkmodeToggle:checked + .container {
+    --color: white;
+    --background-color: black;
+
+    background-color: var(--background-color);
+    color: var(--color)
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+h1 {
+    color: #F51737;
+}
+
+h2 {
+    color: var(--color);
+    grid-row: 1 / 3;
+}
+
+p {
+    color: var(--color);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    display: flexbox;
+}
+
+a:hover {
+    color: #F51737;
+}
+
+
+.DarkModeLabel {
+    cursor: pointer;
+    color: white;
+    margin-right: 10px;
+}
+
+.DarkModeLabel:hover {
+    color: #F51737;
+}
+
+.nome {
+    margin: 20px;
+}
+
+.menu {
+    display: flex;
+    height: 0px;
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+.lista {
+    margin-top: 25px;
+}
+
+.label {
+    margin-top: 35px;
+}
+
+ul {
+    background-color:#F51737;
+}
+
+li {
+    background-color:#F51737;
+}
+
+.header {
+    background-color: #01011d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    box-sizing: 10px;
+}
+
+.Oi {
+    width: 360px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+}
+
+.Eita {
+    background-color: transparent;
+}
+
+.GG {
+    background-color: transparent;
+    box-sizing: 0px;
+    margin: 10px;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+.container {
+    margin-top: -27px;
+}
+
+.pesquisa {
+    height: 20px;
+    margin-top: 15%;
+}
+
+.pesquisa > p {
+    margin: 0 auto;
+}
+
+button {
+    height: 25px;
+    cursor: pointer;
+    margin-left: 5px;
+}

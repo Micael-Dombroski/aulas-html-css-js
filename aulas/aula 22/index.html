@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font: sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        p {
+            text-align: justify;
+            text-indent: 20px;
+            margin: 20px;
+            font-size: 1em;
+        }
+        a { 
+            color: red; 
+            text-decoration: none; 
+            font-weight: bolder;
+        }
+        a:visited { 
+            color: darkred;
+        }
+        a:hover {
+            color: black; 
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+        }
+        a::after {
+            content: '[link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgreen;
+
+        }
+        h2 {
+            margin: 40px;
+        }
+        .especial::before {
+            content: '>> ';
+            color: red;
+            text-decoration: none;
+        }
+        .especial::after {
+            content: ' <<';
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=cKJyzfxvGWg" target="_blank">Video Youtube</a></li>
+        <li><a href="https://taverna42.wordpress.com/2020/06/04/um-harem-de-garotas-demonio-helltaker-review/" target="_blank" class="especial">Site na Net</a></li>
+        <li><a href="https://br.pinterest.com/pin/309270699411541912/" target="_blank">Imagem Legal</a></li>
+    </ul>
+    <h2>Pseudo-elementos</h2>
+    <p>São representado no CSS como "::".</p>
+</body>
+</html>

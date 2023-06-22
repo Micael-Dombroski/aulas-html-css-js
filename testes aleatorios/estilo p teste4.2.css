@@ -1,0 +1,111 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 20px;
+    font-family: Arial;
+    background-color:black;
+    margin-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+
+}
+.nome {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #F51737;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    background-color: #04041e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+}
+
+.menu {
+    display: flex;
+    height: 0px;
+}
+
+.menu li {
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+ul {
+    background-color:#F51737;
+}
+
+li {
+    background-color:#F51737;
+}
+
+section {
+    background-color: black;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 20px;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.sidebar > div {
+    margin-bottom: 10px;
+    background: #F51737;
+    height: 300px;
+}
+
+@media (max-width: 600px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: flex;
+        overflow: scroll;
+    }
+    .sidebar > div {
+        flex: 1 0 200px;
+        margin: 0 10px;
+    }
+}

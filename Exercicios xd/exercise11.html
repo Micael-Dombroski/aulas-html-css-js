@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/lucif2.ico" type="image/x-icon">
+    <title>Imagens Dinâmicas</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+           margin: 10px; 
+           border-style: dashed;
+           border-radius: 10px;
+           border-color: red;
+           padding: 10px;
+        }
+        audio {
+            margin: 5px;
+        }
+        .audio {
+            width: 315px;
+            border-style: double;
+            border-color: red;
+            border-radius: 50px;
+            margin: auto;
+        }
+        pre {
+            text-align: left;
+        }
+        ul {
+            text-align: left;
+        }
+        table {
+
+            background-color: black;
+            margin: auto;
+        }
+        td {
+            background-color: aqua;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <hr>
+    <p>É importante termos a mesma imagem de tamanhos diferentes pois os usuários podem acessar 
+        nosso site por dispositivos diferentes e uma imagem muito pesada pode deixar o site mais lento 
+        por conta de uma imagem pesada, devemos tratar a imagem para que isso não ocorra, para isso, nesse exemplo 
+        criamos 3 imagens de tamanhos diferentes, a primeira é a de tamanho 1000 x 1000 px, que aparecerá para usuários
+        que estão acessando o nosso site por um computador, outra imagem de tamanho 700 x 700 px, que será mostrada para usuários 
+        que acessarem nosso site através de tablets, e uma última de tamanhos 300 x 300 px, que irá ser mostrada para 
+        usuários que acessarem nosso site através do celular.
+    </p>
+    <p>Podemos criar inúmeros tamanhos de imagens para adaptarmos.</p>
+    
+    <hr>
+    <h2>Tag &lt;Picture&gt;</h2>
+    <p>A tag &lt;picture&gt; deve abrigar a tag &lt;img&gt; que queremos que seja mostrada inicialmente. 
+        Ex:
+        <br><br>&lt;picture&gt;
+        <br>&lt;img src="imagem-1050px.png" alt="imagem 1"&gt;
+        <br>&lt;/picture&gt;
+    </p>
+    <p>No entanto se só escrevermos apenas isso, apenas a imagem que inserimos será mostrada, independente do tamanho dela, então devemos inserir antes da 
+        tag de imagem a tag &lt;source&gt; e inserir nessa tag o atributo "media" podendo definir uma tamanho máximo ou mínimo (max-width/min-width) que o navegador deve 
+        ter para determinada imagem permanecer sendo mostrada para o usuário, o valor inserido pode ser em pixels, devemos sempre colocar um valor superior ao da imagem 
+        para que haja uma folga (Ex: para imagens de 1000px max-width: 1050px), só lidaremos com max-width; também o atributo "srcset" onde inserimos o link para a imagem que desejamos que seja 
+        mostrada para o usuário caso o tamanho máximo que o navegador deva ter para mostrar a imagem inicial ao usuário seja passado; e por fim o atributo 
+        "type" para indicar o tipo da imagem o valor deve ser "image/exetenção do arquivo" (Ex: type="image/jpg").<strong> obs:</strong> devemos colocar uma tag source para 
+        cada imagem que deve substituir outra sempre que o tamanho máximo exigido não seja alcançado, a ordem deve ser sempre a seguinte: se você colocou primeira a menor imagem 
+        então o primeiro source a ser escrito deve ser o para substituir a segunda maior imagem pela maior imagem, depois para substituir a terceira maior imagem para a segunda maior, e assim por 
+        diante até chegar a hora de aparecer a menor imagem (onde o tamanho do navegador será menor que o max-width necessário para exibir a segunda menor imagem); se a imagem que você inseriu foi 
+        a maior então o primeiro source deve ser para a menor imagem, depois para a segunda menor, e assim por diante até chegar a hora de aparecer a maior imagem (onde o tamanho do navegador será 
+        equivalente ao max-width necessário para exibir a maior imagem).
+    </p>
+    <p>Ex: <br>
+        &lt;picture&gt;
+        <br>&lt;source media="(max-width: 750px)" srcset="../imagem/imagem-300px.png" type="image/"&gt;
+        <br>&lt;source media="(max-width: 1000px)" srcset="../imagen/imagem-700px.png" type="image/"&gt;
+        <br>&lt;img src="imagem-1050px.png" alt="imagem 1"&gt;
+        <br>&lt;/picture&gt;
+    </p>
+    <hr>
+    <h2>Testando a funcionalidade da Tag &lt;Picture&gt;</h2>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplismente aumente e diminua o tamanho do seu navegador.</p>
+    
+<picture>
+    <source media="(max-width: 750px)" srcset="../imagens/foto-p.jpg" type="image/jpg">
+    <source media="(max-width: 1050px)" srcset="../imagens/foto-m.jpg" type="image/jpg">
+    <img src="../imagens/foto-g.jpg" alt="Imagem Flexíxel">
+</picture>
+    <p>Note que conforme diminuimos o tamanho do navegador a imagem vai sendo substituída conforme o tamanho limite exigido para a imagem permanecer sendo exibida vai sendo passado.</p>
+    <p>Usar esse sistema de imagem flexível ajuda muito os usuários a navegarem pelo nosso site.</p>
+    <p>A ordem das imagens deve estar certo, no exemplo acima, o primeiro source sempre será a menor imagem. </p>
+    <h1>Inserção de Áudios na página <em>Web</em></h1>
+    <p>Para inserirmos um áudio na nossa webpage precisamos usar a tag &lt;audio&gt;&lt;/audio&gt;, essa tag funciona semelhantemente à tag &lt;picture&gt;, pois assim como ela, você precisa
+         colocar uma ou mais tags &lt;source&gt; para inserir um áudio (normalmente usamos mais de um source para inserirmos o mesmo áudio em outros formatos, para caso o usuário não consiga
+          ouvir o áudio no formato principal, porém diferente da piture, o primeiro source será o primeiro a ser carregado e somente se o primeiro áudio falhe os seguintes serão carregador também). Para inserirmosum audio escrevemos o seguinte código: </p>
+        <pre><code>
+            &lt;audio <a href="#preload">preload</a>="<a href="#metadata">metadata</a>" <a href="#controls">controls</a> <a href="#autoplay">autoplay</a> <a href="#loop">loop</a>&gt;
+                &lt;source src="../caminho/para-o-/áudio/-baixado.mjpeg" type="audio/mjpeg"&gt;
+                &lt;source src="../caminho/para-o-/áudio/-baixado.mp3" type="audio/mjpeg"&gt;
+                &lt;source src="../caminho/para-o-/áudio/-baixado.ogg" type="audio/mjpeg"&gt;
+            &lt;/audio&gt;
+        </code></pre>
+        <p>Vamos explicar a respeito de alguns atributos e valores inseridos na tag &lt;audio&gt;a seguir:</p>
+        <ul>
+            <li><a name="preload">preload</a>= esse atributo indica se o áudio será pré-carregado ou não e aceita três valores:</li>
+            <ol>
+                <li><a name="metadata">metadata</a>= vai carregar apenas as informações sobre o arquivo (tamanho, tempo, informações de direitos, etc)</li>
+                <li>none= não vai carregar nada até que o usuário clique no botão de play ou um script inicie a reprodução</li>
+                <li>auto=valor padrão, carrega o arquivo inteiro assim que a página for carregada, mesmo que o usuário nunca aperte play</li>
+            </ol>
+            <li><a name="controls">controls</a>= vai apresentar o player na tela. Caso não seja colocado na tag &lt;audio&gt;, o controle será transparente e o usuário não poderá interagir com ele</li>
+            <li><a name="autoplay">autoplay</a>= quando inserido, vai indicar a reprodução do áudio assim que a página for carregada</li>
+            <li><a name="loop">loop</a>= faz com que o áudio seja repetido eternamente assim que terminar a sua reprodução</li>
+        </ul>
+    <div class="audio">
+        <audio preload="metadata" controls autoplay loop><source src="../musica/WhatsApp Audio 2022-04-04 at 16.07.59.mpeg" type="audio/mpeg"></audio>
+    </div>
+    <h1>Inserção de vídeos em sua página <em>web</em></h1>
+    <p>Para inserir vídeos em nosso site podemos utilizar a nova tag &lt;video&gt; da HTML5, caso o arquivo esteja hospedado em nosso próprio servidor (em caso de treino, no seu prórpio pc)</p>
+    <p>Veja abaixo um exemplo da tag sendo usada:</p>
+    <pre><code>
+        &lt;video <a href="#width">width</a>="600" <a href="#poster">poster</a>="thumb.jpg" <a href="#controls2">controls</a> <a href="#autoplay2">autoplay</a>&gt;
+            &lt;source src="meu-video.webm" type="video/webm"&gt;
+            &lt;source src="meu-video.mp4" type="video/mp4"&gt;
+            &lt;source src="meu-video.ogg" type="video/ogg"&gt;
+        &lt;/video&gt;
+    </code></pre>
+
+    <p>Abaixo estã algumas explicações sobre os atributos inseridos na tag &lt;video&gt;</p>
+    <ul>
+        <li><a name="width">width</a>= esse atributo indica a largura que o video vai ter na tela (no exemplo acime o largura é 600px)</li>
+        <li><a name="poster">poster</a>= configura uma imagem que vai aparecer como capa, enquanto o visitante não aperta o play para reproduzir o vídeo</li>
+        <li><a name="controls2">controls</a>= vai configurar se os controler do vídeo vão aparecer na parte inferior da mídia. Por padrão os controles não aparecerão, mas basta colocar a palavra "controls" na tag &lt;video&gt;</li>
+        <li><a name="autoplay2">autoplay</a>= diz ao navegador para o vídeo começar a tocar automaticamente, assim que a página for carregada.</li>
+    </ul>
+    <video height="400px" poster="../imagens/duas-noites-com-eduardo.jpg" controls autoplay>
+        <source src="../cidade-anoitecer.mp4" type="video/mp4">
+    </video>
+    <p>Atualmente os dois formatos de vídeo mais suportados pelos navegadores atuais são o MPEG e o WEBM. <br>
+         Abaixo mostraremos uma tabela com os navegadores e os formatos de vídeo suportados por eles.</p>
+    <table>
+        <tr>
+            <td>Navegador</td>
+            <td>Arquivos compatíveis</td>
+        </tr>
+        <tr>
+            <td>Microsoft Edge</td>
+            <td>.mp4 .m4v</td>
+        </tr>
+        <tr>
+            <td>Apple Safari</td>
+            <td>.mp4 .m4v</td>
+        </tr>
+        <tr>
+            <td>Google Chrome</td>
+            <td>.mp4 .m4v .webm .ogv</td>
+        </tr>
+        <tr>
+            <td>Mozilla Firefox</td>
+            <td>.webm .ogv</td>
+        </tr>
+        <tr>
+            <td>Opera</td>
+            <td>.webm .ogv</td>
+        </tr>
+    </table>
+    <p>Abrigar um vídeo no próprio servidor pode causar problemas como o alto consumo de banda, site lento e incompatibilidades
+         com alguns navegadores por conta dos <abbr title="dispositivo de hardware ou software que codifica/decodifica sinais.">codecs</abbr>.
+        Para isso não acontecer, podemos hospedar o nosso vídeo no youtube, que possui servidores muito rápidos, porém essa pode não ser uma boa 
+        escolha caso você queira limitar quem vai ter acesso a determinado vídeo (como por exemplo, uma aula online que queremos que somente os alunos matrículados tenham acesso), 
+        pois a ideia do Google é deixar todos esses vídeos públicos e disponíveis.
+        Caso esse seja o caso, então podemos hospedar nosso vídeo no Vimeo que é uma plataforma que possibilita limitar quem vai poder ver o vídeo, o que é especialmente vantajoso no caso do exemplo citado acima.
+        No entanto, o Vimeo possui uma taxa anual e seus algoritmos não são tão eficientes quanto os do YouTube (isso faz com que alguns vídeos apresentem leves travamentos às vezes).
+    </p>
+    <H2>Como imcorporar um vídeo do YouTube em HTML</H2>
+    <p>Para incorporar um vídeo do YouTube em HTML basta, abrir o vídeo no YouTube, clicar na opção compartilhar, e vai aparecer um opção chamada "incoporar" que possui acima da palavra os símbolos "&lt;&gt;". O código 
+        HTML personalizado vai aparecer em uma nova janela de texto, incluindo um botão que permite COPIAR o código com a tag do &lt;iframe&gt; que vai aparecer diretamente na sua página. Após copiar o código, basta colar a tag 
+        no local desejado no seu código em HTML.
+    </p>
+    <p>Ex de vídeo incorporado do YouTube:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RtN9xxh4WpU?start=90" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Podemos usar a ferramenta gratuita chamada Handbreake para converter o tipo de vídeo (ex: de mp4 para occ). <br>
+    Além de poder também mudar a qualidade do vídeo para reduzir seu peso.</p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../icons/justice.ico" type="image/x-icon">
+    <title>O que é e como usar o CSS</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+        }
+        p, h1 {
+            color: white;
+            font-family:'Times New Roman';
+        }
+        pre {
+            color: red;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS interno</h1>
+    <p>Nesse modelo, o CSS é inserido dentro do documento HTML, em uma parte só, diferente do inline onde temos CSS em espalhado em cada tag. 
+        Colocamos o CSS dentro do documento HTML através da tag &lt;style&gt;&lt;/style&gt; dentro da área head, é recomendado colocar essa tag como 
+        último item dentro da tag &lt;head&gt;&lt;/head&gt; (se não me engano).
+    </p>
+    <pre><code>
+        &lt;head&gt;
+        &lt;style&gt;
+            body {
+                background-color: black;
+                text-align: center;
+            }
+            p, h1 {
+                color: white;
+                font-family: 'Times New Roman'
+            }
+        &lt;/style&gt;
+        &lt;/head&gt;
+    </code></pre>
+    <h1>CSS externo</h1>
+    <p>Nesse modelo, o CSS está em um arquivo separado de extensão .css, que é linkado ao documento HTML dentro da área head do documento. 
+        Essa é a maneira mais organizada de trabalhar com o CSS.
+    </p>
+    <pre><code>
+        &lt;head&gt;
+        &lt;link rel="stylesheet" href="nome-do-doc.css"&gt;
+        &lt;/head&gt;
+    </code></pre>
+</body>
+</html>
