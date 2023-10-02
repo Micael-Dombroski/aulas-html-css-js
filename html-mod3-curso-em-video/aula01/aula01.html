@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../icons/justice.ico" type="image/x-icon">
+    <title>Módulo 3</title>
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+
+        }
+        body {
+            background-color: black;
+        }
+        h1 {
+            text-align:  center;
+            padding: 10px;
+        }
+        h2 {
+            margin-left: 20px;
+            padding: 10px;
+        }
+        p {
+            text-indent: 20px;
+            padding: 10px;
+            text-align: justify;
+        }
+        ol {
+            margin: 20px;
+        }
+        div {
+            margin-top: 50px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color:  white;
+            border-radius: 10px;
+        }
+        img {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #git-icon {
+            height: 200px;
+        }
+        #git-esquema {
+            height: 300px;
+        }
+        #github-esquema {
+            height: 200px;
+        }
+        #github-icon {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Git e GitHub</h1>
+        <h2>O que é um repositório?</h2>
+        <p>É um local onde seu projeto fica hospedado. Existem dois tipos de 
+            repositórios, os <strong>Repositórios Locais</strong> e os 
+            <strong>Repositórios Remotos</strong>.
+        </p>
+        <h3>Qual a utilidade de um repositório?</h3>
+        <p>Para exemplificar o uso de cada um dos tipos de repositórios serão citados 
+            abaixo algumas histórias para exemplificar seu uso.
+        </p>
+        <ol>
+            <li>
+                <h4>Como Guardar várias versões do seus site?</h4>
+                <p>Quando estamos criando um projeto,  começamos aos poucos 
+                    criando sua primeira versão dentro de uma pasta local em nosso
+                    computador.
+                </p>
+                <p>Quando atingir uma versão estável, para manter um "<em>backup seguro</em>", 
+                sempre usamos ideias brilhantes como gerar uma versão compactada dessa pasta. 
+                Isso vai permitir continuar a desenvolver uma versão aprimorada sem perder a versão 
+                anterior. Se por acaso algo der errado basta descompactar nosso arquivo de versão 
+                estável, substituir o conteúdo da pasta original e recomeçar os trabalhos da criação 
+                da próxima versão. Usando essa prática, com certeza vai acabar se deparando com vários 
+                arquivos ZIP com nomes esquisitos.</p>
+            </li>
+            <li>
+                <h4>O HD foi pro saco, o que fazer?</h4>
+                <p>Se usarmos a técnica do exemplo anterior, é possível que todos os arquivos sejam 
+                    perdidos cado o HD seja queimado.
+                </p>
+                <p>Uma das sáidas é salvar cópias de segurança em <em>pendrivez</em> e em HDs externos, 
+                além de manter um <em>backup</em> em serviços de armazenamento como <strong>Dropbox</strong>, 
+                <strong>Google Drive</strong>, <strong>One Drive</strong>, <strong>iCloud</strong>, etc.</p>
+                <p>O problema de manter esses <em>backups</em> isolados é que, no momentos de ligar nossa 
+                "máquina do tempo" e voltar para a versão anterior, precisamos fazer o <em>download</em> do ZIP 
+                desejado e substituir manualmente a versão atual para a última estável.</p>
+            </li>
+            <li>
+                <h4>Mostrar seu site para o mundo</h4>
+                <p>O que você faz caso queira mostrar seu projeto de um site para um amigo, seu professor, 
+                    ou até mesmo um possível cliente? Vai mandar o link de um arquivo ZIP para ele(a) baixar, 
+                    descompactar e abrir no navegador local? Não é dess aforma que as pessoas estão acostumadar a 
+                    acessar sites.
+                </p>
+                <p>Os serviços de armazenamento citador na situação anterior são muito úteis para fazer <em>backup</em>, 
+                mas possume uma grande limitação quando queremos praticidade. Por exemplo, salvar os arquivos de um site 
+                no <strong>Dropbox</strong> não vai garantir de forma alguma que el vai ficar disponível para o acesso 
+                externo. Ninguém vai poder "acessar seu site"l, apenas digitando uma URL no navegador. Tudo vai ficar armazenado 
+                como um grupo de arquivos, não como um site hospedado.</p>
+            </li>
+        </ol>
+        <h3>Os repositórios vão resolver isso</h3>
+        <p>Todas as três situações descritas podem ser resolvidas com repositórios locais/remotos de maneira muito simples. 
+        E se por acaso você já tentou aprender sobre isso, achou guias com dezenas de comandos e não conseguiu se adaptar, saiba que 
+        tudo evoluiu muito nos últimos meses e vamos ter tudo de maneira muito simples, sem decorar nenhum comando! Para começar, vamos 
+        aprender que existem dois tipos de repositórios: os <strong>locais</strong> e os <strong>remotos</strong>.
+        </p>
+        <h2>Tipos de Repositórios</h2>
+        <h3>Repositório Local</h3>
+        <p>Um <strong>repositório local</strong> tem esse nome porque vai estar sempre no seu computador. A função dele é facilidade a 
+        gestão de diversas versões do seu projeto de forma simples e automática.</p>
+        <p>Lembra da <strong>situação 1</strong> que descrevemos anteriormente? Pois quando instalamos um <strong>Sistema de Controle de Versões</strong> 
+        (do inglês <em>Version Control System</em> - <strong>VCS</strong>), deixamos a responsabilidade por gerenciar as versões dos nossos 
+        projetos nas mãos de um <em>software</em> especializado, que vai fazer tudo automaticamente e vai permitir que você volte a qualquer ponto 
+        no momento em que achar melhor.</p>
+        <p>Um dos softwares VCS mais famosos é o <strong>Git</strong>, feito por <strong>Linus Torvalds</strong>, o mesmo criador do núcleo 
+        <strong>Linux</strong> dos sistemas operacionais. O sistema do Git foi criado no ano de 2005 em poucos dias (10 dias, para ser mais exato), 
+        por conta de uma briga entre o <em>Linus</em> e o criador de um software chamado <strong>BitKeeper</strong>, que era utilizado para 
+        gerenciar as versões em desenvolvimento do <em>Linux</em>.</p>
+        <img id="git-icon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="git icon">
+        <p>O esquema de funcionamento do Git é totalmente focado no nosso computador. Analisando a imagem a seguir, vemos que o software está 
+        monitorando uma pasta chamada <code>meu-site</code> que tem a versão atual do projeto e uma pasta especial chamada <code>.git</code> com 
+        várias versões pelas quais o site passou durante sua evolução.
+        </p>
+        <img id="git-esquema" src="git-esquema.png" alt="Como funciona o Git">
+        <p>A grande vantagem de usar um <strong>sistema de controle de versões</strong> como o <strong>Git</strong> é poder voltar a qualquer 
+        momento para qualquer versão anterior do projeto de forma imediata, tudo 100% transparente para o programador.</p>
+        <p>Como você já deve ter percebido, os repositórios locais resolvem o problema que apontamos na <strong>situação 1</strong>, mas se o nosso 
+        PC quebrar (<strong>situação 2</strong>) ou se quisermos mostrar o projeto para outra pessoa (<strong>situação 3</strong>), ainda não é 
+        possível usando esse tipo de sistema, mas não se desespere agora! Continue lendo...</p>
+        <h3>Repositório Remoto</h3>
+        <p>Para solucionar os problemas levantados nas duas últimas situações desse capítulo, vamos precisar de um lugar na nuvem para guardar nossos 
+            repositórios locais. E é aí que entra o nosso segundo grande personagem: o <strong>GitHub</strong>.
+        </p>
+        <img id="github-esquema" src="github-esquema.png" alt="Como funciona o GitHub">
+        <p>Criado em 2008 por quatro amigos, o <strong>GitHub</strong> é um serviço que nos permite criar um <strong>repositório remoto</strong> na nuvem 
+        para guardar nossos projetos e versionamentos. Ele não é a única opção que existe no mercado (ainda temos o <strong>GitLab</strong>, o <strong>Bitbucket</strong>, 
+        e muitos outros) mas provavelmente é a mais popular, tanto que hoje pertence à gigante <strong>Microsoft</strong>, que comprou o serviço em 2018 por 
+        7.5 bilhões de dólares.</p>
+        <img id="github-icon" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github-icon">
+        <p>Com o tempo, o GitHub começou a ganhar funcionalidades extras, que foram transformando o serviço em uma grande <strong>rede social para programadores</strong>. 
+        Além de guardamos nossos códigos nos servidores, podemos nos comunicar com outrso desenvolvedores e até mesmo colaborar com outros projetos que estão 
+        disponíveis publicamente para todos.</p>
+        <p>Ao colocar nossos códigos na nuvem, automaticamente resolvemos o problema da <strong>situação 2</strong>. E um recurso chamado <strong>GitHub Pages</strong> 
+        vai permitir a hospedagem gratuita de sites simples, que usem HTML + CSS + JS e disponibilize acesso através de uma URL.</p>
+    </div>
+</body>
+</html>
